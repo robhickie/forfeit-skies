@@ -1,0 +1,13 @@
+name = "WH: NPCs"
+filename = "wh_npcs-neoforge-1.21.1-1.0.2.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/z3LQpsHg/versions/LInZuarI/wh_npcs-neoforge-1.21.1-1.0.2.jar"
+hash-format = "sha512"
+hash = "0893aa28e105b624275b50778cdf8a8cd0098c1ee4a17ef70db2cfed95c04b3c071df29744d561834969f4e3e28fd7e69522be2cb88283d20bd57e704cf16800"
+
+[update]
+[update.modrinth]
+mod-id = "z3LQpsHg"
+version = "LInZuarI"

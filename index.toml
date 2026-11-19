@@ -765,6 +765,21 @@ hash = "ae6fd52d8bdcbeca5bbe6db840f22f92c1928fe0fda22017b19612b9b00a245a"
 metafile = true
 
 [[files]]
+file = "mods/easy-npc-config-ui.pw.toml"
+hash = "a83765aabfce1171c5c2123fafb7a0ef0e5649ff6fb2ede6481ab50cc9a1e294"
+metafile = true
+
+[[files]]
+file = "mods/easy-npc-core.pw.toml"
+hash = "ee835ebca9841c7f5cfc19af08670b1437c777268010aa355ea81bb04e1ac610"
+metafile = true
+
+[[files]]
+file = "mods/easy-npc.pw.toml"
+hash = "88b5495447c30589d1700c1e9dda719979caf892a9f9d1cdeb0dc76584aa1ef3"
+metafile = true
+
+[[files]]
 file = "mods/easy-villagers.pw.toml"
 hash = "0bdddcb5c48cb5fb1fee738a7dcf0d06bcdaa95c6ec3e2ac85cc87ecad2d26ce"
 metafile = true
@@ -1777,6 +1792,11 @@ metafile = true
 [[files]]
 file = "mods/when-dungeons-arise.pw.toml"
 hash = "485906ff55a5d6ad06070abb80663d6adadc3e4b32f8b52240d8596e7aaef9fa"
+metafile = true
+
+[[files]]
+file = "mods/without-honor-npcs.pw.toml"
+hash = "dca5a233bc985ea8465ed6f3715e5e30447a8a9e251d711604f5f614367e8ea5"
 metafile = true
 
 [[files]]
