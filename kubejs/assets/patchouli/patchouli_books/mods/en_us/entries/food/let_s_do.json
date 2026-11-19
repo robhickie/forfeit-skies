@@ -1,0 +1,13 @@
+{
+  "name": "Let's Do (2)",
+  "icon": "vinery:wine_bottle",
+  "category": "patchouli:food",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l)[Let's Do] HerbalBrews$()$(br)It's Tea Time! Brew Tea, Coffee and Flasks.$(br2)$(l)[Let's Do] Vinery$()$(br)Sun-warmed vineyards, creaking barrels and dusty bottles in a cool cellar…",
+      "title": "Let's Do"
+    }
+  ]
+}

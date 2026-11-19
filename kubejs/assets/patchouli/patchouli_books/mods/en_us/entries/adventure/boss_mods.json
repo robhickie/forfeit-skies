@@ -1,0 +1,21 @@
+{
+  "name": "Boss Mods (8)",
+  "icon": "minecraft:wither_skeleton_skull",
+  "category": "patchouli:adventure",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Bosses of Mass Destruction Forge$()$(br)WIP mod that adds boss fights to Minecraft$(br2)$(l)Bosses'Rise$()$(br)🐉 Bring Souls-like Bosses into your world",
+      "title": "Boss Mods"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Dark Doppelganger - Irons Spells And Spellbooks Addon$()$(br)Summon a boss that looks just like you$(br2)$(l)Ender Dragon Fight Remastered$()$(br)A difficulty increase of Minecraft's final boss, with a focus on a somewhat…$(br2)$(l)Legendary Monsters$()$(br)New early, middle, late game bosses"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Multiplayer Bosses$()$(br)A server-side mod that makes boss health and loot drops scales to player…$(br2)$(l)Mutant Monsters$()$(br)The mutants are back! Face scary creatures and powerful beasts like never…$(br2)$(l)Qliphoth Awakening$()$(br)Adds various bosses with unique attacks and mechanics."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Ars Nouveau & Addons (5)",
+  "icon": "ars_nouveau:novice_spell_book",
+  "category": "patchouli:magic",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Ars Additions$()$(br)An Ars Nouveau addon focused on small tweaks and quality of life additions.$(br2)$(l)Ars Creo$()$(br)An addon for Ars Nouveau and Create",
+      "title": "Ars Nouveau & Addons"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Ars Énergistique$()$(br)Bringing magic to the digital age. (Ars Nouveau x Applied Energistics 2)$(br2)$(l)Ars Nouveau$()$(br)Craft spells and construct magical automations$(br2)$(l)Ars Ocultas$()$(br)Ars Nouveau Integration for Occultism"
+    }
+  ]
+}

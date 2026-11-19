@@ -1,0 +1,13 @@
+{
+  "name": "Relics (1)",
+  "icon": "minecraft:totem_of_undying",
+  "category": "patchouli:magic",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Relics$()$(br)Just a mod about useful items with unique mechanics :3",
+      "title": "Relics"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "name": "Create & Its Addons (25)",
+  "icon": "create:cogwheel",
+  "category": "patchouli:create",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Create$()$(br)Aesthetic Technology that empowers the Player$(br2)$(l)Create Crafts & Additions$()$(br)Create Crafts & Additions extends Create and acts as a bridge between…",
+      "title": "Create & Its Addons"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Create Deco$()$(br)Industrial decoration themed around the aesthetics of the Create mod.$(br2)$(l)Create Encased$()$(br)Allow to use all casing on shafts/cogwheels/pipes$(br2)$(l)Create Factory Logistics$()$(br)Ever wondered why there are logistics packages, but no logistics jars? Let's…"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Create Jetpack$()$(br)Upgrade your backtank and utilize the pressurized air to fly$(br2)$(l)Create Ore Excavation$()$(br)Extract resources using machines powered by Rotational Force$(br2)$(l)Create Slice & Dice$()$(br)Making automation for Farmers Delight more sensible"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Create Stock Bridge$()$(br)Links the Create Stock network with Applied Energistics$(br2)$(l)Create Stuff 'N Additions$()$(br)🧲 Dominate your environment with Create technology$(br2)$(l)Create: Bits 'n' Bobs$()$(br)Decorative and mechanical additions to create!"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Create: Central Kitchen$()$(br)Offering more tools and methods to automate food processing of other mod in…$(br2)$(l)Create: Connected$()$(br)QoL blocks that you wish existed in Create - Highly configurable, disable…$(br2)$(l)Create: Copycats+$()$(br)All the copycats you've ever wanted, combined into a single mod!"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Create: Design n' Decor$()$(br)a create addon that adds decor blocks to spice up your factory!$(br2)$(l)Create: Diesel Generators$()$(br)A Create addon that adds compact diesel generators (engines), simple…$(br2)$(l)Create: Dragons Plus$()$(br)Provide convenient features to players and dev utilities for Create addon…"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Create: Enchantment Industry$()$(br)Automatic Enchanting, with Create$(br2)$(l)Create: Interiors$()$(br)A complement to the Create mod that adds new furniture.$(br2)$(l)Create: New Age$()$(br)Create: New Age is an addon for the Create mod that adds integration with…"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Create: Occult Engineering$()$(br)An integration mod between Create and Occultism.$(br2)$(l)Create: Power Loader$()$(br)A Create mod add-on adding immersive chunk loaders.$(br2)$(l)Create: Train Perspective$() $(7)(your game only)$()$(br)Provides more immersion for players on a train."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Create: Wizardry$()$(br)This is an addon mod for Create adding enhanced compatibility with Iron's…$(br2)$(l)Rechiseled: Create$()$(br)Rechiseled: Create adds new decorative variants of blocks in Create!"
+    }
+  ]
+}

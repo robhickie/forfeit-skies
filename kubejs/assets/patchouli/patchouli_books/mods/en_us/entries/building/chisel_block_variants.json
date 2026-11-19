@@ -1,0 +1,13 @@
+{
+  "name": "Chisel & Block Variants (2)",
+  "icon": "chipped:botanist_workbench",
+  "category": "patchouli:building",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Chipped$()$(br)Every block deserves a friend.$(br2)$(l)Rechiseled$()$(br)Rechiseled allows you to chisel blocks into various decorative blocks with…",
+      "title": "Chisel & Block Variants"
+    }
+  ]
+}

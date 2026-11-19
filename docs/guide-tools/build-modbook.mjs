@@ -14,7 +14,7 @@ import { fileURLToPath } from 'node:url';
 const DIR = dirname(fileURLToPath(import.meta.url));
 const arg = (n) => { const i = process.argv.indexOf(n); return i > 0 ? process.argv[i + 1] : undefined; };
 const PACK = arg('--pack') || 'C:\\Users\\rober\\minecraft-pack';
-const NS = 'forfeit', BOOK = 'mods';
+const NS = 'patchouli', BOOK = 'mods';   // => book id patchouli:mods
 const mods = JSON.parse(readFileSync(join(DIR, '..', '.cache', 'modlist.json'), 'utf8'));
 
 // Categories: [group id from build-modlist, title, icon, blurb]
@@ -87,7 +87,10 @@ const clean = (s) => String(s || '').replace(/\$/g, 'S').replace(/[\r\n]+/g, ' '
 const short = (s, n) => { s = clean(s); return s.length > n ? s.slice(0, n - 1).replace(/[\s,.;:!-]+\S*$/, '') + '…' : s; };
 const PER_PAGE = 3, FIRST_PAGE = 2;   // the first page also shows the entry title
 
-const out = { data: join(PACK, 'kubejs', 'data', NS, 'patchouli_books', BOOK), assets: join(PACK, 'kubejs', 'assets', NS, 'patchouli_books', BOOK) };
+// Patchouli only reads book.json from mod jars or the game folder's patchouli_books/ (book id becomes patchouli:<folder>).
+// The pages live in kubejs/assets (a resource pack), under the same 'patchouli' namespace.
+const out = { data: join(PACK, 'patchouli_books', BOOK), assets: join(PACK, 'kubejs', 'assets', NS, 'patchouli_books', BOOK) };
+for (const legacy of [join(PACK, 'kubejs', 'data', 'forfeit'), join(PACK, 'kubejs', 'assets', 'forfeit')]) if (existsSync(legacy)) rmSync(legacy, { recursive: true });
 for (const d of Object.values(out)) if (existsSync(d)) rmSync(d, { recursive: true });
 mkdirSync(join(out.assets, 'en_us', 'categories'), { recursive: true });
 mkdirSync(out.data, { recursive: true });

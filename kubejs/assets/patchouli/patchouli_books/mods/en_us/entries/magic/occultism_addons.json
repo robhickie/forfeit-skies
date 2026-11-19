@@ -1,0 +1,13 @@
+{
+  "name": "Occultism & Addons (1)",
+  "icon": "occultism:spirit_attuned_gem",
+  "category": "patchouli:magic",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Occultism$()$(br)A ritual magic system centered around summonable spirits allows you to…",
+      "title": "Occultism & Addons"
+    }
+  ]
+}
