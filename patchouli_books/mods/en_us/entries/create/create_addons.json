@@ -50,15 +50,15 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(l)Create: Train Perspective$() $(7)(your game only)$()$(br)Provides more immersion for players on a train.$(br2)$(l)Create: Wizardry$()$(br)This is an addon mod for Create adding enhanced compatibility with Iron's Spells and…"
+      "text": "$(l)Create: Train Perspective$() $(7)(your game only)$()$(br)Provides more immersion for players on a train.$(br2)$(l)Create: Warnautics$()$(br)A Create Big Cannons add-on, featuring bombs, bombs, and more bombs."
     },
     {
       "type": "patchouli:text",
-      "text": "$(l)Rechiseled: Create$()$(br)Rechiseled: Create adds new decorative variants of blocks in Create!"
+      "text": "$(l)Create: Wizardry$()$(br)This is an addon mod for Create adding enhanced compatibility with Iron's Spells and…$(br2)$(l)Rechiseled: Create$()$(br)Rechiseled: Create adds new decorative variants of blocks in Create!"
     },
     {
       "type": "patchouli:text",
-      "text": "$(l)Tip$()$(br2)The three paths need each other: trade with the Create, magic and tech players."
+      "text": "$(l)Tip$()$(br2)Stuck? The $(l)quest book$() walks you through each mod step by step."
     }
   ]
 }

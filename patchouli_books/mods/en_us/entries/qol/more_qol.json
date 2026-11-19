@@ -6,11 +6,15 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(l)AmbientSounds$() $(7)(your game only)$()$(br)#listentonature$(br2)$(l)AppleSkin$()$(br)Food/hunger-related HUD improvements"
+      "text": "$(l)Akashic Tome$()$(br)The Book of Books. Store every documentation book in one.$(br2)$(l)AmbientSounds$() $(7)(your game only)$()$(br)#listentonature"
     },
     {
       "type": "patchouli:text",
-      "text": "$(l)Better Advancements$() $(7)(your game only)$()$(br)Better Advancements tries to improve the UI and UX for the advancements system in…$(br2)$(l)Carry On$()$(br)Carry On allows you to pick up Tile Entities and Mobs and carry them around!"
+      "text": "$(l)AppleSkin$()$(br)Food/hunger-related HUD improvements$(br2)$(l)Better Advancements$() $(7)(your game only)$()$(br)Better Advancements tries to improve the UI and UX for the advancements system in…"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Building Gadgets$()$(br)$(br2)$(l)Carry On$()$(br)Carry On allows you to pick up Tile Entities and Mobs and carry them around!"
     },
     {
       "type": "patchouli:text",
@@ -18,31 +22,35 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(l)Controlling$() $(7)(your game only)$()$(br)Adds a search bar to the Key-Bindings menu$(br2)$(l)Easy Villagers$()$(br)Never get annoyed by villagers again!"
+      "text": "$(l)Construction Sticks$()$(br)$(br2)$(l)Controlling$() $(7)(your game only)$()$(br)Adds a search bar to the Key-Bindings menu"
     },
     {
       "type": "patchouli:text",
-      "text": "$(l)Enchanted: Witchcraft$()$(br)$(br2)$(l)Etched$()$(br)A new form of entertainment. Create and play your very own records that everyone can…"
+      "text": "$(l)Easy Villagers$()$(br)Never get annoyed by villagers again!$(br2)$(l)Enchanted: Witchcraft$()$(br)"
     },
     {
       "type": "patchouli:text",
-      "text": "$(l)Exposure$()$(br)Camera mod with focus on process and aesthetics$(br2)$(l)GeckoLib$()$(br)"
+      "text": "$(l)Etched$()$(br)A new form of entertainment. Create and play your very own records that everyone can…$(br2)$(l)Exposure$()$(br)Camera mod with focus on process and aesthetics"
     },
     {
       "type": "patchouli:text",
-      "text": "$(l)GraveStone Mod$()$(br)Places a gravestone with your inventory items inside when you die$(br2)$(l)Inventory Essentials$()$(br)The most essential inventory tweaks. Now with sorting!"
+      "text": "$(l)GeckoLib$()$(br)$(br2)$(l)GraveStone Mod$()$(br)Places a gravestone with your inventory items inside when you die"
     },
     {
       "type": "patchouli:text",
-      "text": "$(l)L2 Complements$()$(br)Adds various end game material that can be obtained in a special way.$(br2)$(l)Lootr$()$(br)Makes it so nobody misses out on Loot! All loot chests are instanced per player and…"
+      "text": "$(l)Inventory Essentials$()$(br)The most essential inventory tweaks. Now with sorting!$(br2)$(l)L2 Complements$()$(br)Adds various end game material that can be obtained in a special way."
     },
     {
       "type": "patchouli:text",
-      "text": "$(l)Modopedia$()$(br)$(br2)$(l)Mouse Tweaks$() $(7)(your game only)$()$(br)Enhances inventory management by adding various functions to the mouse buttons."
+      "text": "$(l)Lootr$()$(br)Makes it so nobody misses out on Loot! All loot chests are instanced per player and…$(br2)$(l)Modopedia$()$(br)"
     },
     {
       "type": "patchouli:text",
-      "text": "$(l)No Chat Reports$()$(br)Makes chat unreportable (where possible)$(br2)$(l)Quark$()$(br)A Quark is a very small thing. This mod is a collection of small things..."
+      "text": "$(l)Mouse Tweaks$() $(7)(your game only)$()$(br)Enhances inventory management by adding various functions to the mouse buttons.$(br2)$(l)No Chat Reports$()$(br)Makes chat unreportable (where possible)"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)NoTimeOut$() $(7)(server only)$()$(br)Server-side NeoForge mod that extends login, keep-alive, and network read timeouts…$(br2)$(l)Quark$()$(br)A Quark is a very small thing. This mod is a collection of small things..."
     },
     {
       "type": "patchouli:text",
@@ -50,15 +58,15 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(l)StateObserver$()$(br)$(br2)$(l)TorchMaster$()$(br)Control Mob Spawning with simple to use Blocks like the Mega Torch or the Dread Lamp"
+      "text": "$(l)StateObserver$()$(br)$(br2)$(l)Studious Keybinds$() $(7)(your game only)$()$(br)"
     },
     {
       "type": "patchouli:text",
-      "text": "$(l)Traveler's Titles$() $(7)(your game only)$()$(br)Epic, RPG-like titles when entering biomes & dimensions!$(br2)$(l)Waystones$()$(br)Teleport from waystone to waystone or craft magical scrolls to warp."
+      "text": "$(l)TorchMaster$()$(br)Control Mob Spawning with simple to use Blocks like the Mega Torch or the Dread Lamp$(br2)$(l)Traveler's Titles$() $(7)(your game only)$()$(br)Epic, RPG-like titles when entering biomes & dimensions!"
     },
     {
       "type": "patchouli:text",
-      "text": "$(l)Tip$()$(br2)The three paths need each other: trade with the Create, magic and tech players."
+      "text": "$(l)Waystones$()$(br)Teleport from waystone to waystone or craft magical scrolls to warp."
     }
   ]
 }

@@ -10,6 +10,10 @@
     },
     {
       "type": "patchouli:text",
+      "text": "$(l)Create Aeronautics Discovery$()$(br)An extension for the Minecraft Create Aeronautics to add generated structures to the…$(br2)$(l)Create Aeronautics Structures$()$(br)Adds structures to create aeronautics."
+    },
+    {
+      "type": "patchouli:text",
       "text": "$(l)Create Aeronautics: Automated Logistics$()$(br)Station networks and automated docking, so airships can run cargo routes.$(br2)$(l)Create Aeronautics: Transmission & Linkage$()$(br)Linkages and transmissions for building more complex vehicles."
     },
     {
@@ -23,10 +27,6 @@
     {
       "type": "patchouli:text",
       "text": "$(l)Waystones: Sable (Create Aeronautics Addon)$()$(br)A compatibility mod that allows Waystones to work properly within Sable's SubLevel…"
-    },
-    {
-      "type": "patchouli:text",
-      "text": "$(l)Tip$()$(br2)Press $(l)R$() on any item for its recipe, $(l)U$() for what it is used in."
     }
   ]
 }
