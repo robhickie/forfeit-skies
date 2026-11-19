@@ -1,0 +1,13 @@
+{
+  "name": "When Dungeons Arise (2)",
+  "icon": "minecraft:cracked_stone_bricks",
+  "category": "forfeit:world",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l)When Dungeons Arise$()$(br)Adds various elegant -and likely hostile- roguelike dungeons and structures…$(br2)$(l)When Dungeons Arise: Seven Seas$()$(br)Elegant - and likely hostile - vessels lost in the seven seas...",
+      "title": "When Dungeons Arise"
+    }
+  ]
+}

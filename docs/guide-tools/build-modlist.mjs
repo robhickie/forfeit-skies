@@ -152,6 +152,12 @@ for (const m of mods) {
   if (!p && m.modrinth) console.warn(`No Modrinth data for ${m.name} (${m.modrinth}); listed by name only.`);
 }
 
+// Shared data for other builders (e.g. the in-game mod book): one record per mod with its main group.
+writeFileSync(join(CACHE_DIR, 'modlist.json'), JSON.stringify(mods.map(m => ({
+  key: m.key, title: m.title, description: m.description, group: m.group, side: m.side,
+  slug: m.info?.slug || null,
+})), null, 1));
+
 // ---------- 4. icons: download, downscale to 64 px in headless Edge, embed as data URIs ----------
 const iconCache = existsSync(ICON_CACHE) ? JSON.parse(readFileSync(ICON_CACHE, 'utf8')) : {};
 const needIcons = [...new Set(mods.map(m => m.info?.icon_url).filter(u => u && !iconCache[u]))];

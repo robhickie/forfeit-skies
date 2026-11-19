@@ -1,0 +1,21 @@
+{
+  "name": "Terrain & Biomes (8)",
+  "icon": "minecraft:grass_block",
+  "category": "forfeit:world",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Alex's Caves (Unofficial Port)$()$(br)Explore five new rare cave biomes hidden under the surface of the Overworld...$(br2)$(l)Biomes O' Plenty$()$(br)Adds 50+ unique biomes to enhance your world, with new trees, flowers, and…",
+      "title": "Terrain & Biomes"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Incendium Legacy$()$(br)A nether biome overhaul combined with challenging structures to conquer…$(br2)$(l)Nullscape$()$(br)Transforms the boring Vanilla end into an alien dimension with the most…$(br2)$(l)Regions Unexplored$()$(br)A stack of new biomes spread across the Overworld and Nether!"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Serene Seasons$()$(br)Seasons with changing colors, shifting temperatures, and more!$(br2)$(l)Tectonic$()$(br)Terrain shaping brought to new heights, grander and more varied than ever…$(br2)$(l)Terralith$()$(br)Explore almost 100 new biomes consisting of both realism and light fantasy…"
+    }
+  ]
+}

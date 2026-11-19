@@ -1,0 +1,13 @@
+{
+  "name": "Apotheosis (1)",
+  "icon": "apotheosis:gem",
+  "category": "forfeit:adventure",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Apotheosis$()$(br)All things that should have been",
+      "title": "Apotheosis"
+    }
+  ]
+}

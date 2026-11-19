@@ -1,0 +1,13 @@
+{
+  "name": "Other Food & Farming (1)",
+  "icon": "minecraft:bread",
+  "category": "forfeit:food",
+  "sortnum": 99,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Cooking for Blockheads$()$(br)Adds a multiblock kitchen that shows recipes you can make with what…",
+      "title": "Other Food & Farming"
+    }
+  ]
+}

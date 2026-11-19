@@ -1,0 +1,20 @@
+{
+  "name": "Applied Energistics 2 & Addons (7)",
+  "icon": "ae2:controller",
+  "category": "forfeit:tech",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l)AdvancedAE$()$(br)An AE2 addon that adds a lot of utilities and quality of life.$(br2)$(l)Applied Energistics 2$()$(br)AE2: A popular automation and storage mod"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Applied Energistics 2 Wireless Terminals$()$(br)Ae2wtlib is an addon for ae2 that adds wireless versions of several Terminals$(br2)$(l)Applied Mekanistics$()$(br)The official Mekanism support addon for AE2$(br2)$(l)Extended AE$()$(br)Turbo-boosts Applied Energistics 2 with fan-favorite QoL blocks!"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)ME Requester$()$(br)Keep items and fluids in your Applied Energistics 2 ME-System in stock.$(br2)$(l)MEGA Cells$()$(br)ME Greater Accumulation: For when kilobytes just won't do."
+    }
+  ]
+}

@@ -21,8 +21,200 @@ file = "config/terrablender.toml"
 hash = "386b0318404124fc17b67fc7e5b19407aa8fbe6d20f414d1d2a417b2f7893ac2"
 
 [[files]]
+file = "kubejs/assets/forfeit/patchouli_books/mods/en_us/categories/adventure.json"
+hash = "0478267e5be0810fdda95778eec73ebb5d0e69adbf0c9a4db8e31b492cfde4ca"
+
+[[files]]
+file = "kubejs/assets/forfeit/patchouli_books/mods/en_us/categories/building.json"
+hash = "bafec0a6dc908f9fb8bf866cf132e907b937e3fc24465f838868a39a26cb99c2"
+
+[[files]]
+file = "kubejs/assets/forfeit/patchouli_books/mods/en_us/categories/create.json"
+hash = "16c591ce3a457a942f469c6fda55dbe4bc9a5d8adbad765e45ecb018a9e267b7"
+
+[[files]]
+file = "kubejs/assets/forfeit/patchouli_books/mods/en_us/categories/food.json"
+hash = "4b388b231d166f335f1f7c9fb34622ea94b26a4724c0b25302a54b4376c14523"
+
+[[files]]
+file = "kubejs/assets/forfeit/patchouli_books/mods/en_us/categories/magic.json"
+hash = "32078470aa0bfe18d65a2d935b260ee419c3d45b803985d128d44c07a9f36e9d"
+
+[[files]]
+file = "kubejs/assets/forfeit/patchouli_books/mods/en_us/categories/qol.json"
+hash = "81b3310e3b685eda88cc8c27c11e762a4aab23fc024e3bf987e1a286f1573b81"
+
+[[files]]
+file = "kubejs/assets/forfeit/patchouli_books/mods/en_us/categories/tech.json"
+hash = "28ff7ddfeeeea5431e2b345ccd718f5e3d8fe52ea5acfa1df90e308a4d6d41cc"
+
+[[files]]
+file = "kubejs/assets/forfeit/patchouli_books/mods/en_us/categories/world.json"
+hash = "c7b9da057c48c10f245c886f15f348bea8dfc312d655ae5c572cdc2af4f9d6c7"
+
+[[files]]
+file = "kubejs/assets/forfeit/patchouli_books/mods/en_us/entries/adventure/apotheosis.json"
+hash = "334271ee8c6a519d5594699544bdbee7cbbe708aeb3a7505d67625f9018fb083"
+
+[[files]]
+file = "kubejs/assets/forfeit/patchouli_books/mods/en_us/entries/adventure/boss_mods.json"
+hash = "00f0a62aec19b2f00d82b96ab6a60984397037f74f735e3d8612d227791d9b6f"
+
+[[files]]
+file = "kubejs/assets/forfeit/patchouli_books/mods/en_us/entries/adventure/l_ender_s_cataclysm_mowzie_s_mobs.json"
+hash = "e65491ed6d09450f6f319de9db9ab83e3e7fb08c86764d6d20c261b9cc7a9840"
+
+[[files]]
+file = "kubejs/assets/forfeit/patchouli_books/mods/en_us/entries/adventure/other_adventure_bosses.json"
+hash = "6e59382d396530b63123c0731690c44ae973fa72d538dbadb6654888f14d4ba5"
+
+[[files]]
+file = "kubejs/assets/forfeit/patchouli_books/mods/en_us/entries/adventure/weapons_combat.json"
+hash = "26120a7e7d93746fd1f8bfc1c1da16a4c2dde58f590c372bd9d681208b778c07"
+
+[[files]]
+file = "kubejs/assets/forfeit/patchouli_books/mods/en_us/entries/building/chisel_block_variants.json"
+hash = "6af1c4dc2502a9c933e901359d92c195a88cd7c977e22e6a11c5066ced01e284"
+
+[[files]]
+file = "kubejs/assets/forfeit/patchouli_books/mods/en_us/entries/building/macaw_s_mods.json"
+hash = "41740c89df3534493f87aa718ac73c0041677ed53a48bed62d3c9c7020f40141"
+
+[[files]]
+file = "kubejs/assets/forfeit/patchouli_books/mods/en_us/entries/building/other_building.json"
+hash = "2d022da7382f03004e1cea1db85bfcd761b114885fae470dd911b9c705f07e3f"
+
+[[files]]
+file = "kubejs/assets/forfeit/patchouli_books/mods/en_us/entries/create/create_aeronautics_airship_addons.json"
+hash = "02b4305e1b0699806dd263240a299e2e57f5f740b89b6f32dadaf69ee197eb6f"
+
+[[files]]
+file = "kubejs/assets/forfeit/patchouli_books/mods/en_us/entries/create/create_big_cannons.json"
+hash = "bafa8e9728c8dda788fa42a36787f48c21d8cbfd06c3efcd5325463aeb23943a"
+
+[[files]]
+file = "kubejs/assets/forfeit/patchouli_books/mods/en_us/entries/create/create_its_addons.json"
+hash = "6dae22c0bf9ec4d5ec5e87c64e6b9598c6f8ff0750d2fc5bbca89dea47f87bbb"
+
+[[files]]
+file = "kubejs/assets/forfeit/patchouli_books/mods/en_us/entries/create/trains_railways.json"
+hash = "6d22b8746ca8a4fd69660d7ad90d93553cf7cccdd3974293dd6ed5d7a8481c38"
+
+[[files]]
+file = "kubejs/assets/forfeit/patchouli_books/mods/en_us/entries/food/farmer_s_delight_addons.json"
+hash = "02c7e6b5afdfb2a44dbfb72d9f5522e8b0a6cc8941bdf2f92a18ddc9ac75208e"
+
+[[files]]
+file = "kubejs/assets/forfeit/patchouli_books/mods/en_us/entries/food/let_s_do.json"
+hash = "e381144a4d57d88ee6949625c0e02c40690c88757de857217e53481e6e2999aa"
+
+[[files]]
+file = "kubejs/assets/forfeit/patchouli_books/mods/en_us/entries/food/other_food_farming.json"
+hash = "fa50e4fd5edbb2df39a0de12a79841639cbff3bc37a620361e5e562aecf636b5"
+
+[[files]]
+file = "kubejs/assets/forfeit/patchouli_books/mods/en_us/entries/magic/apotheosis.json"
+hash = "6edbef20b644a511f924c8a1402f995e0c621cd245e02fbf4e41c1b9004df528"
+
+[[files]]
+file = "kubejs/assets/forfeit/patchouli_books/mods/en_us/entries/magic/ars_nouveau_addons.json"
+hash = "51fe6d2811b6554697be71c73d839d7a0936a6c8257c84ee6b2cb21674149f4b"
+
+[[files]]
+file = "kubejs/assets/forfeit/patchouli_books/mods/en_us/entries/magic/iron_s_spells_addons.json"
+hash = "12cb65e200d53b441150ec4e5013b90e84b36937d42b19d7478d71635150770f"
+
+[[files]]
+file = "kubejs/assets/forfeit/patchouli_books/mods/en_us/entries/magic/occultism_addons.json"
+hash = "4597f55190cc2c499a716b226b6f09b08f5ca3961d1e8b3348e16c352c773b27"
+
+[[files]]
+file = "kubejs/assets/forfeit/patchouli_books/mods/en_us/entries/magic/other_magic.json"
+hash = "f06e122ccde8f77fa4c2b6250d10677e7fe95561b53d577f32b8352035be7b78"
+
+[[files]]
+file = "kubejs/assets/forfeit/patchouli_books/mods/en_us/entries/magic/relics.json"
+hash = "5f0537be527f4775007ee83fd14bc5a80c07121cba0aaa26e977fd3bde62911a"
+
+[[files]]
+file = "kubejs/assets/forfeit/patchouli_books/mods/en_us/entries/qol/ftb_quests_teams_vein_mining.json"
+hash = "53bab00ab068eca733ea80409c608c7eae6658276b4a4fa922c44cb4e78a7c91"
+
+[[files]]
+file = "kubejs/assets/forfeit/patchouli_books/mods/en_us/entries/qol/maps_claims.json"
+hash = "256d0c361e96146f6f9a8672a14f5a610669d2c66de67c2516a341c4ffec635f"
+
+[[files]]
+file = "kubejs/assets/forfeit/patchouli_books/mods/en_us/entries/qol/other_quality_of_life.json"
+hash = "4f6fa94e493d1a0b50a9e8fc811aa0a72aa1651245e6296d20d10dcd4651fe0b"
+
+[[files]]
+file = "kubejs/assets/forfeit/patchouli_books/mods/en_us/entries/qol/performance_server.json"
+hash = "5698afed5ed4c6cfafe1040a6e971e3f994513f9f4154fcc01c544a836def235"
+
+[[files]]
+file = "kubejs/assets/forfeit/patchouli_books/mods/en_us/entries/qol/recipes_tooltips.json"
+hash = "dccc87a88532deb75c30ed34f507760a6713281bba31a325740e32f44cf4bb4d"
+
+[[files]]
+file = "kubejs/assets/forfeit/patchouli_books/mods/en_us/entries/qol/storage_backpacks.json"
+hash = "ab070006519de4d92d0f8879c69a958514b0fa1494a4e820bc3a7a09df0e46f4"
+
+[[files]]
+file = "kubejs/assets/forfeit/patchouli_books/mods/en_us/entries/tech/applied_energistics_2_addons.json"
+hash = "9a52f0507e8f967b68cd6af33fc4047f11c3a4826f5669cc35242bbd97177649"
+
+[[files]]
+file = "kubejs/assets/forfeit/patchouli_books/mods/en_us/entries/tech/computers.json"
+hash = "65cf3179f50145b3969defedb1e8347d3d67334c2e9b41b44775970eb4bc93c9"
+
+[[files]]
+file = "kubejs/assets/forfeit/patchouli_books/mods/en_us/entries/tech/immersive_engineering_addons.json"
+hash = "0f9482562c1afe52aaf7dc0a93cb5ee26086f081975ccbd8916c5887d27dfb0a"
+
+[[files]]
+file = "kubejs/assets/forfeit/patchouli_books/mods/en_us/entries/tech/mekanism_addons.json"
+hash = "e8fbd5eef49e92315a4f4fd163863b5ae072a8350a9a8736b03abcbd0984222e"
+
+[[files]]
+file = "kubejs/assets/forfeit/patchouli_books/mods/en_us/entries/tech/other_tech.json"
+hash = "4efd53a13639ee287fe97039b6ac5ce95a264924b32fa3932e1408fbca12845d"
+
+[[files]]
+file = "kubejs/assets/forfeit/patchouli_books/mods/en_us/entries/world/dimensions.json"
+hash = "3eb86dbb9877415c4932ad7d095149f9fb104ffd0ec0fa9c47d9e1d3796ae58b"
+
+[[files]]
+file = "kubejs/assets/forfeit/patchouli_books/mods/en_us/entries/world/moog_s_structures.json"
+hash = "563f5c488cc028e514346d0c54e78ee0d765d1afc3db6757c07bac8efca6516b"
+
+[[files]]
+file = "kubejs/assets/forfeit/patchouli_books/mods/en_us/entries/world/other_world_structures.json"
+hash = "4641c467075a56a7525a67f75eb2bc6865afc51fd224dfe45f9d865d3d880a88"
+
+[[files]]
+file = "kubejs/assets/forfeit/patchouli_books/mods/en_us/entries/world/terrain_biomes.json"
+hash = "258fe87cc426f2106dd8016c0bc3a8f701013e849e34ae4e71f7656c47029c14"
+
+[[files]]
+file = "kubejs/assets/forfeit/patchouli_books/mods/en_us/entries/world/when_dungeons_arise.json"
+hash = "2cd95d3935693164a647f207c6b62b326562f2aa04db21b6e27f95bdd135d176"
+
+[[files]]
+file = "kubejs/assets/forfeit/patchouli_books/mods/en_us/entries/world/yung_s_structures.json"
+hash = "c61523b4677d7fa65f62277d4c00b97fa029b8cc7fedd501990b968f51f4f297"
+
+[[files]]
+file = "kubejs/data/forfeit/patchouli_books/mods/book.json"
+hash = "5745ebd2a99bd7985fb449f00ba60f0b7adae4879625fc53a6b4218543bacc51"
+
+[[files]]
 file = "kubejs/server_scripts/forfeit_balance.js"
 hash = "db6a96f88d0a39e1c6339bdb2ae67002b98eaf11b96fae79ef32647c01b80873"
+
+[[files]]
+file = "kubejs/server_scripts/forfeit_modbook.js"
+hash = "dce6eccae9ae9a1d261541b3a82e76c313ff4f139c034959ff4607341f5e7fad"
 
 [[files]]
 file = "mods/aces-spell-utils.pw.toml"

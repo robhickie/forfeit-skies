@@ -1,0 +1,25 @@
+{
+  "name": "Other Building (9)",
+  "icon": "minecraft:bricks",
+  "category": "forfeit:building",
+  "sortnum": 99,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Amendments$()$(br)Many changes to vanilla blocks$(br2)$(l)Another Furniture$()$(br)Vanilla-styled Minecraft furniture mod.",
+      "title": "Other Building"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Diagonal Fences$()$(br)Fences connecting diagonally? Wait. That's illegal.$(br2)$(l)FramedBlocks$()$(br)Fancy building blocks$(br2)$(l)Handcrafted$()$(br)Make your house a home!"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Immersive Paintings$()$(br)Drag and drop, pixelate and hang up beautiful art. On servers too.$(br2)$(l)Strut Your Stuff (Struts)$()$(br)Minecraft mod library for \"strut\" blocks, that span between two positions…$(br2)$(l)Supplementaries$()$(br)Vanilla+ additions: Jars, signposts, faucets, weather vanes spring…"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Twigs$()$(br)A Minecraft building blocks mod"
+    }
+  ]
+}

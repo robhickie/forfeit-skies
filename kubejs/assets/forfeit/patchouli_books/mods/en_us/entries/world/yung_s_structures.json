@@ -1,0 +1,21 @@
+{
+  "name": "YUNG's Structures (6)",
+  "icon": "minecraft:mossy_cobblestone",
+  "category": "forfeit:world",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l)YUNG's Better Desert Temples$()$(br)A complete redesign of Minecraft's desert temples!$(br2)$(l)YUNG's Better Dungeons$()$(br)A complete redesign of Minecraft's dungeons!",
+      "title": "YUNG's Structures"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)YUNG's Better Mineshafts$()$(br)A long-awaited and much-needed abandoned mineshaft overhaul!$(br2)$(l)YUNG's Better Nether Fortresses$()$(br)A complete redesign of Minecraft's Nether fortresses!$(br2)$(l)YUNG's Better Ocean Monuments$()$(br)A complete redesign of Minecraft's ocean monuments!"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)YUNG's Better Strongholds$()$(br)A complete redesign of Minecraft's strongholds!"
+    }
+  ]
+}
