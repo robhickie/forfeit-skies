@@ -97,11 +97,11 @@ smallIslandWeight = 0.2
 #Specific mode: minimum radius for medium islands.
 # Default: 70
 # Range: 8 ~ 600
-mediumIslandMinRadius = 90
+mediumIslandMinRadius = 70
 #Specific mode: maximum radius for medium islands.
 # Default: 95
 # Range: 8 ~ 600
-mediumIslandMaxRadius = 140
+mediumIslandMaxRadius = 110
 #Specific mode: spawn weight for medium islands.
 # Default: 0.6
 # Range: 0.0 ~ 1.0
@@ -109,11 +109,11 @@ mediumIslandWeight = 0.45
 #Specific mode: minimum radius for large islands.
 # Default: 150
 # Range: 8 ~ 600
-largeIslandMinRadius = 180
+largeIslandMinRadius = 140
 #Specific mode: maximum radius for large islands.
 # Default: 160
 # Range: 8 ~ 600
-largeIslandMaxRadius = 280
+largeIslandMaxRadius = 200
 #Specific mode: spawn weight for large islands.
 # Default: 0.3
 # Range: 0.0 ~ 1.0
@@ -129,7 +129,7 @@ maxIslandY = 380
 #Maximum vertical island thickness in blocks. Prevents giant islands from becoming too tall/deep.
 # Default: 140
 # Range: 24 ~ 1024
-maxIslandThicknessBlocks = 180
+maxIslandThicknessBlocks = 140
 #Relative weight of the uncommon low-island height band.
 # Default: 0.5
 # Range: 0.0 ~ 10.0
@@ -160,15 +160,15 @@ clusterSpacingMode = "DYNAMIC"
 #Dynamic spacing mode: minimum cluster spacing in blocks.
 # Default: 150
 # Range: 32 ~ 2000
-minClusterSpacing = 220
+minClusterSpacing = 180
 #Dynamic spacing mode: maximum cluster spacing in blocks.
 # Default: 250
 # Range: 32 ~ 2000
-maxClusterSpacing = 360
+maxClusterSpacing = 300
 #Multiplier for island top-surface height variation. Higher values create rougher, less flat tops.
 # Default: 1.0
 # Range: 0.0 ~ 40.0
-terrainReliefScale = 6.0
+terrainReliefScale = 3.0
 #Whether the classic island archetype is allowed to spawn.
 classicArchetypeEnabled = true
 #Relative spawn weight for the classic island archetype.
