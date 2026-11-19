@@ -1850,7 +1850,7 @@ metafile = true
 
 [[files]]
 file = "patchouli_books/mods/book.json"
-hash = "656559343ae626bd41b035bbe6465380169c7070c0226656ba2356a0a009f85d"
+hash = "adc156a3c0d7581ce1dce42d37f0ae1f017c5436b3442db2105033f6360b146d"
 
 [[files]]
 file = "patchouli_books/mods/en_us/categories/adventure.json"
@@ -1882,7 +1882,7 @@ hash = "28ff7ddfeeeea5431e2b345ccd718f5e3d8fe52ea5acfa1df90e308a4d6d41cc"
 
 [[files]]
 file = "patchouli_books/mods/en_us/categories/world.json"
-hash = "7b9254d68ab971d65a7ed7d37d1dae591ebfaf4a3dc08a4183f6f505ba5ebe79"
+hash = "c7b9da057c48c10f245c886f15f348bea8dfc312d655ae5c572cdc2af4f9d6c7"
 
 [[files]]
 file = "patchouli_books/mods/en_us/entries/adventure/apotheosis.json"
@@ -1906,11 +1906,11 @@ hash = "14c7f5cd640a9a466ced8ceb267158864501fa84b124a749118c7d5f1fa760aa"
 
 [[files]]
 file = "patchouli_books/mods/en_us/entries/building/block_variants.json"
-hash = "1de2bb3a64d2d89b70a47153170d222d45eb8525d2fa84b953b61dae41326af4"
+hash = "62f88610f7c45e3d2da5b1058d31bcba9a71418a4ae39abd516b65bb74247eb9"
 
 [[files]]
 file = "patchouli_books/mods/en_us/entries/building/macaw_s.json"
-hash = "de58ac6ea07ab2e1ceeac69febb970057736bc7d4651aa7fdc7cddf1f8acce5b"
+hash = "26ebc7f5027eadaf4dc608988747a0dea7e7fd2a1e8f7a03335445c39943783d"
 
 [[files]]
 file = "patchouli_books/mods/en_us/entries/building/more_building.json"
@@ -1942,7 +1942,7 @@ hash = "ffe3fd3d41cfff260348a58d13d5da350d59c441bfdd3e3bbf36e5c89691aeaa"
 
 [[files]]
 file = "patchouli_books/mods/en_us/entries/food/more_food.json"
-hash = "a8888f08577991bb7ad3d0c2605aff9908aa3dda73bea6223a775472be9838a9"
+hash = "d3cc83a26273c196e0a61ab63e2a4e78aa7cea1ca8dacd45c584b51ad40a5649"
 
 [[files]]
 file = "patchouli_books/mods/en_us/entries/magic/apotheosis.json"
@@ -1966,11 +1966,11 @@ hash = "e68a53383e42f8987f1e9802b083461574fb4509c96e9611b52d13bd070d27eb"
 
 [[files]]
 file = "patchouli_books/mods/en_us/entries/qol/compat_patches.json"
-hash = "815c132164e51390b9be9e0ad98c5b201c9d5f5264b22324d8db9397a5bb24aa"
+hash = "dd6f8627537280650f3351a8cc0a13f377c55925b700abfa51a12d2acd6e78ef"
 
 [[files]]
 file = "patchouli_books/mods/en_us/entries/qol/ftb.json"
-hash = "cd027fb4fd2d7994806eed3ebfd295aa8783456bf9b1f9dae5de8fbe7d9ece67"
+hash = "eebfad24c63cc00c386f6d45c223cc7ea3b8e779e5db3a1393143d709b8db873"
 
 [[files]]
 file = "patchouli_books/mods/en_us/entries/qol/maps_claims.json"
@@ -1978,15 +1978,15 @@ hash = "cdce4f10204159169c188f8cd66ad69d0cfad400887d8fe9bd43d9d55299ed04"
 
 [[files]]
 file = "patchouli_books/mods/en_us/entries/qol/more_qol.json"
-hash = "5a06035c9289f80a1833f80e5a36bcbe97ff409be35d38dd72796deec205aaa4"
+hash = "0dad08baa1aa2dc02803d4422b0091414613eab0bddeb04a06a254bf42eb4288"
 
 [[files]]
 file = "patchouli_books/mods/en_us/entries/qol/performance.json"
-hash = "110b72e88cc759d9d360e759fdcd700cdc864a3067ba6ca8f74ba4b64b2cfedd"
+hash = "eb6bbc8bc7f7f5d43ef9571e6b69e9b86d56844b5fc379158901553635774930"
 
 [[files]]
 file = "patchouli_books/mods/en_us/entries/qol/recipes_tooltips.json"
-hash = "34aaeb152e67a0a8770eb35c5d173a96bc8f737bc08116f2f62ca1d0c0277090"
+hash = "200af24cff1804632e66ac9c21921dfdf2745d23f796dc434a423ecdef87b67c"
 
 [[files]]
 file = "patchouli_books/mods/en_us/entries/qol/storage.json"
@@ -2014,7 +2014,7 @@ hash = "7e8413a44f21358947dcec91224f642138772ab7cef88d0733fd43dfc0a8d0ad"
 
 [[files]]
 file = "patchouli_books/mods/en_us/entries/world/dimensions.json"
-hash = "a91a2c96c05123b1f08b4f24a5a53aa7128a6df362fe91cf1c547d227953630e"
+hash = "a58644a51929354de18eeed636bb98a0cf470e14af9e92e8eeff019a812cfd99"
 
 [[files]]
 file = "patchouli_books/mods/en_us/entries/world/dungeons_arise.json"
@@ -2022,7 +2022,7 @@ hash = "eddb8d08ec7a0925a7266198b687f55c8b38f30887ab0d86c531504a4aa71750"
 
 [[files]]
 file = "patchouli_books/mods/en_us/entries/world/islands_biomes.json"
-hash = "aa43a7b945e4f94b3b39625c40c1f205c4f41cbd0773acff88cc927659bacc81"
+hash = "6ae041c855c1d0575d03fd908b2e3bdfbaf22d8ee5624e33d3e202b9ee12c350"
 
 [[files]]
 file = "patchouli_books/mods/en_us/entries/world/moog_s_structures.json"

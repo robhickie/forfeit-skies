@@ -26,7 +26,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(l)Tip$()$(br2)The world is floating islands: an airship is the best way between them. Mind the edge!"
+      "text": "$(l)Tip$()$(br2)Mark your base with a $(l)waystone$() so the whole party can teleport home."
     }
   ]
 }

@@ -10,7 +10,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(l)Tip$()$(br2)The three paths need each other: trade with the Create, magic and tech players."
+      "text": "$(l)Tip$()$(br2)Stuck? The $(l)quest book$() walks you through each mod step by step."
     }
   ]
 }
