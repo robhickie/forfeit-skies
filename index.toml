@@ -675,8 +675,18 @@ hash = "03494a76b42b1b79e4d36a93317b8e884cafdb7e08f6103ce47ecd4e4df57645"
 metafile = true
 
 [[files]]
+file = "mods/familiarslib.pw.toml"
+hash = "f59a5d28c796ad0f4e263d261710632954ca887cba5a892c3487c3480889ff5f"
+metafile = true
+
+[[files]]
 file = "mods/farmers-delight.pw.toml"
 hash = "97347efd9e808841d72fe3599da8a11add8422e97f89ae1c85cdfc0acfa18f96"
+metafile = true
+
+[[files]]
+file = "mods/fdlib.pw.toml"
+hash = "66ebc57b6ea5e09a154e21ee6edd384fbbe3002872026bf8224eede15e458456"
 metafile = true
 
 [[files]]
