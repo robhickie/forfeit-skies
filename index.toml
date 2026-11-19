@@ -21,6 +21,14 @@ file = "config/terrablender.toml"
 hash = "386b0318404124fc17b67fc7e5b19407aa8fbe6d20f414d1d2a417b2f7893ac2"
 
 [[files]]
+file = "kubejs/assets/forfeit/textures/quests/badge.png"
+hash = "52415b656766d03c8988baef7e68df00dd2a7cf674101a8fc45643083e7d3980"
+
+[[files]]
+file = "kubejs/assets/forfeit/textures/quests/logo.png"
+hash = "b7168fc43ae4a9000a78a128d8edec73155d6e4d2a975faccba0344bf4aca496"
+
+[[files]]
 file = "kubejs/server_scripts/forfeit_balance.js"
 hash = "db6a96f88d0a39e1c6339bdb2ae67002b98eaf11b96fae79ef32647c01b80873"
 
@@ -51,6 +59,11 @@ metafile = true
 [[files]]
 file = "mods/aether.pw.toml"
 hash = "cc3f6e6e8f1838d16e47cce9241e32176279673efb1438ff4451ccffa9579b14"
+metafile = true
+
+[[files]]
+file = "mods/akashic-tome.pw.toml"
+hash = "18a5b572a9afdb84b24f5c58c4a53022158f8db746dde95531b780d4713f3fc8"
 metafile = true
 
 [[files]]
@@ -581,6 +594,11 @@ metafile = true
 [[files]]
 file = "mods/discerning-the-eldritch.pw.toml"
 hash = "ea47e4cc4d1c0346e8a21d55011e82cdc4afa9f32dbf7dd9c5315d5cfbdc3dda"
+metafile = true
+
+[[files]]
+file = "mods/distanthorizons.pw.toml"
+hash = "6d37de7b436e094a7834d51b5d9d803653ab445e1041853f32a61599b054c7bf"
 metafile = true
 
 [[files]]
