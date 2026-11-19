@@ -1,0 +1,624 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Forfeit Skies: Mod Picker</title>
+<style>
+:root{--ink:#1d2430;--muted:#5b6575;--sky:#2b6cb0;--line:#dbe2ea;--rec:#2f855a;--warn:#b7791f;--bg:#f5f7fa}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);font-size:14px}
+header{background:linear-gradient(135deg,#1e3a5f,#2b6cb0 60%,#4a90c8);color:#fff;padding:22px 28px}
+header h1{margin:0;font-size:26px}header p{margin:6px 0 0;opacity:.92;max-width:900px;line-height:1.5}
+.bar{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid var(--line);padding:10px 28px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.bar input[type=search]{flex:1;min-width:200px;padding:8px 12px;border:1px solid var(--line);border-radius:8px;font-size:14px}
+button{font:inherit;cursor:pointer;border:1px solid var(--line);background:#fff;border-radius:8px;padding:7px 12px}
+button.primary{background:var(--sky);color:#fff;border-color:var(--sky);font-weight:600}
+.count{font-weight:600;color:var(--sky);min-width:110px}
+main{padding:8px 28px 220px;max-width:1400px;margin:0 auto}
+h2{font-size:18px;margin:26px 0 10px;color:#1e3a5f;display:flex;align-items:center;gap:8px}
+.mini{font-size:12px;padding:3px 8px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:10px}
+.card{display:flex;gap:10px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 12px;cursor:pointer;transition:border-color .1s,box-shadow .1s}
+.card:hover{border-color:#a9bfd8}.card:has(input:checked){border-color:var(--sky);box-shadow:0 0 0 2px #2b6cb033;background:#f4f9ff}
+.card input{margin-top:4px;width:17px;height:17px;flex:none;accent-color:var(--sky)}
+.card img{width:40px;height:40px;border-radius:8px;flex:none;object-fit:cover;background:#eef1f5}
+.body{min-width:0}.t{font-weight:600;display:flex;flex-wrap:wrap;gap:6px;align-items:center}.t a{color:inherit;text-decoration:none}.t a:hover{text-decoration:underline}
+.tag{font-size:11px;font-weight:600;border-radius:999px;padding:1px 8px}.tag.r{background:#e6f4ea;color:var(--rec)}.tag.s{background:#eef1f5;color:var(--muted)}
+.n{color:#333c4a;margin-top:2px;line-height:1.4}.w{color:var(--warn);font-size:12.5px;margin-top:3px;font-weight:600}
+.meta{color:var(--muted);font-size:11.5px;margin-top:4px}
+.hidden{display:none!important}
+.out{position:fixed;left:0;right:0;bottom:0;background:#1e2a3a;color:#fff;padding:12px 28px;z-index:6;box-shadow:0 -4px 14px rgba(0,0,0,.18)}
+.out textarea{width:100%;height:92px;border-radius:8px;border:0;padding:8px 10px;font-family:Consolas,monospace;font-size:12.5px;resize:vertical}
+.out .row{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;gap:10px;flex-wrap:wrap}
+.excl{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin-top:10px}.excl li{margin:4px 0}
+</style></head><body>
+<header><h1>Forfeit Skies: Mod Picker</h1>
+<p>95 extra mods, every one checked to have a <b>Minecraft 1.21.1 NeoForge</b> build on Modrinth (so they auto-download for everyone), and none known to conflict with Create Aeronautics / Sable.
+Tick what you want, then press <b>Copy</b> and paste it to Claude. Anything chosen gets test-loaded on the server before it reaches your friends. Checked 2026-11-19.</p></header>
+<div class="bar"><input type="search" id="q" placeholder="Search mods…" oninput="filter()">
+<button type="button" onclick="pickRec()">Tick all recommended</button><button type="button" onclick="clearAll()">Clear all</button><span class="count" id="count">0 selected</span></div>
+<main><section><h2>Create &amp; Airships <button type="button" class="mini" onclick="selCat(this,true)">select all</button><button type="button" class="mini" onclick="selCat(this,false)">clear</button></h2><div class="grid"><label class="card rec" data-slug="create-aeroworks" data-title="Create: Aeroworks" data-text="create: aeroworks more aeronautics parts: propellers, engines and controls for bigger, better ships. create &amp; airships">
+  <input type="checkbox" value="create-aeroworks">
+  <img src="https://cdn.modrinth.com/data/P26k79kP/2ca24db2d19baa1569bcb7050a6c4b1376c37682_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/create-aeroworks" target="_blank" rel="noopener" onclick="event.stopPropagation()">Create: Aeroworks</a><span class="tag r">Recommended</span></div>
+  <div class="n">More Aeronautics parts: propellers, engines and controls for bigger, better ships.</div>
+  <div class="meta">805k downloads · v1.5.0+mc1.21.1 · updated 2026-08-27</div></div></label>
+<label class="card rec" data-slug="create-power-loader" data-title="Create: Power Loader" data-text="create: power loader chunk loaders powered by create, so farms and ships keep running when nobody is nearby. create &amp; airships">
+  <input type="checkbox" value="create-power-loader">
+  <img src="https://cdn.modrinth.com/data/wPQ6GgFE/2f6c7a922eeb1b1064737e95b3ba1794b0c2c980.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/create-power-loader" target="_blank" rel="noopener" onclick="event.stopPropagation()">Create: Power Loader</a><span class="tag r">Recommended</span></div>
+  <div class="n">Chunk loaders powered by Create, so farms and ships keep running when nobody is nearby.</div>
+  <div class="meta">2.7M downloads · v2.0.5-mc1.21.1 · updated 2026-05-22</div></div></label>
+<label class="card rec" data-slug="create-diesel-generators" data-title="Create: Diesel Generators" data-text="create: diesel generators oil, fuel and diesel engines. gives airships and factories a fuel economy. create &amp; airships">
+  <input type="checkbox" value="create-diesel-generators">
+  <img src="https://cdn.modrinth.com/data/ZM3tt6p1/53719ad7b62929d86b6b02bd8f54d15da0217885_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/create-diesel-generators" target="_blank" rel="noopener" onclick="event.stopPropagation()">Create: Diesel Generators</a><span class="tag r">Recommended</span></div>
+  <div class="n">Oil, fuel and diesel engines. Gives airships and factories a fuel economy.</div>
+  <div class="meta">6.4M downloads · v1.21.1-1.3.15 · updated 2026-07-30</div></div></label>
+<label class="card" data-slug="create_factory_logistics" data-title="Create Factory Logistics" data-text="create factory logistics extends create 6 logistics (packages, stock keeping) for big automated bases. create &amp; airships">
+  <input type="checkbox" value="create_factory_logistics">
+  <img src="https://cdn.modrinth.com/data/QMGO17gm/3d589caa87d966371fc1787b57d1bc5f397b5407_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/create_factory_logistics" target="_blank" rel="noopener" onclick="event.stopPropagation()">Create Factory Logistics</a></div>
+  <div class="n">Extends Create 6 logistics (packages, stock keeping) for big automated bases.</div>
+  <div class="meta">581k downloads · v1.6.1 · updated 2026-10-05</div></div></label>
+<label class="card rec" data-slug="create-bits-n-bobs" data-title="Create: Bits 'n' Bobs" data-text="create: bits 'n' bobs lots of small create extras: lights, chairs, gadgets. works on ships thanks to the compat mod. create &amp; airships">
+  <input type="checkbox" value="create-bits-n-bobs">
+  <img src="https://cdn.modrinth.com/data/T8bvmqVZ/f7f35471f0a411deb04f91158254e8177be332b7_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/create-bits-n-bobs" target="_blank" rel="noopener" onclick="event.stopPropagation()">Create: Bits 'n' Bobs</a><span class="tag r">Recommended</span></div>
+  <div class="n">Lots of small Create extras: lights, chairs, gadgets. Works on ships thanks to the compat mod.</div>
+  <div class="meta">2.2M downloads · v2.3.5 · updated 2026-09-15</div></div></label>
+<label class="card" data-slug="create-new-age" data-title="Create: New Age" data-text="create: new age electricity and nuclear power for create. overlaps a little with crafts &amp; additions. create &amp; airships">
+  <input type="checkbox" value="create-new-age">
+  <img src="https://cdn.modrinth.com/data/FTeXqI9v/1ac4b41d0ddd54fd432fd61edfa70c2d66ccf4ae_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/create-new-age" target="_blank" rel="noopener" onclick="event.stopPropagation()">Create: New Age</a></div>
+  <div class="n">Electricity and nuclear power for Create. Overlaps a little with Crafts &amp; Additions.</div>
+  <div class="meta">5.8M downloads · v1.2.0+mc1.21.1 · updated 2026-06-08</div></div></label>
+<label class="card" data-slug="create-stuff-additions" data-title="Create Stuff 'N Additions" data-text="create stuff 'n additions jetpacks, tools and gadgets made with create. create &amp; airships">
+  <input type="checkbox" value="create-stuff-additions">
+  <img src="https://cdn.modrinth.com/data/aq9qUUQG/5bdb5c6598670bae17d6295757066d43c7364d61_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/create-stuff-additions" target="_blank" rel="noopener" onclick="event.stopPropagation()">Create Stuff 'N Additions</a></div>
+  <div class="n">Jetpacks, tools and gadgets made with Create.</div>
+  <div class="meta">2.8M downloads · v2.1.4.b · updated 2026-08-17</div></div></label>
+<label class="card" data-slug="create-jetpack" data-title="Create Jetpack" data-text="create jetpack a brass jetpack running on air. fun alongside airships. create &amp; airships">
+  <input type="checkbox" value="create-jetpack">
+  <img src="https://cdn.modrinth.com/data/UbFnAd4l/bb045c85270cd6a59ec939530fc77343cae2f526_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/create-jetpack" target="_blank" rel="noopener" onclick="event.stopPropagation()">Create Jetpack</a></div>
+  <div class="n">A brass jetpack running on air. Fun alongside airships.</div>
+  <div class="meta">4.3M downloads · v5.2.1 · updated 2026-07-31</div></div></label>
+<label class="card" data-slug="create-ore-excavation" data-title="Create Ore Excavation" data-text="create ore excavation drills that mine endless ore veins. strong late-game resource source. create &amp; airships">
+  <input type="checkbox" value="create-ore-excavation">
+  <img src="https://cdn.modrinth.com/data/ResbpANg/45cf8d089b09c9bf997d46c353baacf95572db43_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/create-ore-excavation" target="_blank" rel="noopener" onclick="event.stopPropagation()">Create Ore Excavation</a></div>
+  <div class="n">Drills that mine endless ore veins. Strong late-game resource source.</div>
+  <div class="meta">3.7M downloads · v1.21.1-1.6.8 · updated 2025-11-08</div></div></label>
+<label class="card" data-slug="create-encased" data-title="Create Encased" data-text="create encased encased versions of create shafts and pipes in every wood and stone type. tidier builds. create &amp; airships">
+  <input type="checkbox" value="create-encased">
+  <img src="https://cdn.modrinth.com/data/hSSqdyU1/e7229e03d0795915092cdab361ee4406e0b27153_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/create-encased" target="_blank" rel="noopener" onclick="event.stopPropagation()">Create Encased</a></div>
+  <div class="n">Encased versions of Create shafts and pipes in every wood and stone type. Tidier builds.</div>
+  <div class="meta">2.6M downloads · v1.21.1-1.10.1-fix1 · updated 2026-11-17</div></div></label>
+<label class="card rec" data-slug="create-deco" data-title="Create Deco" data-text="create deco metal bricks, catwalks, hull blocks and doors with an industrial look. great for ships. create &amp; airships">
+  <input type="checkbox" value="create-deco">
+  <img src="https://cdn.modrinth.com/data/sMvUb4Rb/b60e1330b10bd1d7b1f2c0b7337a25f73b0eb555_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/create-deco" target="_blank" rel="noopener" onclick="event.stopPropagation()">Create Deco</a><span class="tag r">Recommended</span></div>
+  <div class="n">Metal bricks, catwalks, hull blocks and doors with an industrial look. Great for ships.</div>
+  <div class="meta">8.1M downloads · v2.1.3 · updated 2026-04-18</div></div></label>
+<label class="card" data-slug="create-design-n-decor" data-title="Create: Design n' Decor" data-text="create: design n' decor more industrial and steampunk decoration blocks. create &amp; airships">
+  <input type="checkbox" value="create-design-n-decor">
+  <img src="https://cdn.modrinth.com/data/x49wilh8/c52e15692d7911bd7a74413ca97d4e98ece0cefb_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/create-design-n-decor" target="_blank" rel="noopener" onclick="event.stopPropagation()">Create: Design n' Decor</a></div>
+  <div class="n">More industrial and steampunk decoration blocks.</div>
+  <div class="meta">5.0M downloads · v2.2b · updated 2026-05-28</div></div></label>
+<label class="card" data-slug="create-train-perspective" data-title="Create: Train Perspective" data-text="create: train perspective your camera tilts with trains and contraptions. client-only, cosmetic. create &amp; airships">
+  <input type="checkbox" value="create-train-perspective">
+  <img src="https://cdn.modrinth.com/data/MAuPqvf1/d61ce32c99e33e419704021d30ef138fd3f8f76b_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/create-train-perspective" target="_blank" rel="noopener" onclick="event.stopPropagation()">Create: Train Perspective</a><span class="tag s">Client-only</span></div>
+  <div class="n">Your camera tilts with trains and contraptions. Client-only, cosmetic.</div>
+  <div class="meta">373k downloads · v1.1.1+neoforge-1.21.1 · updated 2026-06-07</div></div></label></div></section>
+<section><h2>Magic <button type="button" class="mini" onclick="selCat(this,true)">select all</button><button type="button" class="mini" onclick="selCat(this,false)">clear</button></h2><div class="grid"><label class="card" data-slug="apotheosis" data-title="Apotheosis" data-text="apotheosis big overhaul of enchanting, loot, gems and bosses. changes how gear works for everyone. magic">
+  <input type="checkbox" value="apotheosis">
+  <img src="https://cdn.modrinth.com/data/rqFWfVlz/28988b67466cf077778c12c7798fbbb0bad97e03_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/apotheosis" target="_blank" rel="noopener" onclick="event.stopPropagation()">Apotheosis</a></div>
+  <div class="n">Big overhaul of enchanting, loot, gems and bosses. Changes how gear works for everyone.</div><div class="w">⚠ Changes enchanting and loot pack-wide</div>
+  <div class="meta">405k downloads · v1.21.1-8.9.0 · updated 2026-09-27</div></div></label>
+<label class="card rec" data-slug="irons-jewelry" data-title="Iron's Gems 'n Jewelry" data-text="iron's gems 'n jewelry rings and amulets with spell bonuses. pairs with iron's spells. magic">
+  <input type="checkbox" value="irons-jewelry">
+  <img src="https://cdn.modrinth.com/data/cTagjDuu/86b433beb057a7fa71946d67369d35b99bbf5d4e_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/irons-jewelry" target="_blank" rel="noopener" onclick="event.stopPropagation()">Iron's Gems 'n Jewelry</a><span class="tag r">Recommended</span></div>
+  <div class="n">Rings and amulets with spell bonuses. Pairs with Iron's Spells.</div>
+  <div class="meta">25k downloads · v1.21.1-2.0.2 · updated 2026-08-17</div></div></label>
+<label class="card rec" data-slug="ars-additions" data-title="Ars Additions" data-text="ars additions quality-of-life extras and new items for ars nouveau. magic">
+  <input type="checkbox" value="ars-additions">
+  <img src="https://cdn.modrinth.com/data/GYK6Gk8R/248e49588dd7e85e9ec8ca66fe4d23d832935af6.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/ars-additions" target="_blank" rel="noopener" onclick="event.stopPropagation()">Ars Additions</a><span class="tag r">Recommended</span></div>
+  <div class="n">Quality-of-life extras and new items for Ars Nouveau.</div>
+  <div class="meta">399k downloads · v21.3.0 · updated 2026-02-18</div></div></label>
+<label class="card" data-slug="ars-ocultas" data-title="Ars Ocultas" data-text="ars ocultas ars nouveau addon with darker, ritual-themed magic. magic">
+  <input type="checkbox" value="ars-ocultas">
+  <img src="https://cdn.modrinth.com/data/Tsw8vbks/dad06230ef967be584ec480ee0bb02b3a41699a4_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/ars-ocultas" target="_blank" rel="noopener" onclick="event.stopPropagation()">Ars Ocultas</a></div>
+  <div class="n">Ars Nouveau addon with darker, ritual-themed magic.</div>
+  <div class="meta">431k downloads · v1.21.1-2.6.2 · updated 2026-10-24</div></div></label>
+<label class="card rec" data-slug="malum" data-title="Malum" data-text="malum spirit magic: harvest souls from mobs and craft powerful gear. magic">
+  <input type="checkbox" value="malum">
+  <img src="https://cdn.modrinth.com/data/jgzwYsAN/ca6c59690727d39fd048b22a9be183f96c5d4d81_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/malum" target="_blank" rel="noopener" onclick="event.stopPropagation()">Malum</a><span class="tag r">Recommended</span></div>
+  <div class="n">Spirit magic: harvest souls from mobs and craft powerful gear.</div>
+  <div class="meta">618k downloads · v1.8.2 · updated 2026-01-12</div></div></label>
+<label class="card" data-slug="forbidden-arcanus" data-title="Forbidden and Arcanus " data-text="forbidden and arcanus  dark magic with rituals, special weapons and enchanting upgrades. magic">
+  <input type="checkbox" value="forbidden-arcanus">
+  <img src="https://cdn.modrinth.com/data/MdlnLS7Q/icon.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/forbidden-arcanus" target="_blank" rel="noopener" onclick="event.stopPropagation()">Forbidden and Arcanus</a></div>
+  <div class="n">Dark magic with rituals, special weapons and enchanting upgrades.</div>
+  <div class="meta">552k downloads · v2.6.1 · updated 2025-08-11</div></div></label>
+<label class="card" data-slug="eidolonrepraised" data-title="Eidolon:Repraised" data-text="eidolon:repraised necromancy and prayer magic with a research book. magic">
+  <input type="checkbox" value="eidolonrepraised">
+  <img src="https://cdn.modrinth.com/data/eWX2m1eM/6d2c24728d5e7e7ae20414f07d83f8de2a678a77.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/eidolonrepraised" target="_blank" rel="noopener" onclick="event.stopPropagation()">Eidolon:Repraised</a></div>
+  <div class="n">Necromancy and prayer magic with a research book.</div>
+  <div class="meta">273k downloads · v0.5.0.7 · updated 2026-10-26</div></div></label>
+<label class="card" data-slug="hexerei" data-title="Hexerei" data-text="hexerei witchcraft: brewing, herbs and cauldrons. relaxed and cosy. magic">
+  <input type="checkbox" value="hexerei">
+  <img src="https://cdn.modrinth.com/data/IQSOHVhI/3d2817f9902ce28a7bd5396eccbcc9061067c8c8_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/hexerei" target="_blank" rel="noopener" onclick="event.stopPropagation()">Hexerei</a></div>
+  <div class="n">Witchcraft: brewing, herbs and cauldrons. Relaxed and cosy.</div>
+  <div class="meta">457k downloads · v0.5.0.3 · updated 2025-04-02</div></div></label>
+<label class="card" data-slug="mahou-tsukai" data-title="Mahou Tsukai" data-text="mahou tsukai japanese-style mana magic based on spell circles. a different feel. magic">
+  <input type="checkbox" value="mahou-tsukai">
+  <img src="https://cdn.modrinth.com/data/7jOxn6qJ/977651191d12b60563e2ab7f8b5a10283a9231b0_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/mahou-tsukai" target="_blank" rel="noopener" onclick="event.stopPropagation()">Mahou Tsukai</a></div>
+  <div class="n">Japanese-style mana magic based on spell circles. A different feel.</div>
+  <div class="meta">453k downloads · v1.36.31 · updated 2026-11-01</div></div></label></div></section>
+<section><h2>Tech &amp; Storage <button type="button" class="mini" onclick="selCat(this,true)">select all</button><button type="button" class="mini" onclick="selCat(this,false)">clear</button></h2><div class="grid"><label class="card rec" data-slug="mega" data-title="MEGA Cells" data-text="mega cells mega cells: much bigger ae2 storage cells. must-have once ae2 grows. tech &amp; storage">
+  <input type="checkbox" value="mega">
+  <img src="https://cdn.modrinth.com/data/jjuIRIVr/03ff568e2e8b5f1a3130d256ff91c50128b12c06.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/mega" target="_blank" rel="noopener" onclick="event.stopPropagation()">MEGA Cells</a><span class="tag r">Recommended</span></div>
+  <div class="n">MEGA Cells: much bigger AE2 storage cells. Must-have once AE2 grows.</div>
+  <div class="meta">2.0M downloads · v4.11.0 · updated 2026-04-19</div></div></label>
+<label class="card rec" data-slug="advancedae" data-title="AdvancedAE" data-text="advancedae advanced ae2 autocrafting: quantum computers and bigger patterns. tech &amp; storage">
+  <input type="checkbox" value="advancedae">
+  <img src="https://cdn.modrinth.com/data/rxYaglEe/ebc7848f3387d43e65c84befff15cb8608f3d070.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/advancedae" target="_blank" rel="noopener" onclick="event.stopPropagation()">AdvancedAE</a><span class="tag r">Recommended</span></div>
+  <div class="n">Advanced AE2 autocrafting: quantum computers and bigger patterns.</div>
+  <div class="meta">664k downloads · v1.6.12-1.21.1 · updated 2026-08-02</div></div></label>
+<label class="card" data-slug="mekanism-additions" data-title="Mekanism Additions" data-text="mekanism additions glow panels, balloons and fun extras for mekanism. tech &amp; storage">
+  <input type="checkbox" value="mekanism-additions">
+  <img src="https://cdn.modrinth.com/data/a6F3uASn/ea185eb1300a64867f89101d4798e71a54ef6bed_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/mekanism-additions" target="_blank" rel="noopener" onclick="event.stopPropagation()">Mekanism Additions</a></div>
+  <div class="n">Glow panels, balloons and fun extras for Mekanism.</div>
+  <div class="meta">1.0M downloads · v10.7.19.85 · updated 2026-04-10</div></div></label>
+<label class="card" data-slug="immersiveengineering" data-title="Immersive Engineering" data-text="immersive engineering big multiblock machines (excavators, arc furnace), wires and a retro industrial style. tech &amp; storage">
+  <input type="checkbox" value="immersiveengineering">
+  <img src="https://cdn.modrinth.com/data/tIm2nV03/icon.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/immersiveengineering" target="_blank" rel="noopener" onclick="event.stopPropagation()">Immersive Engineering</a></div>
+  <div class="n">Big multiblock machines (excavators, arc furnace), wires and a retro industrial style.</div>
+  <div class="meta">3.7M downloads · v12.4.2-194 · updated 2025-07-05</div></div></label>
+<label class="card" data-slug="pneumaticcraft-repressurized" data-title="PneumaticCraft: Repressurized" data-text="pneumaticcraft: repressurized pressure-based tech with drones and logistics. works on ships thanks to the compat mod. tech &amp; storage">
+  <input type="checkbox" value="pneumaticcraft-repressurized">
+  <img src="https://cdn.modrinth.com/data/ncAcdgk7/898bdd5a5051145c2190d029c16f352e0c7b8347.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/pneumaticcraft-repressurized" target="_blank" rel="noopener" onclick="event.stopPropagation()">PneumaticCraft: Repressurized</a></div>
+  <div class="n">Pressure-based tech with drones and logistics. Works on ships thanks to the compat mod.</div>
+  <div class="meta">820k downloads · v8.2.24 · updated 2026-10-29</div></div></label>
+<label class="card" data-slug="industrial-foregoing" data-title="Industrial Foregoing" data-text="industrial foregoing mob, tree and plant automation plus resource generation. tech &amp; storage">
+  <input type="checkbox" value="industrial-foregoing">
+  <img src="https://cdn.modrinth.com/data/lWxpUd04/a49f4b8e396b3ad4537e02e1c5e95c4c5074f96c_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/industrial-foregoing" target="_blank" rel="noopener" onclick="event.stopPropagation()">Industrial Foregoing</a></div>
+  <div class="n">Mob, tree and plant automation plus resource generation.</div>
+  <div class="meta">995k downloads · v1.21-3.6.39 · updated 2026-07-04</div></div></label>
+<label class="card" data-slug="powah" data-title="Powah!" data-text="powah! simple, strong power generation (reactors, solar). easy to learn. tech &amp; storage">
+  <input type="checkbox" value="powah">
+  <img src="https://cdn.modrinth.com/data/KZO4S4DO/2105466943534568c3a1a837df50fd4f5f2e3e14_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/powah" target="_blank" rel="noopener" onclick="event.stopPropagation()">Powah!</a></div>
+  <div class="n">Simple, strong power generation (reactors, solar). Easy to learn.</div>
+  <div class="meta">2.6M downloads · v6.2.10-neoforge · updated 2026-04-29</div></div></label>
+<label class="card" data-slug="integrated-dynamics" data-title="Integrated Dynamics" data-text="integrated dynamics program your base logic with cables and variables. for puzzle lovers. tech &amp; storage">
+  <input type="checkbox" value="integrated-dynamics">
+  <img src="https://cdn.modrinth.com/data/yYzdQHJI/icon.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/integrated-dynamics" target="_blank" rel="noopener" onclick="event.stopPropagation()">Integrated Dynamics</a></div>
+  <div class="n">Program your base logic with cables and variables. For puzzle lovers.</div>
+  <div class="meta">124k downloads · v1.21.1-1.39.1 · updated 2026-11-15</div></div></label>
+<label class="card" data-slug="modular-routers" data-title="Modular Routers" data-text="modular routers small, cheap item routers. good early-game automation. tech &amp; storage">
+  <input type="checkbox" value="modular-routers">
+  <img src="https://cdn.modrinth.com/data/EuTS81Z3/1ae3ead8a00ff37bbf7b2e7915b82fdbc62fd47f_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/modular-routers" target="_blank" rel="noopener" onclick="event.stopPropagation()">Modular Routers</a></div>
+  <div class="n">Small, cheap item routers. Good early-game automation.</div>
+  <div class="meta">300k downloads · v13.2.7 · updated 2026-10-10</div></div></label>
+<label class="card rec" data-slug="pipez" data-title="Pipez" data-text="pipez simple, efficient pipes for items, fluids and power. tech &amp; storage">
+  <input type="checkbox" value="pipez">
+  <img src="https://cdn.modrinth.com/data/iRmWy6ga/be55098fe4886146924fd873e88169c10bf47051.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/pipez" target="_blank" rel="noopener" onclick="event.stopPropagation()">Pipez</a><span class="tag r">Recommended</span></div>
+  <div class="n">Simple, efficient pipes for items, fluids and power.</div>
+  <div class="meta">592k downloads · vneoforge-1.21.1-1.2.31 · updated 2026-07-01</div></div></label>
+<label class="card rec" data-slug="storagedrawers" data-title="Storage Drawers" data-text="storage drawers drawers that hold a lot of one item. pick this or functional storage. tech &amp; storage">
+  <input type="checkbox" value="storagedrawers">
+  <img src="https://cdn.modrinth.com/data/guitPqEi/58b4229c52876eff66c9f98a5d2a1e9b9f648501.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/storagedrawers" target="_blank" rel="noopener" onclick="event.stopPropagation()">Storage Drawers</a><span class="tag r">Recommended</span></div>
+  <div class="n">Drawers that hold a lot of one item. Pick this OR Functional Storage.</div><div class="w">⚠ Pick one: Storage Drawers or Functional Storage</div>
+  <div class="meta">4.4M downloads · v1.21.1-13.11.4 · updated 2025-09-14</div></div></label>
+<label class="card rec" data-slug="functional-storage" data-title="Functional Storage" data-text="functional storage drawers with upgrades and ae2 links. pick this or storage drawers. tech &amp; storage">
+  <input type="checkbox" value="functional-storage">
+  <img src="https://cdn.modrinth.com/data/cO40ZIg3/bc3267a800469a0b867a0100706543bbd02f303a_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/functional-storage" target="_blank" rel="noopener" onclick="event.stopPropagation()">Functional Storage</a><span class="tag r">Recommended</span></div>
+  <div class="n">Drawers with upgrades and AE2 links. Pick this OR Storage Drawers.</div><div class="w">⚠ Pick one: Storage Drawers or Functional Storage</div>
+  <div class="meta">1.2M downloads · v1.21-1.5.7 · updated 2026-06-01</div></div></label></div></section>
+<section><h2>Adventure &amp; Bosses <button type="button" class="mini" onclick="selCat(this,true)">select all</button><button type="button" class="mini" onclick="selCat(this,false)">clear</button></h2><div class="grid"><label class="card rec" data-slug="aether" data-title="The Aether" data-text="the aether the classic sky dimension. fits an airships pack well. adventure &amp; bosses">
+  <input type="checkbox" value="aether">
+  <img src="https://cdn.modrinth.com/data/YhmgMVyu/f76fada67156fdeab0974f5f791f936be524d5d3_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/aether" target="_blank" rel="noopener" onclick="event.stopPropagation()">The Aether</a><span class="tag r">Recommended</span></div>
+  <div class="n">The classic sky dimension. Fits an airships pack well.</div>
+  <div class="meta">10.5M downloads · v1.21.1-1.5.10-neoforge · updated 2025-09-28</div></div></label>
+<label class="card" data-slug="the-bumblezone" data-title="The Bumblezone - NeoForge/Forge" data-text="the bumblezone - neoforge/forge a bee dimension with its own bosses and items. adventure &amp; bosses">
+  <input type="checkbox" value="the-bumblezone">
+  <img src="https://cdn.modrinth.com/data/38tpSycf/df51606c81b979611259890f4a9bb68e4c45aeb9.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/the-bumblezone" target="_blank" rel="noopener" onclick="event.stopPropagation()">The Bumblezone - NeoForge/Forge</a></div>
+  <div class="n">A bee dimension with its own bosses and items.</div>
+  <div class="meta">4.3M downloads · v7.19.2+1.21.1-neoforge · updated 2026-11-19</div></div></label>
+<label class="card rec" data-slug="deeperdarker" data-title="Deeper and Darker" data-text="deeper and darker a dimension beyond the ancient city, with new gear. adventure &amp; bosses">
+  <input type="checkbox" value="deeperdarker">
+  <img src="https://cdn.modrinth.com/data/fnAffV0n/be8023f374038c6bd8a52a0e5b2cbc4eb1a37746_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/deeperdarker" target="_blank" rel="noopener" onclick="event.stopPropagation()">Deeper and Darker</a><span class="tag r">Recommended</span></div>
+  <div class="n">A dimension beyond the Ancient City, with new gear.</div>
+  <div class="meta">16.5M downloads · v1.4.1-neoforge-1.21.1 · updated 2026-06-05</div></div></label>
+<label class="card rec" data-slug="l_enders-cataclysm" data-title="L_Ender's Cataclysm" data-text="l_ender's cataclysm huge boss fights with great loot. iron's spells players will love it. adventure &amp; bosses">
+  <input type="checkbox" value="l_enders-cataclysm">
+  <img src="https://cdn.modrinth.com/data/46KJle7n/4de43b519c4b4ce09c5a3155e908da446dbf455a_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/l_enders-cataclysm" target="_blank" rel="noopener" onclick="event.stopPropagation()">L_Ender's Cataclysm</a><span class="tag r">Recommended</span></div>
+  <div class="n">Huge boss fights with great loot. Iron's Spells players will love it.</div>
+  <div class="meta">19.5M downloads · v3.33 · updated 2026-09-20</div></div></label>
+<label class="card" data-slug="borninchaos" data-title="Born in Chaos" data-text="born in chaos spooky new mobs and bosses that spawn at night. adventure &amp; bosses">
+  <input type="checkbox" value="borninchaos">
+  <img src="https://cdn.modrinth.com/data/1kcHy4de/2681453b4ba4b411834b0941149dd6abbe8cb3ea_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/borninchaos" target="_blank" rel="noopener" onclick="event.stopPropagation()">Born in Chaos</a></div>
+  <div class="n">Spooky new mobs and bosses that spawn at night.</div>
+  <div class="meta">1.9M downloads · v1.7.6 · updated 2026-06-17</div></div></label>
+<label class="card" data-slug="aquamirae" data-title="Aquamirae" data-text="aquamirae frozen-ocean adventure with a ship-based boss and pirate loot. adventure &amp; bosses">
+  <input type="checkbox" value="aquamirae">
+  <img src="https://cdn.modrinth.com/data/k23mNPhZ/e33ffb391c8c05f1ea99b09d00d5369e0ac44ae7_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/aquamirae" target="_blank" rel="noopener" onclick="event.stopPropagation()">Aquamirae</a></div>
+  <div class="n">Frozen-ocean adventure with a ship-based boss and pirate loot.</div>
+  <div class="meta">11.3M downloads · v7.2.13 · updated 2026-10-17</div></div></label>
+<label class="card" data-slug="alexs-mobs-1.21.1" data-title="Alex's Mobs (Unofficial Port)" data-text="alex's mobs (unofficial port) over 80 new animals and creatures. works on ships thanks to the compat mod. adventure &amp; bosses">
+  <input type="checkbox" value="alexs-mobs-1.21.1">
+  <img src="https://cdn.modrinth.com/data/EmNhnNnt/d22c02c846e2a319969bccc119c79e4ca5f81715_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/alexs-mobs-1.21.1" target="_blank" rel="noopener" onclick="event.stopPropagation()">Alex's Mobs (Unofficial Port)</a></div>
+  <div class="n">Over 80 new animals and creatures. Works on ships thanks to the compat mod.</div>
+  <div class="meta">526k downloads · v1.22.17 · updated 2026-01-26</div></div></label>
+<label class="card" data-slug="naturalist" data-title="Naturalist" data-text="naturalist more realistic wildlife: bears, deer, snakes and more. adventure &amp; bosses">
+  <input type="checkbox" value="naturalist">
+  <img src="https://cdn.modrinth.com/data/F8BQNPWX/e52917ba0f5ecc1d827f0d4465a15422e0584bf5_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/naturalist" target="_blank" rel="noopener" onclick="event.stopPropagation()">Naturalist</a></div>
+  <div class="n">More realistic wildlife: bears, deer, snakes and more.</div>
+  <div class="meta">11.8M downloads · v2.0.7+1.21.1-neoforge · updated 2026-10-21</div></div></label>
+<label class="card rec" data-slug="friends-and-foes-forge" data-title="Friends&amp;Foes (Forge/NeoForge)" data-text="friends&amp;foes (forge/neoforge) mobs from mojang's mob votes that never got added (copper golem, glare and more). adventure &amp; bosses">
+  <input type="checkbox" value="friends-and-foes-forge">
+  <img src="https://cdn.modrinth.com/data/BOCJKD49/0d5db692d86ca2f99935ebc01123d4c55a714122_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/friends-and-foes-forge" target="_blank" rel="noopener" onclick="event.stopPropagation()">Friends&amp;Foes (Forge/NeoForge)</a><span class="tag r">Recommended</span></div>
+  <div class="n">Mobs from Mojang's mob votes that never got added (copper golem, glare and more).</div>
+  <div class="meta">5.2M downloads · vneoforge-5.0.5+mc1.21.1 · updated 2026-11-16</div></div></label>
+<label class="card rec" data-slug="artifacts" data-title="Artifacts" data-text="artifacts rare items with special powers, found in chests and mimics. adventure &amp; bosses">
+  <input type="checkbox" value="artifacts">
+  <img src="https://cdn.modrinth.com/data/P0Mu4wcQ/icon.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/artifacts" target="_blank" rel="noopener" onclick="event.stopPropagation()">Artifacts</a><span class="tag r">Recommended</span></div>
+  <div class="n">Rare items with special powers, found in chests and mimics.</div>
+  <div class="meta">14.4M downloads · v13.2.5 · updated 2026-09-02</div></div></label>
+<label class="card rec" data-slug="lootr" data-title="Lootr" data-text="lootr every player gets their own loot from each chest. essential on a shared server. adventure &amp; bosses">
+  <input type="checkbox" value="lootr">
+  <img src="https://cdn.modrinth.com/data/EltpO5cN/3dc915eb1bbcd65654c17eb3870de4aba055d0c6_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/lootr" target="_blank" rel="noopener" onclick="event.stopPropagation()">Lootr</a><span class="tag r">Recommended</span></div>
+  <div class="n">Every player gets their own loot from each chest. Essential on a shared server.</div>
+  <div class="meta">24.4M downloads · v1.21.1-1.11.38.127 · updated 2026-09-25</div></div></label></div></section>
+<section><h2>Structures &amp; Exploration <button type="button" class="mini" onclick="selCat(this,true)">select all</button><button type="button" class="mini" onclick="selCat(this,false)">clear</button></h2><div class="grid"><label class="card rec" data-slug="idas" data-title=" Integrated Dungeons and Structures" data-text=" integrated dungeons and structures integrated dungeons and structures: big hand-built dungeons and towers. fits the terrain. structures &amp; exploration">
+  <input type="checkbox" value="idas">
+  <img src="https://cdn.modrinth.com/data/Z8OZShAU/914c274ee6f427a1792020e467581b8e3ec8d6c8_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/idas" target="_blank" rel="noopener" onclick="event.stopPropagation()">Integrated Dungeons and Structures</a><span class="tag r">Recommended</span></div>
+  <div class="n">Integrated Dungeons and Structures: big hand-built dungeons and towers. Fits the terrain.</div>
+  <div class="meta">1.3M downloads · v1.13.7+1.21.1-neoforge · updated 2026-06-11</div></div></label>
+<label class="card rec" data-slug="moogs-voyager-structures" data-title="MVS - Moog's Voyager Structures" data-text="mvs - moog's voyager structures lots of smaller structures to find while flying around. structures &amp; exploration">
+  <input type="checkbox" value="moogs-voyager-structures">
+  <img src="https://cdn.modrinth.com/data/OQAgZMH1/33277345757fcfdae356bb1b58064de77b065722.gif" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/moogs-voyager-structures" target="_blank" rel="noopener" onclick="event.stopPropagation()">MVS - Moog's Voyager Structures</a><span class="tag r">Recommended</span><span class="tag s">Server-only</span></div>
+  <div class="n">Lots of smaller structures to find while flying around.</div>
+  <div class="meta">9.2M downloads · v5.1.3 · updated 2026-09-25</div></div></label>
+<label class="card" data-slug="repurposed-structures-forge" data-title="Repurposed Structures - Neoforge/Forge" data-text="repurposed structures - neoforge/forge new versions of vanilla structures for every biome. structures &amp; exploration">
+  <input type="checkbox" value="repurposed-structures-forge">
+  <img src="https://cdn.modrinth.com/data/QDNS5oAT/icon.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/repurposed-structures-forge" target="_blank" rel="noopener" onclick="event.stopPropagation()">Repurposed Structures - Neoforge/Forge</a><span class="tag s">Server-only</span></div>
+  <div class="n">New versions of vanilla structures for every biome.</div>
+  <div class="meta">5.5M downloads · v7.5.22+1.21.1-neoforge · updated 2026-08-20</div></div></label>
+<label class="card" data-slug="dungeons-and-taverns" data-title="Dungeons and Taverns" data-text="dungeons and taverns taverns, ruins and new dungeons in vanilla style. structures &amp; exploration">
+  <input type="checkbox" value="dungeons-and-taverns">
+  <img src="https://cdn.modrinth.com/data/tpehi7ww/429ba22d212868940cdd82465df949ac51c9791e_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/dungeons-and-taverns" target="_blank" rel="noopener" onclick="event.stopPropagation()">Dungeons and Taverns</a></div>
+  <div class="n">Taverns, ruins and new dungeons in vanilla style.</div>
+  <div class="meta">22.3M downloads · vv4.4.4+mod · updated 2024-09-29</div></div></label>
+<label class="card" data-slug="explorify" data-title="Explorify" data-text="explorify small vanilla-style landmarks and ruins. structures &amp; exploration">
+  <input type="checkbox" value="explorify">
+  <img src="https://cdn.modrinth.com/data/HSfsxuTo/e036a417f857abd937326db5c131296ad88bad5b_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/explorify" target="_blank" rel="noopener" onclick="event.stopPropagation()">Explorify</a></div>
+  <div class="n">Small vanilla-style landmarks and ruins.</div>
+  <div class="meta">10.1M downloads · vv1.6.6 · updated 2026-11-08</div></div></label>
+<label class="card rec" data-slug="ct-overhaul-village" data-title="ChoiceTheorem's Overhauled Village" data-text="choicetheorem's overhauled village villages redesigned for each biome. server-side only. structures &amp; exploration">
+  <input type="checkbox" value="ct-overhaul-village">
+  <img src="https://cdn.modrinth.com/data/fgmhI8kH/9c616710df27b0bc60281a7ad69a2a6f77ea2d72_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/ct-overhaul-village" target="_blank" rel="noopener" onclick="event.stopPropagation()">ChoiceTheorem's Overhauled Village</a><span class="tag r">Recommended</span><span class="tag s">Server-only</span></div>
+  <div class="n">Villages redesigned for each biome. Server-side only.</div>
+  <div class="meta">11.1M downloads · v3.6.4 · updated 2026-11-04</div></div></label>
+<label class="card rec" data-slug="natures-compass" data-title="Nature's Compass" data-text="nature's compass find any biome. very handy with this many biomes. structures &amp; exploration">
+  <input type="checkbox" value="natures-compass">
+  <img src="https://cdn.modrinth.com/data/fPetb5Kh/95e4110a4cf600843c4ba9d545cc1b60e2c00eaa.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/natures-compass" target="_blank" rel="noopener" onclick="event.stopPropagation()">Nature's Compass</a><span class="tag r">Recommended</span></div>
+  <div class="n">Find any biome. Very handy with this many biomes.</div>
+  <div class="meta">27.8M downloads · v1.21.1-3.4.0-neoforge · updated 2026-04-08</div></div></label>
+<label class="card rec" data-slug="explorers-compass" data-title="Explorer's Compass" data-text="explorer's compass find any structure by name. structures &amp; exploration">
+  <input type="checkbox" value="explorers-compass">
+  <img src="https://cdn.modrinth.com/data/RV1qfVQ8/8f36254e98a4caa95684fcf4dbe72c2264c98cfc.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/explorers-compass" target="_blank" rel="noopener" onclick="event.stopPropagation()">Explorer's Compass</a><span class="tag r">Recommended</span></div>
+  <div class="n">Find any structure by name.</div>
+  <div class="meta">12.7M downloads · v1.21.1-3.4.0-neoforge · updated 2026-04-08</div></div></label>
+<label class="card" data-slug="travelers-titles" data-title="Traveler's Titles" data-text="traveler's titles shows biome and dimension names on screen as you enter them. client-only. structures &amp; exploration">
+  <input type="checkbox" value="travelers-titles">
+  <img src="https://cdn.modrinth.com/data/JtifUr64/e7743f2d78a52a1af0ebe5aacbfa940094c63dff_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/travelers-titles" target="_blank" rel="noopener" onclick="event.stopPropagation()">Traveler's Titles</a><span class="tag s">Client-only</span></div>
+  <div class="n">Shows biome and dimension names on screen as you enter them. Client-only.</div>
+  <div class="meta">9.6M downloads · v1.21.1-NeoForge-5.1.3 · updated 2025-03-11</div></div></label></div></section>
+<section><h2>Building &amp; Decoration <button type="button" class="mini" onclick="selCat(this,true)">select all</button><button type="button" class="mini" onclick="selCat(this,false)">clear</button></h2><div class="grid"><label class="card rec" data-slug="supplementaries" data-title="Supplementaries" data-text="supplementaries huge set of useful decorative blocks: jars, signs, cannons, globes and more. building &amp; decoration">
+  <input type="checkbox" value="supplementaries">
+  <img src="https://cdn.modrinth.com/data/fFEIiSDQ/e9f5f66fa3b67e54acb91258a1428d68311c58bc_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/supplementaries" target="_blank" rel="noopener" onclick="event.stopPropagation()">Supplementaries</a><span class="tag r">Recommended</span></div>
+  <div class="n">Huge set of useful decorative blocks: jars, signs, cannons, globes and more.</div>
+  <div class="meta">29.5M downloads · v1.21.1-4.1.3 · updated 2026-11-18</div></div></label>
+<label class="card" data-slug="amendments" data-title="Amendments" data-text="amendments small vanilla improvements. same author as supplementaries. building &amp; decoration">
+  <input type="checkbox" value="amendments">
+  <img src="https://cdn.modrinth.com/data/6iTJugQR/46e156f1c798bfc3c18bd2a55567af1086674f02_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/amendments" target="_blank" rel="noopener" onclick="event.stopPropagation()">Amendments</a></div>
+  <div class="n">Small vanilla improvements. Same author as Supplementaries.</div>
+  <div class="meta">20.5M downloads · v1.21-2.2.7 · updated 2026-10-31</div></div></label>
+<label class="card rec" data-slug="handcrafted" data-title="Handcrafted" data-text="handcrafted furniture: chairs, tables, beds and shelves. building &amp; decoration">
+  <input type="checkbox" value="handcrafted">
+  <img src="https://cdn.modrinth.com/data/pJmCFF0p/e89faefc522d601db2a5fd70136f37ef7ce18569.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/handcrafted" target="_blank" rel="noopener" onclick="event.stopPropagation()">Handcrafted</a><span class="tag r">Recommended</span></div>
+  <div class="n">Furniture: chairs, tables, beds and shelves.</div>
+  <div class="meta">27.9M downloads · v4.0.3 · updated 2025-03-22</div></div></label>
+<label class="card rec" data-slug="chipped" data-title="Chipped" data-text="chipped hundreds of block variants made at workbenches. pick this or rechiseled. building &amp; decoration">
+  <input type="checkbox" value="chipped">
+  <img src="https://cdn.modrinth.com/data/BAscRYKm/4faa514b4824672a0877d026bcd5a94bc8aad985_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/chipped" target="_blank" rel="noopener" onclick="event.stopPropagation()">Chipped</a><span class="tag r">Recommended</span></div>
+  <div class="n">Hundreds of block variants made at workbenches. Pick this OR Rechiseled.</div><div class="w">⚠ Pick one: Chipped or Rechiseled</div>
+  <div class="meta">24.1M downloads · v4.0.2 · updated 2024-10-15</div></div></label>
+<label class="card rec" data-slug="rechiseled" data-title="Rechiseled" data-text="rechiseled chisel blocks into connected-texture variants. pick this or chipped. building &amp; decoration">
+  <input type="checkbox" value="rechiseled">
+  <img src="https://cdn.modrinth.com/data/B0g2vT6l/b3d1c0f2ed2ec55eed1d6cd59c3ceb8f23b6eba3_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/rechiseled" target="_blank" rel="noopener" onclick="event.stopPropagation()">Rechiseled</a><span class="tag r">Recommended</span></div>
+  <div class="n">Chisel blocks into connected-texture variants. Pick this OR Chipped.</div><div class="w">⚠ Pick one: Chipped or Rechiseled</div>
+  <div class="meta">9.2M downloads · v1.2.6-neoforge-mc1.21 · updated 2026-09-13</div></div></label>
+<label class="card" data-slug="framedblocks" data-title="FramedBlocks" data-text="framedblocks blocks that take the look of any other block. great for detailed ships. building &amp; decoration">
+  <input type="checkbox" value="framedblocks">
+  <img src="https://cdn.modrinth.com/data/wbgfS34j/9e1c5293570d9822e51b99a385e25835f2ee6b1d.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/framedblocks" target="_blank" rel="noopener" onclick="event.stopPropagation()">FramedBlocks</a></div>
+  <div class="n">Blocks that take the look of any other block. Great for detailed ships.</div>
+  <div class="meta">2.3M downloads · v10.6.3 · updated 2026-10-11</div></div></label>
+<label class="card rec" data-slug="macaws-roofs" data-title="Macaw's Roofs" data-text="macaw's roofs roof blocks in every wood and stone type. building &amp; decoration">
+  <input type="checkbox" value="macaws-roofs">
+  <img src="https://cdn.modrinth.com/data/B8jaH3P1/e6652e3ddfe1cc21188c7bf354a4570292791864_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/macaws-roofs" target="_blank" rel="noopener" onclick="event.stopPropagation()">Macaw's Roofs</a><span class="tag r">Recommended</span></div>
+  <div class="n">Roof blocks in every wood and stone type.</div>
+  <div class="meta">8.3M downloads · v2.3.2 · updated 2025-05-04</div></div></label>
+<label class="card" data-slug="macaws-windows" data-title="Macaw's Windows" data-text="macaw's windows window styles and shutters. building &amp; decoration">
+  <input type="checkbox" value="macaws-windows">
+  <img src="https://cdn.modrinth.com/data/C7I0BCni/7eb5e7816f887154e69a4001bee5bcc143242b32_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/macaws-windows" target="_blank" rel="noopener" onclick="event.stopPropagation()">Macaw's Windows</a></div>
+  <div class="n">Window styles and shutters.</div>
+  <div class="meta">11.8M downloads · v2.4.2 · updated 2025-12-10</div></div></label>
+<label class="card" data-slug="macaws-doors" data-title="Macaw's Doors" data-text="macaw's doors many more door styles. building &amp; decoration">
+  <input type="checkbox" value="macaws-doors">
+  <img src="https://cdn.modrinth.com/data/kNxa8z3e/ced8fa00264400cbe06d622b92a6d1106cedc65d_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/macaws-doors" target="_blank" rel="noopener" onclick="event.stopPropagation()">Macaw's Doors</a></div>
+  <div class="n">Many more door styles.</div>
+  <div class="meta">8.5M downloads · v1.1.5 · updated 2026-02-13</div></div></label>
+<label class="card" data-slug="macaws-bridges" data-title="Macaw's Bridges" data-text="macaw's bridges rope and stone bridges. building &amp; decoration">
+  <input type="checkbox" value="macaws-bridges">
+  <img src="https://cdn.modrinth.com/data/GURcjz8O/5cd0895fdcde03f1d970ef910dd9287fb881bdc6_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/macaws-bridges" target="_blank" rel="noopener" onclick="event.stopPropagation()">Macaw's Bridges</a></div>
+  <div class="n">Rope and stone bridges.</div>
+  <div class="meta">9.9M downloads · v3.1.2 · updated 2026-02-15</div></div></label>
+<label class="card" data-slug="macaws-furniture" data-title="Macaw's Furniture" data-text="macaw's furniture tables, chairs and cabinets. building &amp; decoration">
+  <input type="checkbox" value="macaws-furniture">
+  <img src="https://cdn.modrinth.com/data/dtWC90iB/2d2fdc39e9ab4c1cc56c6ce2785b6d60343bb86d_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/macaws-furniture" target="_blank" rel="noopener" onclick="event.stopPropagation()">Macaw's Furniture</a></div>
+  <div class="n">Tables, chairs and cabinets.</div>
+  <div class="meta">7.5M downloads · v3.4.1 · updated 2025-11-24</div></div></label>
+<label class="card" data-slug="macaws-fences-and-walls" data-title="Macaw's Fences and Walls" data-text="macaw's fences and walls more fence and wall variants. building &amp; decoration">
+  <input type="checkbox" value="macaws-fences-and-walls">
+  <img src="https://cdn.modrinth.com/data/GmwLse2I/ebe4d2375e0a402e5587665ba9da5eb50f37422a_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/macaws-fences-and-walls" target="_blank" rel="noopener" onclick="event.stopPropagation()">Macaw's Fences and Walls</a></div>
+  <div class="n">More fence and wall variants.</div>
+  <div class="meta">11.6M downloads · v1.2.1 · updated 2025-12-08</div></div></label>
+<label class="card" data-slug="macaws-lights-and-lamps" data-title="Macaw's Lights and Lamps" data-text="macaw's lights and lamps lamps and lanterns. building &amp; decoration">
+  <input type="checkbox" value="macaws-lights-and-lamps">
+  <img src="https://cdn.modrinth.com/data/w4an97C2/23b3786d03ab6ed8b8df056d1123f20129175b6b_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/macaws-lights-and-lamps" target="_blank" rel="noopener" onclick="event.stopPropagation()">Macaw's Lights and Lamps</a></div>
+  <div class="n">Lamps and lanterns.</div>
+  <div class="meta">4.3M downloads · v1.1.5 · updated 2025-12-07</div></div></label>
+<label class="card" data-slug="macaws-paths-and-pavings" data-title="Macaw's Paths and Pavings" data-text="macaw's paths and pavings paths and paving blocks. building &amp; decoration">
+  <input type="checkbox" value="macaws-paths-and-pavings">
+  <img src="https://cdn.modrinth.com/data/VRLhWB91/4564a530eaf62d3704796e407f700dc1f1fc22f8_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/macaws-paths-and-pavings" target="_blank" rel="noopener" onclick="event.stopPropagation()">Macaw's Paths and Pavings</a></div>
+  <div class="n">Paths and paving blocks.</div>
+  <div class="meta">5.8M downloads · v1.1.1 · updated 2025-09-24</div></div></label>
+<label class="card" data-slug="macaws-trapdoors" data-title="Macaw's Trapdoors" data-text="macaw's trapdoors more trapdoor styles. building &amp; decoration">
+  <input type="checkbox" value="macaws-trapdoors">
+  <img src="https://cdn.modrinth.com/data/n2fvCDlM/e764bf33a0a9d94fd33af84a63d8a47da7c85561_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/macaws-trapdoors" target="_blank" rel="noopener" onclick="event.stopPropagation()">Macaw's Trapdoors</a></div>
+  <div class="n">More trapdoor styles.</div>
+  <div class="meta">5.0M downloads · v1.1.5 · updated 2025-11-24</div></div></label></div></section>
+<section><h2>Food &amp; Farming <button type="button" class="mini" onclick="selCat(this,true)">select all</button><button type="button" class="mini" onclick="selCat(this,false)">clear</button></h2><div class="grid"><label class="card rec" data-slug="serene-seasons" data-title="Serene Seasons" data-text="serene seasons seasons that change crop growth and colours. makes farming matter more. food &amp; farming">
+  <input type="checkbox" value="serene-seasons">
+  <img src="https://cdn.modrinth.com/data/e0bNACJD/f8b292ea53e0a0ea908570defddc48673d16d7d6.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/serene-seasons" target="_blank" rel="noopener" onclick="event.stopPropagation()">Serene Seasons</a><span class="tag r">Recommended</span></div>
+  <div class="n">Seasons that change crop growth and colours. Makes farming matter more.</div><div class="w">⚠ Crops only grow in their seasons</div>
+  <div class="meta">7.8M downloads · v10.1.0.9 · updated 2026-09-05</div></div></label>
+<label class="card rec" data-slug="cooking-for-blockheads" data-title="Cooking for Blockheads" data-text="cooking for blockheads a kitchen that cooks from every chest around it. food &amp; farming">
+  <input type="checkbox" value="cooking-for-blockheads">
+  <img src="https://cdn.modrinth.com/data/vJnhuDde/811d0c55230d84d9e182df1b0bd631ddebecc0ad_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/cooking-for-blockheads" target="_blank" rel="noopener" onclick="event.stopPropagation()">Cooking for Blockheads</a><span class="tag r">Recommended</span></div>
+  <div class="n">A kitchen that cooks from every chest around it.</div>
+  <div class="meta">1.2M downloads · v21.1.25+neoforge-1.21.1 · updated 2026-11-16</div></div></label>
+<label class="card" data-slug="brewin-and-chewin" data-title="Brewin' And Chewin'" data-text="brewin' and chewin' farmer's delight addon: brewing, cheese and more food. food &amp; farming">
+  <input type="checkbox" value="brewin-and-chewin">
+  <img src="https://cdn.modrinth.com/data/hIu9KJTT/f7c591a80046859d3d45c04ecbbc54d264483d5e.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/brewin-and-chewin" target="_blank" rel="noopener" onclick="event.stopPropagation()">Brewin' And Chewin'</a></div>
+  <div class="n">Farmer's Delight addon: brewing, cheese and more food.</div>
+  <div class="meta">3.8M downloads · v4.5.0+1.21.1-neoforge · updated 2026-06-24</div></div></label>
+<label class="card" data-slug="ends-delight" data-title="End's Delight" data-text="end's delight farmer's delight addon with end-themed food. food &amp; farming">
+  <input type="checkbox" value="ends-delight">
+  <img src="https://cdn.modrinth.com/data/yHN0njMr/bc333fa34161b1e4d3c2e185210bb558aa1d480a.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/ends-delight" target="_blank" rel="noopener" onclick="event.stopPropagation()">End's Delight</a></div>
+  <div class="n">Farmer's Delight addon with End-themed food.</div>
+  <div class="meta">9.9M downloads · v2.6.1+neoforge.1.21.1 · updated 2026-06-28</div></div></label>
+<label class="card" data-slug="miners-delight" data-title="Miner's Delight" data-text="miner's delight farmer's delight addon with cave food and mining snacks. food &amp; farming">
+  <input type="checkbox" value="miners-delight">
+  <img src="https://cdn.modrinth.com/data/qMxbM4BQ/0d6f967d3ad184dd296c62a9891e2b2b7d45f61d.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/miners-delight" target="_blank" rel="noopener" onclick="event.stopPropagation()">Miner's Delight</a></div>
+  <div class="n">Farmer's Delight addon with cave food and mining snacks.</div>
+  <div class="meta">3.8M downloads · v1.4.5 · updated 2026-04-29</div></div></label></div></section>
+<section><h2>Multiplayer &amp; Quality of Life <button type="button" class="mini" onclick="selCat(this,true)">select all</button><button type="button" class="mini" onclick="selCat(this,false)">clear</button></h2><div class="grid"><label class="card rec" data-slug="corpse" data-title="Corpse" data-text="corpse when you die your items stay in a corpse you can loot. pick this or gravestone. multiplayer &amp; quality of life">
+  <input type="checkbox" value="corpse">
+  <img src="https://cdn.modrinth.com/data/WrpuIfhw/032925a79197e9e23be2c6a07d994b17e3363912.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/corpse" target="_blank" rel="noopener" onclick="event.stopPropagation()">Corpse</a><span class="tag r">Recommended</span></div>
+  <div class="n">When you die your items stay in a corpse you can loot. Pick this OR GraveStone.</div><div class="w">⚠ Pick one: Corpse or GraveStone</div>
+  <div class="meta">4.8M downloads · vneoforge-1.21.1-1.1.22 · updated 2026-10-22</div></div></label>
+<label class="card rec" data-slug="gravestone-mod" data-title="GraveStone Mod" data-text="gravestone mod a gravestone keeps your items when you die. pick this or corpse. multiplayer &amp; quality of life">
+  <input type="checkbox" value="gravestone-mod">
+  <img src="https://cdn.modrinth.com/data/RYtXKJPr/ee9d4610b3892547c20ac61bcdb2517d1b3a4649_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/gravestone-mod" target="_blank" rel="noopener" onclick="event.stopPropagation()">GraveStone Mod</a><span class="tag r">Recommended</span></div>
+  <div class="n">A gravestone keeps your items when you die. Pick this OR Corpse.</div><div class="w">⚠ Pick one: Corpse or GraveStone</div>
+  <div class="meta">12.7M downloads · vneoforge-1.21.1-1.0.40 · updated 2026-08-17</div></div></label>
+<label class="card rec" data-slug="almostunified" data-title="Almost Unified" data-text="almost unified merges duplicate ores and ingots from different mods into one, which tidies jei and storage. multiplayer &amp; quality of life">
+  <input type="checkbox" value="almostunified">
+  <img src="https://cdn.modrinth.com/data/sdaSaQEz/icon.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/almostunified" target="_blank" rel="noopener" onclick="event.stopPropagation()">Almost Unified</a><span class="tag r">Recommended</span></div>
+  <div class="n">Merges duplicate ores and ingots from different mods into one, which tidies JEI and storage.</div>
+  <div class="meta">3.4M downloads · v1.21.1-1.4.2+neoforge · updated 2026-05-22</div></div></label>
+<label class="card rec" data-slug="carry-on" data-title="Carry On" data-text="carry on pick up chests and animals and carry them. multiplayer &amp; quality of life">
+  <input type="checkbox" value="carry-on">
+  <img src="https://cdn.modrinth.com/data/joEfVgkn/d7750a532cd45c9020bf4d07f304191de6e98c19_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/carry-on" target="_blank" rel="noopener" onclick="event.stopPropagation()">Carry On</a><span class="tag r">Recommended</span></div>
+  <div class="n">Pick up chests and animals and carry them.</div>
+  <div class="meta">28.2M downloads · v2.2.6 · updated 2026-07-26</div></div></label>
+<label class="card rec" data-slug="comforts" data-title="Comforts" data-text="comforts sleeping bags and hammocks for trips without resetting your spawn. multiplayer &amp; quality of life">
+  <input type="checkbox" value="comforts">
+  <img src="https://cdn.modrinth.com/data/SaCpeal4/ed4840f0c9a30e04ad88413bd82cd762dd6ec95d.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/comforts" target="_blank" rel="noopener" onclick="event.stopPropagation()">Comforts</a><span class="tag r">Recommended</span></div>
+  <div class="n">Sleeping bags and hammocks for trips without resetting your spawn.</div>
+  <div class="meta">24.5M downloads · v9.0.5+1.21.1 · updated 2026-01-24</div></div></label>
+<label class="card rec" data-slug="simple-voice-chat" data-title="Simple Voice Chat" data-text="simple voice chat talk to nearby players in game. needs one more port opened on the server and router. multiplayer &amp; quality of life">
+  <input type="checkbox" value="simple-voice-chat">
+  <img src="https://cdn.modrinth.com/data/9eGKb6K1/icon.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/simple-voice-chat" target="_blank" rel="noopener" onclick="event.stopPropagation()">Simple Voice Chat</a><span class="tag r">Recommended</span></div>
+  <div class="n">Talk to nearby players in game. Needs one more port opened on the server and router.</div><div class="w">⚠ Needs UDP port 24454 forwarded</div>
+  <div class="meta">77.3M downloads · vneoforge-1.21.1-2.6.27 · updated 2026-10-28</div></div></label>
+<label class="card rec" data-slug="fallingtree" data-title="FallingTree" data-text="fallingtree chop a whole tree at once. multiplayer &amp; quality of life">
+  <input type="checkbox" value="fallingtree">
+  <img src="https://cdn.modrinth.com/data/Fb4jn8m6/02610e2f41e1a4ea06b36ad5034be2b3d03b8f88_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/fallingtree" target="_blank" rel="noopener" onclick="event.stopPropagation()">FallingTree</a><span class="tag r">Recommended</span></div>
+  <div class="n">Chop a whole tree at once.</div>
+  <div class="meta">13.3M downloads · v1.21.1-1.21.1.11 · updated 2025-08-01</div></div></label>
+<label class="card rec" data-slug="leaves-be-gone" data-title="Leaves Be Gone" data-text="leaves be gone leaves decay quickly after chopping. server-side only. multiplayer &amp; quality of life">
+  <input type="checkbox" value="leaves-be-gone">
+  <img src="https://cdn.modrinth.com/data/AVq17PqV/72915db87281bf57b62cc4ec7dc9ea75865b2f5f_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/leaves-be-gone" target="_blank" rel="noopener" onclick="event.stopPropagation()">Leaves Be Gone</a><span class="tag r">Recommended</span><span class="tag s">Server-only</span></div>
+  <div class="n">Leaves decay quickly after chopping. Server-side only.</div>
+  <div class="meta">13.6M downloads · vv21.1.1-1.21.1-NeoForge · updated 2026-05-04</div></div></label>
+<label class="card" data-slug="torchmaster" data-title="TorchMaster" data-text="torchmaster mega torches that stop mobs spawning around your base. multiplayer &amp; quality of life">
+  <input type="checkbox" value="torchmaster">
+  <img src="https://cdn.modrinth.com/data/Tl8ESrhX/icon.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/torchmaster" target="_blank" rel="noopener" onclick="event.stopPropagation()">TorchMaster</a></div>
+  <div class="n">Mega torches that stop mobs spawning around your base.</div>
+  <div class="meta">3.5M downloads · v21.1.13-release · updated 2026-09-22</div></div></label>
+<label class="card rec" data-slug="trashslot" data-title="TrashSlot" data-text="trashslot a trash slot in your inventory. multiplayer &amp; quality of life">
+  <input type="checkbox" value="trashslot">
+  <img src="https://cdn.modrinth.com/data/vRYk0bv7/f700e747710e4d485c79617fe993cc53887a3da6.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/trashslot" target="_blank" rel="noopener" onclick="event.stopPropagation()">TrashSlot</a><span class="tag r">Recommended</span></div>
+  <div class="n">A trash slot in your inventory.</div>
+  <div class="meta">6.8M downloads · v21.1.11+neoforge-1.21.1 · updated 2026-05-29</div></div></label>
+<label class="card" data-slug="inventory-essentials" data-title="Inventory Essentials" data-text="inventory essentials shift and ctrl shortcuts for moving stacks quickly. multiplayer &amp; quality of life">
+  <input type="checkbox" value="inventory-essentials">
+  <img src="https://cdn.modrinth.com/data/Boon8xwi/12b8c77a7db7ebe5a41caf3e0a185bfce6397e3a_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/inventory-essentials" target="_blank" rel="noopener" onclick="event.stopPropagation()">Inventory Essentials</a></div>
+  <div class="n">Shift and ctrl shortcuts for moving stacks quickly.</div>
+  <div class="meta">2.3M downloads · v21.1.20+neoforge-1.21.1 · updated 2026-10-02</div></div></label>
+<label class="card" data-slug="crafting-tweaks" data-title="Crafting Tweaks" data-text="crafting tweaks rotate, balance and clear buttons on crafting grids. multiplayer &amp; quality of life">
+  <input type="checkbox" value="crafting-tweaks">
+  <img src="https://cdn.modrinth.com/data/DMu0oBKf/32bc48587e2c1b0457698a9f4f9ecf3bbda6b42b_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/crafting-tweaks" target="_blank" rel="noopener" onclick="event.stopPropagation()">Crafting Tweaks</a></div>
+  <div class="n">Rotate, balance and clear buttons on crafting grids.</div>
+  <div class="meta">10.7M downloads · v21.1.11+neoforge-1.21.1 · updated 2026-08-21</div></div></label>
+<label class="card rec" data-slug="enchantment-descriptions" data-title="Enchantment Descriptions" data-text="enchantment descriptions explains what each enchantment does in its tooltip. multiplayer &amp; quality of life">
+  <input type="checkbox" value="enchantment-descriptions">
+  <img src="https://cdn.modrinth.com/data/UVtY3ZAC/1f857baf3d1f78e40343925176c084838c91a891_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/enchantment-descriptions" target="_blank" rel="noopener" onclick="event.stopPropagation()">Enchantment Descriptions</a><span class="tag r">Recommended</span></div>
+  <div class="n">Explains what each enchantment does in its tooltip.</div>
+  <div class="meta">40.4M downloads · v21.1.11 · updated 2026-08-20</div></div></label>
+<label class="card" data-slug="better-advancements" data-title="Better Advancements" data-text="better advancements a much nicer advancements screen. client-only. multiplayer &amp; quality of life">
+  <input type="checkbox" value="better-advancements">
+  <img src="https://cdn.modrinth.com/data/Q2OqKxDG/b1519a191e62135647f66394d526d179ab5b598d.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/better-advancements" target="_blank" rel="noopener" onclick="event.stopPropagation()">Better Advancements</a><span class="tag s">Client-only</span></div>
+  <div class="n">A much nicer advancements screen. Client-only.</div>
+  <div class="meta">27.9M downloads · v0.4.3.21 · updated 2024-10-27</div></div></label>
+<label class="card" data-slug="chat-heads" data-title="Chat Heads" data-text="chat heads player heads next to chat messages. client-only. multiplayer &amp; quality of life">
+  <input type="checkbox" value="chat-heads">
+  <img src="https://cdn.modrinth.com/data/Wb5oqrBJ/icon.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/chat-heads" target="_blank" rel="noopener" onclick="event.stopPropagation()">Chat Heads</a><span class="tag s">Client-only</span></div>
+  <div class="n">Player heads next to chat messages. Client-only.</div>
+  <div class="meta">53.4M downloads · v0.15.7 · updated 2026-08-13</div></div></label></div></section>
+<section><h2>Performance &amp; Server <button type="button" class="mini" onclick="selCat(this,true)">select all</button><button type="button" class="mini" onclick="selCat(this,false)">clear</button></h2><div class="grid"><label class="card rec" data-slug="chunky" data-title="Chunky" data-text="chunky pre-generates the world in quiet hours, so flying into new areas doesn't lag the server. performance &amp; server">
+  <input type="checkbox" value="chunky">
+  <img src="https://cdn.modrinth.com/data/fALzjamp/e1954413665e57b7bae1feef44eda530270c7d47_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/chunky" target="_blank" rel="noopener" onclick="event.stopPropagation()">Chunky</a><span class="tag r">Recommended</span></div>
+  <div class="n">Pre-generates the world in quiet hours, so flying into new areas doesn't lag the server.</div>
+  <div class="meta">20.5M downloads · v1.4.23 · updated 2025-04-04</div></div></label>
+<label class="card rec" data-slug="packet-fixer" data-title="Packet Fixer" data-text="packet fixer fixes &quot;packet too big&quot; disconnects that happen in large packs. performance &amp; server">
+  <input type="checkbox" value="packet-fixer">
+  <img src="https://cdn.modrinth.com/data/c7m1mi73/388af00d61fa57e7e10612bcc099bf6ee0794e5e.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/packet-fixer" target="_blank" rel="noopener" onclick="event.stopPropagation()">Packet Fixer</a><span class="tag r">Recommended</span></div>
+  <div class="n">Fixes &quot;packet too big&quot; disconnects that happen in large packs.</div>
+  <div class="meta">31.7M downloads · v3.3.1 · updated 2025-11-14</div></div></label>
+<label class="card rec" data-slug="clumps" data-title="Clumps" data-text="clumps groups xp orbs together to cut lag. performance &amp; server">
+  <input type="checkbox" value="clumps">
+  <img src="https://cdn.modrinth.com/data/Wnxd13zP/6a965bb7974c3e759a53a1c89c35de4acd4cf86a_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/clumps" target="_blank" rel="noopener" onclick="event.stopPropagation()">Clumps</a><span class="tag r">Recommended</span></div>
+  <div class="n">Groups XP orbs together to cut lag.</div>
+  <div class="meta">43.3M downloads · v19.0.0.1 · updated 2024-08-13</div></div></label>
+<label class="card rec" data-slug="dynamic-fps" data-title="Dynamic FPS" data-text="dynamic fps lowers fps when the game is in the background to save power and heat. client-only. performance &amp; server">
+  <input type="checkbox" value="dynamic-fps">
+  <img src="https://cdn.modrinth.com/data/LQ3K71Q1/5056368d0d87c1a9f3efead0cb48ab39a4ea87bf_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/dynamic-fps" target="_blank" rel="noopener" onclick="event.stopPropagation()">Dynamic FPS</a><span class="tag r">Recommended</span><span class="tag s">Client-only</span></div>
+  <div class="n">Lowers FPS when the game is in the background to save power and heat. Client-only.</div>
+  <div class="meta">72.7M downloads · v3.11.4 · updated 2026-01-29</div></div></label>
+<label class="card" data-slug="ambientsounds" data-title="AmbientSounds" data-text="ambientsounds atmospheric biome sounds. client-only. performance &amp; server">
+  <input type="checkbox" value="ambientsounds">
+  <img src="https://cdn.modrinth.com/data/fM515JnW/9a8eca9c055ec1dd753a7209210fcb22a2d40ff7_96.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/ambientsounds" target="_blank" rel="noopener" onclick="event.stopPropagation()">AmbientSounds</a><span class="tag s">Client-only</span></div>
+  <div class="n">Atmospheric biome sounds. Client-only.</div>
+  <div class="meta">41.6M downloads · v6.3.11 · updated 2026-10-19</div></div></label>
+<label class="card" data-slug="sound-physics-remastered" data-title="Sound Physics Remastered" data-text="sound physics remastered realistic echo and muffling in caves and buildings. client-only. performance &amp; server">
+  <input type="checkbox" value="sound-physics-remastered">
+  <img src="https://cdn.modrinth.com/data/qyVF9oeo/798fbfae58ec95ad51f3e1d522b43227306c326c.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t"><a href="https://modrinth.com/mod/sound-physics-remastered" target="_blank" rel="noopener" onclick="event.stopPropagation()">Sound Physics Remastered</a></div>
+  <div class="n">Realistic echo and muffling in caves and buildings. Client-only.</div>
+  <div class="meta">57.4M downloads · vneoforge-1.21.1-1.5.2 · updated 2026-10-21</div></div></label></div></section>
+<section><h2>Left out on purpose</h2><div class="excl"><ul><li><b>Sodium / Embeddium</b>: Replaces the renderer; open crash reports with the current Sable/Aeronautics.</li><li><b>Iris / Oculus (shaders)</b>: Aeronautics officially has visual issues with Iris.</li><li><b>Lithium / C2ME / Noisium</b>: Rewrite core game and worldgen logic that Sable and Tectonic hook into.</li><li><b>Distant Horizons</b>: Its own render pipeline; untested with physics ships and heavy on the server.</li><li><b>Valkyrien Skies / Eureka</b>: A competing physics engine; conflicts with Sable.</li><li><b>LittleTiles, Farm &amp; Charm</b>: Reported to crash or stop Sable loading.</li><li><b>Twilight Forest, Botania, Blood Magic, Blue Skies, LaserIO, ExtendedAE</b>: No 1.21.1 NeoForge build on Modrinth (CurseForge-only or not updated), so they can't auto-download.</li></ul></div></section></main>
+<div class="out"><div class="row"><b>Copy this to Claude</b><span><button type="button" class="primary" id="copy" onclick="copyOut()">Copy</button></span></div>
+<textarea id="out" readonly placeholder="Tick some mods above…"></textarea></div>
+<script>
+const boxes=[...document.querySelectorAll('.card input')];
+function update(){const sel=boxes.filter(b=>b.checked).map(b=>b.closest('.card'));
+document.getElementById('count').textContent=sel.length+' selected';
+document.getElementById('out').value=sel.length?'Please add these mods to Forfeit Skies (Modrinth slugs, 1.21.1 NeoForge), test them on the server, then push the update:\n'+sel.map(c=>c.dataset.slug).join(' ')+'\n\n('+sel.map(c=>c.dataset.title.trim()).join(', ')+')':'';
+localStorage.setItem('fs-picks',JSON.stringify(sel.map(c=>c.dataset.slug)));}
+boxes.forEach(b=>b.addEventListener('change',update));
+function filter(){const q=document.getElementById('q').value.toLowerCase().trim();document.querySelectorAll('.card').forEach(c=>c.classList.toggle('hidden',!!q&&!c.dataset.text.includes(q)));}
+function pickRec(){document.querySelectorAll('.card.rec input').forEach(b=>b.checked=true);update();}
+function clearAll(){boxes.forEach(b=>b.checked=false);update();}
+function selCat(btn,on){btn.closest('section').querySelectorAll('.card:not(.hidden) input').forEach(b=>b.checked=on);update();}
+function copyOut(){const t=document.getElementById('out');if(!t.value)return;navigator.clipboard?.writeText(t.value).catch(()=>{});t.select();try{document.execCommand('copy')}catch(e){}
+const b=document.getElementById('copy');b.textContent='Copied!';setTimeout(()=>b.textContent='Copy',1500);}
+try{const saved=JSON.parse(localStorage.getItem('fs-picks')||'[]');boxes.forEach(b=>b.checked=saved.includes(b.value));}catch(e){}
+update();
+</script></body></html>
