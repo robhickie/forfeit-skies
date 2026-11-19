@@ -1620,6 +1620,11 @@ hash = "bb5dc8ac909aee1955532a65145f7ebfc3a88289610298e821a974fdda5f1822"
 metafile = true
 
 [[files]]
+file = "mods/sky-archipelago.pw.toml"
+hash = "746605920354c6d4db2bdbed47c34d782f92af265b5956ffb5cdf7a840e4e6cf"
+metafile = true
+
+[[files]]
 file = "mods/sleep-tight.pw.toml"
 hash = "665f5fdf879778405e7b3e6089625d0c484cf1a5642aed6d0577f387a80653c0"
 metafile = true
