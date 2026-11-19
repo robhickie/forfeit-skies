@@ -26,7 +26,7 @@ const TOME_PATCHOULI = [
   ['divinerpg', 'divinerpg:divine'],
   ['l2hostility', 'l2hostility:hostility_guide'],
 ]
-const TOME_FLAG = 'forfeit_got_tome_v1'
+const TOME_FLAG = 'forfeit_got_tome_v2'   // v2: books now carry akashictome:defined_mod so morphing works
 
 // Ask the item registry directly: Item.of() with an unknown id throws an error that escapes try/catch.
 const $Registries = Java.loadClass('net.minecraft.core.registries.BuiltInRegistries')
@@ -37,10 +37,11 @@ function buildTome() {
   const parts = []
   TOME_ITEMS.forEach(id => {
     if (!Platform.isLoaded(id.split(':')[0]) || !itemExists(id)) { console.warn(`Forfeit tome: skipping ${id} (no such item)`); return }
-    parts.push(`{id:"${id}",count:1}`)
+    // akashictome:defined_mod is what the Tome stamps on a book when you craft it in; morphing looks books up by it.
+    parts.push(`{id:"${id}",count:1,components:{"akashictome:defined_mod":"${id.split(':')[0]}"}}`)
   })
   TOME_PATCHOULI.forEach(([mod, book]) => {
-    if (Platform.isLoaded(mod)) parts.push(`{id:"patchouli:guide_book",count:1,components:{"patchouli:book":"${book}"}}`)
+    if (Platform.isLoaded(mod)) parts.push(`{id:"patchouli:guide_book",count:1,components:{"patchouli:book":"${book}","akashictome:defined_mod":"${book.split(':')[0]}"}}`)
   })
   return Item.of(`akashictome:tome[akashictome:tool_content=[${parts.join(',')}]]`)
 }
