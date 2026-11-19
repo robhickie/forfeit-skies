@@ -1,6 +1,10 @@
 hash-format = "sha256"
 
 [[files]]
+file = "config/sparsestructures.json5"
+hash = "75a830a8a005a44bbc21b51066d54558f6dd1fa61960e9fedd173ade24913725"
+
+[[files]]
 file = "config/tectonic.json"
 hash = "d039122e14514ec7cd85a3a56ae68dc09c950e0fd0edeca6c3e0fbc054b92ed1"
 
