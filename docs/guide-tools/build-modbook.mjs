@@ -89,9 +89,11 @@ const PER_PAGE = 3, FIRST_PAGE = 2;   // the first page also shows the entry tit
 
 // Patchouli only reads book.json from mod jars or the game folder's patchouli_books/ (book id becomes patchouli:<folder>).
 // The pages live in kubejs/assets (a resource pack), under the same 'patchouli' namespace.
-const out = { data: join(PACK, 'patchouli_books', BOOK), assets: join(PACK, 'kubejs', 'assets', NS, 'patchouli_books', BOOK) };
-for (const legacy of [join(PACK, 'kubejs', 'data', 'forfeit'), join(PACK, 'kubejs', 'assets', 'forfeit')]) if (existsSync(legacy)) rmSync(legacy, { recursive: true });
-for (const d of Object.values(out)) if (existsSync(d)) rmSync(d, { recursive: true });
+// External Patchouli book: book.json AND its pages live in the game folder's patchouli_books/<id>/ (book id patchouli:<id>),
+// with use_resource_pack: false. (Pages in a resource pack are not picked up for external books.)
+const out = { data: join(PACK, 'patchouli_books', BOOK), assets: join(PACK, 'patchouli_books', BOOK) };
+for (const legacy of [join(PACK, 'kubejs', 'data', 'forfeit'), join(PACK, 'kubejs', 'assets', 'forfeit', 'patchouli_books'), join(PACK, 'kubejs', 'assets', 'patchouli')]) if (existsSync(legacy)) rmSync(legacy, { recursive: true });
+if (existsSync(out.data)) rmSync(out.data, { recursive: true });
 mkdirSync(join(out.assets, 'en_us', 'categories'), { recursive: true });
 mkdirSync(out.data, { recursive: true });
 const write = (p, obj) => { mkdirSync(dirname(p), { recursive: true }); writeFileSync(p, JSON.stringify(obj, null, 2) + '\n'); };
@@ -100,7 +102,7 @@ const real = mods.filter(m => m.group !== 'library');
 write(join(out.data, 'book.json'), {
   name: 'Forfeit Skies: Mod Book',
   landing_text: `Every mod in $(l)Forfeit Skies$(), grouped by type and by family (each mod sits next to its addons).$(br2)${real.length} mods, plus ${mods.length - real.length} background libraries that aren't listed.$(br2)Want a mod's recipes? Press $(l)R$() on any item for JEI.`,
-  version: 1, use_resource_pack: true, show_progress: false, i18n: false,
+  version: 1, use_resource_pack: false, show_progress: false, i18n: false,
   model: 'patchouli:book_purple', book_texture: 'patchouli:textures/gui/book_purple.png',
   creative_tab: 'minecraft:tools_and_utilities',
 });
