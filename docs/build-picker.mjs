@@ -1,10 +1,10 @@
 // Builds docs/mod-picker.html from candidates.json (verified 1.21.1 NeoForge on Modrinth) + notes below.
 import fs from 'node:fs';
-const [candFile, outFile] = process.argv.slice(2);
+const [candFile, outFile, notesFile, pageTitle = 'Mod Picker', storeKey = 'fs-picks'] = process.argv.slice(2);
 const data = Object.fromEntries(JSON.parse(fs.readFileSync(candFile, 'utf8')).map(m => [m.slug, m]));
 
 // [slug, note, flags]  flags: r = recommended, w:<text> = heads-up
-const CATS = [
+let CATS = [
   ['Create & Airships', [
     ['create-aeroworks', 'More Aeronautics parts: propellers, engines and controls for bigger, better ships.', 'r'],
     ['create-power-loader', 'Chunk loaders powered by Create, so farms and ships keep running when nobody is nearby.', 'r'],
@@ -119,7 +119,7 @@ const CATS = [
     ['sound-physics-remastered', 'Realistic echo and muffling in caves and buildings. Client-only.', ''],
   ]],
 ];
-const EXCLUDED = [
+let EXCLUDED = [
   ['Sodium / Embeddium', 'Replaces the renderer; open crash reports with the current Sable/Aeronautics.'],
   ['Iris / Oculus (shaders)', 'Aeronautics officially has visual issues with Iris.'],
   ['Lithium / C2ME / Noisium', 'Rewrite core game and worldgen logic that Sable and Tectonic hook into.'],
@@ -128,6 +128,19 @@ const EXCLUDED = [
   ['LittleTiles, Farm & Charm', 'Reported to crash or stop Sable loading.'],
   ['Twilight Forest, Botania, Blood Magic, Blue Skies, LaserIO, ExtendedAE', 'No 1.21.1 NeoForge build on Modrinth (CurseForge-only or not updated), so they can\'t auto-download.'],
 ];
+
+// Optional: read categories/notes from a text file instead ("## Category" headings, "slug | flags | note" lines, "## EXCLUDED" with "Name | reason").
+if (notesFile) {
+  CATS = []; EXCLUDED = []; let cur = null, excl = false;
+  for (const raw of fs.readFileSync(notesFile, 'utf8').split('\n')) {
+    const line = raw.trim();
+    if (line.startsWith('## ')) { excl = line === '## EXCLUDED'; if (!excl) { cur = [line.slice(3), []]; CATS.push(cur); } continue; }
+    if (!line.includes('|')) continue;
+    const parts = line.split('|').map(s => s.trim());
+    if (excl) { if (!/^Trimmed extras/i.test(parts[0])) EXCLUDED.push([parts[0], parts.slice(1).join(' | ')]); continue; }
+    if (cur) cur[1].push([parts[0], parts.slice(2).join(' | '), parts[1].replace(/,/g, ' ')]);
+  }
+}
 
 const missing = []; let count = 0;
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -150,7 +163,7 @@ const sections = CATS.map(([cat, mods]) => {
 if (missing.length) { console.error('Missing from candidates.json:', missing.join(', ')); process.exit(1); }
 
 const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Forfeit Skies: Mod Picker</title>
+<title>Forfeit Skies: ${pageTitle}</title>
 <style>
 :root{--ink:#1d2430;--muted:#5b6575;--sky:#2b6cb0;--line:#dbe2ea;--rec:#2f855a;--warn:#b7791f;--bg:#f5f7fa}
 *{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);font-size:14px}
@@ -179,7 +192,7 @@ h2{font-size:18px;margin:26px 0 10px;color:#1e3a5f;display:flex;align-items:cent
 .out .row{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;gap:10px;flex-wrap:wrap}
 .excl{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin-top:10px}.excl li{margin:4px 0}
 </style></head><body>
-<header><h1>Forfeit Skies: Mod Picker</h1>
+<header><h1>Forfeit Skies: ${pageTitle}</h1>
 <p>${count} extra mods, every one checked to have a <b>Minecraft 1.21.1 NeoForge</b> build on Modrinth (so they auto-download for everyone), and none known to conflict with Create Aeronautics / Sable.
 Tick what you want, then press <b>Copy</b> and paste it to Claude. Anything chosen gets test-loaded on the server before it reaches your friends. Checked ${new Date().toISOString().slice(0, 10)}.</p></header>
 <div class="bar"><input type="search" id="q" placeholder="Search mods…" oninput="filter()">
@@ -193,7 +206,7 @@ const boxes=[...document.querySelectorAll('.card input')];
 function update(){const sel=boxes.filter(b=>b.checked).map(b=>b.closest('.card'));
 document.getElementById('count').textContent=sel.length+' selected';
 document.getElementById('out').value=sel.length?'Please add these mods to Forfeit Skies (Modrinth slugs, 1.21.1 NeoForge), test them on the server, then push the update:\\n'+sel.map(c=>c.dataset.slug).join(' ')+'\\n\\n('+sel.map(c=>c.dataset.title.trim()).join(', ')+')':'';
-localStorage.setItem('fs-picks',JSON.stringify(sel.map(c=>c.dataset.slug)));}
+localStorage.setItem('${storeKey}',JSON.stringify(sel.map(c=>c.dataset.slug)));}
 boxes.forEach(b=>b.addEventListener('change',update));
 function filter(){const q=document.getElementById('q').value.toLowerCase().trim();document.querySelectorAll('.card').forEach(c=>c.classList.toggle('hidden',!!q&&!c.dataset.text.includes(q)));}
 function pickRec(){document.querySelectorAll('.card.rec input').forEach(b=>b.checked=true);update();}
@@ -201,7 +214,7 @@ function clearAll(){boxes.forEach(b=>b.checked=false);update();}
 function selCat(btn,on){btn.closest('section').querySelectorAll('.card:not(.hidden) input').forEach(b=>b.checked=on);update();}
 function copyOut(){const t=document.getElementById('out');if(!t.value)return;navigator.clipboard?.writeText(t.value).catch(()=>{});t.select();try{document.execCommand('copy')}catch(e){}
 const b=document.getElementById('copy');b.textContent='Copied!';setTimeout(()=>b.textContent='Copy',1500);}
-try{const saved=JSON.parse(localStorage.getItem('fs-picks')||'[]');boxes.forEach(b=>b.checked=saved.includes(b.value));}catch(e){}
+try{const saved=JSON.parse(localStorage.getItem('${storeKey}')||'[]');boxes.forEach(b=>b.checked=saved.includes(b.value));}catch(e){}
 update();
 </script></body></html>`;
 fs.writeFileSync(outFile, html);
