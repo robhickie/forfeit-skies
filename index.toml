@@ -54,6 +54,10 @@ file = "kubejs/assets/forfeit/textures/quests/logo.png"
 hash = "b7168fc43ae4a9000a78a128d8edec73155d6e4d2a975faccba0344bf4aca496"
 
 [[files]]
+file = "kubejs/data/minecraft/dimension/overworld.json"
+hash = "fc16d1e485148039cbae77784929534c9f4a69722f0f3d4cf8dec4881fef9569"
+
+[[files]]
 file = "kubejs/server_scripts/forfeit_balance.js"
 hash = "15156495d47316c909f7ccf140e6b3840004528e0735abc767835c1edd67ee23"
 
