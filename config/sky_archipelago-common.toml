@@ -70,7 +70,7 @@ riverEcologicalBankWidth = 4
 #Chance that a cluster cell becomes an island anchor. Lower values create larger sky gaps.
 # Default: 0.4
 # Range: 0.01 ~ 1.0
-islandDensity = 0.55
+islandDensity = 0.45
 #Minimum horizontal island radius in blocks.
 # Default: 24
 # Range: 8 ~ 600
@@ -85,23 +85,23 @@ islandSizeMode = "SPECIFIC"
 #Specific mode: minimum radius for small islands.
 # Default: 50
 # Range: 8 ~ 600
-smallIslandMinRadius = 16
+smallIslandMinRadius = 30
 #Specific mode: maximum radius for small islands.
 # Default: 60
 # Range: 8 ~ 600
-smallIslandMaxRadius = 35
+smallIslandMaxRadius = 50
 #Specific mode: spawn weight for small islands.
 # Default: 0.1
 # Range: 0.0 ~ 1.0
-smallIslandWeight = 0.4
+smallIslandWeight = 0.2
 #Specific mode: minimum radius for medium islands.
 # Default: 70
 # Range: 8 ~ 600
-mediumIslandMinRadius = 40
+mediumIslandMinRadius = 90
 #Specific mode: maximum radius for medium islands.
 # Default: 95
 # Range: 8 ~ 600
-mediumIslandMaxRadius = 70
+mediumIslandMaxRadius = 140
 #Specific mode: spawn weight for medium islands.
 # Default: 0.6
 # Range: 0.0 ~ 1.0
@@ -109,15 +109,15 @@ mediumIslandWeight = 0.45
 #Specific mode: minimum radius for large islands.
 # Default: 150
 # Range: 8 ~ 600
-largeIslandMinRadius = 90
+largeIslandMinRadius = 180
 #Specific mode: maximum radius for large islands.
 # Default: 160
 # Range: 8 ~ 600
-largeIslandMaxRadius = 130
+largeIslandMaxRadius = 280
 #Specific mode: spawn weight for large islands.
 # Default: 0.3
 # Range: 0.0 ~ 1.0
-largeIslandWeight = 0.15
+largeIslandWeight = 0.35
 #Minimum Y for island centers. Values above 320 require world-height expansion mods/settings.
 # Default: -30
 # Range: -32 ~ 2000
@@ -129,11 +129,11 @@ maxIslandY = 380
 #Maximum vertical island thickness in blocks. Prevents giant islands from becoming too tall/deep.
 # Default: 140
 # Range: 24 ~ 1024
-maxIslandThicknessBlocks = 140
+maxIslandThicknessBlocks = 180
 #Relative weight of the uncommon low-island height band.
 # Default: 0.5
 # Range: 0.0 ~ 10.0
-lowBandWeight = 0.25
+lowBandWeight = 0.3
 #Relative weight of the dominant mid/high island height band.
 # Default: 0.3
 # Range: 0.0 ~ 10.0
@@ -141,7 +141,7 @@ midHighBandWeight = 0.45
 #Relative weight of the rare very-high island height band.
 # Default: 0.2
 # Range: 0.0 ~ 10.0
-veryHighBandWeight = 0.3
+veryHighBandWeight = 0.25
 #Center offset applied to the low-island band within the configured vertical envelope.
 # Default: -18
 # Range: -96 ~ 96
@@ -160,21 +160,21 @@ clusterSpacingMode = "DYNAMIC"
 #Dynamic spacing mode: minimum cluster spacing in blocks.
 # Default: 150
 # Range: 32 ~ 2000
-minClusterSpacing = 90
+minClusterSpacing = 220
 #Dynamic spacing mode: maximum cluster spacing in blocks.
 # Default: 250
 # Range: 32 ~ 2000
-maxClusterSpacing = 140
+maxClusterSpacing = 360
 #Multiplier for island top-surface height variation. Higher values create rougher, less flat tops.
 # Default: 1.0
 # Range: 0.0 ~ 40.0
-terrainReliefScale = 1.3
+terrainReliefScale = 6.0
 #Whether the classic island archetype is allowed to spawn.
 classicArchetypeEnabled = true
 #Relative spawn weight for the classic island archetype.
 # Default: 1.0
 # Range: 0.0 ~ 10.0
-classicArchetypeWeight = 0.5
+classicArchetypeWeight = 1.0
 #Whether the bowl/crater island archetype is allowed to spawn.
 bowlCraterArchetypeEnabled = true
 #Relative spawn weight for the bowl/crater island archetype.
@@ -186,7 +186,7 @@ crescentArchetypeEnabled = true
 #Relative spawn weight for the crescent island archetype.
 # Default: 1.0
 # Range: 0.0 ~ 10.0
-crescentArchetypeWeight = 1.3
+crescentArchetypeWeight = 1.2
 lagoonArchetypeEnabled = true
 # Default: 1.0
 # Range: 0.0 ~ 10.0
@@ -208,7 +208,7 @@ terraceArchetypeEnabled = true
 #Relative spawn weight for the terrace island archetype.
 # Default: 1.0
 # Range: 0.0 ~ 10.0
-terraceArchetypeWeight = 1.3
+terraceArchetypeWeight = 1.5
 #Allow climate-selected beach, snowy beach, stony shore, and tagged beach biomes on ordinary islands. Does not create coastline terrain.
 naturalShoreBiomesEnabled = false
 #Whether to fill an optional ocean layer below the sky islands.
