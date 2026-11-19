@@ -1390,11 +1390,6 @@ hash = "02aa4dcb8fa24cffcd2182c66683c2a476a95abf53002373f953a49737a587e3"
 metafile = true
 
 [[files]]
-file = "mods/mss-moogs-soaring-structures.pw.toml"
-hash = "ec031be91f9ae72994f066978921c8e5185b73497113087b6624eaa712b72737"
-metafile = true
-
-[[files]]
 file = "mods/multiplayerbosses.pw.toml"
 hash = "9916932481402cdfb7a6c4624ba3dfb6b6b65ceb4316b9fd17ef0c4bf4fd5aee"
 metafile = true
