@@ -56,7 +56,7 @@
   },
   "general": {
     // When disabled, the mod lays dormant and does nothing. Game restart required!
-    "mod_enabled": false,
+    "mod_enabled": true,
     // Offsets the y-level snow in cold biomes like Taigas starts at.
     "snow_start_offset": 160
   },
