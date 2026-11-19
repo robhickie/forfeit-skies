@@ -1,5 +1,5 @@
-// Builds mods.html: a searchable, filterable list of every mod in the Forfeit Skies pack.
-// Also refreshes the mod counts in guide.html (the <span data-modcount> / <span data-libcount> markers).
+// Builds the "Every mod in the pack" section of guide.html (between the MODLIST:START / MODLIST:END markers):
+// a searchable, filterable list on screen and a compact grouped list in print. Also refreshes the mod counts.
 //
 //   node build-modlist.mjs                 (default pack: C:\Users\rober\minecraft-pack)
 //   node build-modlist.mjs --pack <dir>    (any packwiz pack folder that has mods\*.pw.toml)
@@ -7,14 +7,13 @@
 //
 // Node 24, no npm packages. Mod info comes from the Modrinth API and is cached in
 // ..\.cache\ (outside the guide folder) so a failed fetch never wipes the list.
-// Icons are downscaled to 64 px with headless Edge and embedded, so mods.html is one self-contained file.
+// Icons are downscaled to 64 px with headless Edge and embedded, so guide.html stays one self-contained file.
 
 import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync, rmSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { spawn } from 'node:child_process';
 import { tmpdir } from 'node:os';
-import { createHash } from 'node:crypto';
 
 const DIR = dirname(fileURLToPath(import.meta.url));
 const arg = (name) => { const i = process.argv.indexOf(name); return i > 0 ? process.argv[i + 1] : undefined; };
@@ -111,6 +110,7 @@ const OVERRIDES = {
   'ftb-quests-forge': 'qol', 'ftb-ultimine-forge': 'qol',
   // Modrinth tags that put these in a misleading group
   'ars-nouveau': 'magic', 'irons-jewelry': 'magic', 'reliquified-irons-spells-n-spellbooks': 'magic', 'discerning-the-eldritch': 'magic',
+  'bossesrise': 'adventure', 'borninchaos': 'adventure', 'aquamirae': 'adventure', 'sable': 'library',
   'mowzies-mobs': 'adventure', 'mowzies-cataclysm': 'adventure', 'simply-swords': 'adventure', 'artifacts': 'adventure', 'grapplemod-skybound': 'adventure',
   'mekanism-additions': 'tech', 'mekanism-tools': 'tech', 'draconic-evolution': 'tech',
   'farmers-delight': 'food', 'chefs-delight': 'food', 'l_enders-cataclysm-delight': 'food', 'oceans-delight': 'food',
@@ -231,126 +231,143 @@ async function downscaleInEdge(list) {
   }
 }
 
-// ---------- 5. write mods.html ----------
+// ---------- 5. build the mod list section and write it into guide.html ----------
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const groupName = Object.fromEntries(GROUPS.map(([k, n]) => [k, n]));
 const counts = Object.fromEntries(GROUPS.map(([k]) => [k, mods.filter(m => m.tags.includes(k)).length]));
 const main = mods.filter(m => m.group !== 'library');
 const libs = mods.length - main.length;
 mods.sort((a, b) => a.title.localeCompare(b.title, 'en', { sensitivity: 'base' }));
+const today = new Date().toISOString().slice(0, 10);
+const sideBadge = (m) => m.side === 'client' ? '<span class="ml-side">client only</span>' : m.side === 'server' ? '<span class="ml-side">server only</span>' : '';
+/** first sentence (or so) of a description, cut at a word boundary */
+function short(text, max = 90) {
+  let t = String(text || '').replace(/\s+/g, ' ').trim();
+  const dot = t.search(/[.!?](\s|$)/);
+  if (dot > 20 && dot < max) t = t.slice(0, dot + 1);
+  if (t.length > max) t = t.slice(0, t.lastIndexOf(' ', max - 1)).replace(/[,;:\-–(]+$/, '') + '…';
+  return t;
+}
 
-const logoPath = join(DIR, 'logo', 'forfeit-skies-wide.svg');
-const logo = existsSync(logoPath) ? 'data:image/svg+xml;base64,' + readFileSync(logoPath).toString('base64') : '';
-// Forfeit colours, taken from forfeit-logo.svg (#000 and #681d9e); same values as guide.html
-const css = `:root { --ink:#000; --purple:#681d9e; --purple-dark:#4a1471; --purple-soft:#f1e8f8; --muted:#5d5866; --line:#e2dde8; }
-* { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-body { font-family: "Segoe UI", system-ui, sans-serif; color: var(--ink); font-size: 10.5pt; line-height: 1.45; }
-header.brand { border-bottom: 6px solid var(--ink); padding-bottom: 10px; position: relative; }
-header.brand::after { content: ""; position: absolute; left: 50%; right: 0; bottom: -6px; height: 6px; background: var(--purple); }
-header.brand .logo { height: 110px; display: block; }
-header.brand .strap { margin-top: 6px; color: var(--muted); }
-header.brand .strap b { color: var(--ink); }
-footer { margin: 16px 0 4px; color: var(--muted); font-size: 8.5pt; text-align: center; }`;
-
+// screen: cards with icons, search and filters
 const card = (m) => {
   const icon = m.info?.icon_url && iconCache[m.info.icon_url];
   const letter = esc((m.title.match(/[A-Za-z0-9]/) || ['?'])[0].toUpperCase());
-  const side = m.side === 'client' ? '<span class="side">client only</span>' : m.side === 'server' ? '<span class="side">server only</span>' : '';
   const hay = esc(`${m.title} ${m.name} ${m.description} ${m.tags.map(t => groupName[t]).join(' ')}`.toLowerCase());
   const title = m.url ? `<a href="${esc(m.url)}" target="_blank" rel="noopener">${esc(m.title)}</a>` : esc(m.title);
-  return `<li class="mod" data-group="${m.group}" data-tags="${m.tags.join(' ')}" data-hay="${hay}">
-  ${icon ? `<img src="${icon}" alt="" width="40" height="40" loading="lazy">` : `<span class="ph">${letter}</span>`}
-  <div><h3>${title}${side}</h3><p>${esc(m.description) || '<i>No description (CurseForge-only mod).</i>'}</p>
-  <span class="tag t-${m.group}">${esc(groupName[m.group])}</span></div></li>`;
+  return `<li class="ml-mod" data-group="${m.group}" data-tags="${m.tags.join(' ')}" data-hay="${hay}">` +
+    (icon ? `<img src="${icon}" alt="" width="40" height="40" loading="lazy">` : `<span class="ml-ph">${letter}</span>`) +
+    `<div><h3>${title}${sideBadge(m)}</h3><p>${esc(m.description) || '<i>No description (CurseForge-only mod).</i>'}</p>` +
+    `<span class="ml-tag t-${m.group}">${esc(groupName[m.group])}</span></div></li>`;
 };
+// print: compact list grouped by main category, libraries left out
+const printGroups = GROUPS.filter(([k]) => k !== 'library').map(([k, n, e]) => {
+  const list = mods.filter(m => m.group === k);
+  if (!list.length) return '';
+  return `<h3 class="ml-ph3">${e} ${esc(n)} <small>${list.length}</small></h3>\n<ul class="ml-cols">\n` +
+    list.map(m => `<li><b>${esc(m.title)}</b>${m.side !== 'both' ? ` <i>(${m.side} only)</i>` : ''}${m.description ? ` · ${esc(short(m.description))}` : ''}</li>`).join('\n') + '\n</ul>';
+}).join('\n');
 
-const html = `<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Forfeit Skies: mod list</title>
-<!-- Generated by build-modlist.mjs on ${new Date().toISOString().slice(0, 10)}. Do not edit by hand: rerun the script. -->
+const section = `
+<section id="mods" class="modlist">
+<h2><span class="n">★</span>Every mod in the pack</h2>
+<p class="ml-intro"><b><span data-modcount>${main.length}</span> mods</b>, plus <span data-libcount>${libs}</span> libraries that work in the background.
+<span class="ml-screen-only">Search by name or pick a category. Libraries are hidden until you pick 📚 Libraries or search for one by name.</span>
+<span class="ml-print-only">Libraries are left out of this printed list. Open the guide in a browser to search everything, libraries included.</span></p>
 <style>
-${css}
-body { max-width: 1100px; margin: 0 auto; padding: 18px; }
-.bar { position: sticky; top: 0; background: #fff; padding: 10px 0 8px; z-index: 2; border-bottom: 1px solid var(--line); }
-#q { width: 100%; font: inherit; font-size: 12pt; padding: 9px 12px; border: 2px solid var(--ink); border-radius: 8px; }
-#q:focus { outline: none; border-color: var(--purple); box-shadow: 0 0 0 3px var(--purple-soft); }
-.filters { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
-.filters button { font: inherit; font-size: 9.8pt; font-weight: 600; border: 2px solid var(--ink); background: #fff; color: var(--ink); border-radius: 999px; padding: 4px 11px; cursor: pointer; }
-.filters button[aria-pressed="true"] { background: var(--purple); border-color: var(--purple); color: #fff; }
-.filters button small { opacity: .7; font-weight: 400; }
-.status { color: var(--muted); font-size: 9.5pt; margin-top: 6px; }
-ul.mods { list-style: none; padding: 0; margin: 12px 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 8px; }
-.mod { display: flex; gap: 10px; border: 1px solid var(--line); border-left: 4px solid var(--purple); border-radius: 8px; padding: 9px 11px; break-inside: avoid; }
-.mod[data-group="library"] { border-left-color: #9aa1ab; }
-.mod img, .mod .ph { width: 40px; height: 40px; border-radius: 6px; flex: none; }
-.mod .ph { background: var(--ink); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 16pt; }
-.mod h3 { margin: 0; font-size: 10.6pt; }
-.mod h3 a { color: var(--ink); text-decoration: none; }
-.mod h3 a:hover { color: var(--purple); text-decoration: underline; }
-.mod p { margin: 2px 0 4px; font-size: 9.4pt; color: #353b45; }
-.side { font-size: 7.8pt; font-weight: 600; background: var(--ink); color: #fff; border-radius: 4px; padding: 1px 5px; margin-left: 6px; vertical-align: 1px; }
-.tag { font-size: 8pt; font-weight: 600; color: var(--purple-dark); background: var(--purple-soft); border-radius: 4px; padding: 1px 6px; }
-.tag.t-library { color: #4b5260; background: #eceef1; }
-.hidden { display: none !important; }
-@media print { .bar { position: static; } #q, .filters, .status { display: none; } ul.mods { grid-template-columns: 1fr 1fr; } .mod.hidden { display: flex !important; } }
+  .ml-bar { position: sticky; top: 0; background: #fff; padding: 8px 0; z-index: 2; border-bottom: 1px solid var(--line); }
+  #ml-q { width: 100%; font: inherit; font-size: 12pt; padding: 9px 12px; border: 2px solid var(--ink); border-radius: 8px; }
+  #ml-q:focus { outline: none; border-color: var(--purple); box-shadow: 0 0 0 3px var(--purple-soft); }
+  .ml-filters { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  .ml-filters button { font: inherit; font-size: 9.6pt; font-weight: 600; border: 2px solid var(--ink); background: #fff; color: var(--ink); border-radius: 999px; padding: 3px 10px; cursor: pointer; }
+  .ml-filters button[aria-pressed="true"] { background: var(--purple); border-color: var(--purple); color: #fff; }
+  .ml-filters button small { opacity: .7; font-weight: 400; }
+  .ml-status { color: var(--muted); font-size: 9.3pt; margin-top: 6px; }
+  ul.ml-cards { list-style: none; padding: 0; margin: 10px 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 8px; }
+  .ml-mod { display: flex; gap: 10px; border: 1px solid var(--line); border-left: 4px solid var(--purple); border-radius: 8px; padding: 8px 10px; }
+  .ml-mod[data-group="library"] { border-left-color: #9aa1ab; }
+  .ml-mod img, .ml-mod .ml-ph { width: 40px; height: 40px; border-radius: 6px; flex: none; }
+  .ml-mod .ml-ph { background: var(--ink); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 16pt; }
+  .ml-mod h3 { margin: 0; font-size: 10.4pt; }
+  .ml-mod h3 a { color: var(--ink); text-decoration: none; }
+  .ml-mod h3 a:hover { color: var(--purple); text-decoration: underline; }
+  .ml-mod p { margin: 2px 0 4px; font-size: 9.2pt; color: #353b45; }
+  .ml-side { font-size: 7.6pt; font-weight: 600; background: var(--ink); color: #fff; border-radius: 4px; padding: 1px 5px; margin-left: 6px; vertical-align: 1px; }
+  .ml-tag { font-size: 7.8pt; font-weight: 600; color: var(--purple-dark); background: var(--purple-soft); border-radius: 4px; padding: 1px 6px; }
+  .ml-tag.t-library { color: #4b5260; background: #eceef1; }
+  .ml-hidden { display: none !important; }
+  .ml-print, .ml-print-only { display: none; }
+  @media print {
+    .modlist { break-before: page; }
+    .ml-screen, .ml-screen-only { display: none !important; }
+    .ml-print { display: block; }
+    .ml-print-only { display: inline; }
+    .ml-intro { font-size: 9.4pt; margin: 2px 0 4px; }
+    h3.ml-ph3 { font-size: 10pt; font-weight: 800; margin: 7px 0 3px; padding: 2px 8px; background: var(--ink); color: #fff; border-left: 5px solid var(--purple); border-radius: 3px; break-after: avoid; }
+    h3.ml-ph3 small { font-weight: 400; opacity: .75; }
+    ul.ml-cols { columns: 3; column-gap: 12px; list-style: none; padding: 0; margin: 0; font-size: 7.3pt; line-height: 1.25; }
+    ul.ml-cols li { break-inside: avoid; margin: 0 0 2px; color: #3a3540; }
+    ul.ml-cols li b { color: var(--ink); }
+  }
 </style>
-</head>
-<body>
-<header class="brand">
-  ${logo ? `<img class="logo" src="${logo}" alt="Forfeit Skies">` : '<h1>Forfeit Skies</h1>'}
-  <div class="strap"><b>Mod list</b> · ${main.length} mods, plus ${libs} libraries that make them work · Minecraft 1.21.1 · NeoForge</div>
-</header>
-<div class="bar">
-  <input id="q" type="search" placeholder="Search mods: try 'airship', 'spells', 'backpack'…" autocomplete="off">
-  <div class="filters" role="group" aria-label="Filter by category">
+<div class="ml-screen">
+<div class="ml-bar">
+  <input id="ml-q" type="search" placeholder="Search mods: try 'airship', 'spells', 'backpack'…" autocomplete="off" aria-label="Search mods">
+  <div class="ml-filters" role="group" aria-label="Filter by category">
     <button type="button" data-f="all" aria-pressed="true">All mods <small>${main.length}</small></button>
 ${GROUPS.map(([k, n, e]) => `    <button type="button" data-f="${k}" aria-pressed="false">${e} ${esc(n)} <small>${counts[k]}</small></button>`).join('\n')}
   </div>
-  <div class="status" id="status"></div>
+  <div class="ml-status" id="ml-status"></div>
 </div>
-<ul class="mods" id="list">
+<ul class="ml-cards">
 ${mods.map(card).join('\n')}
 </ul>
-<footer>Forfeit Skies · ${mods.length} mod files · list generated ${new Date().toISOString().slice(0, 10)} · mod info from Modrinth</footer>
+</div>
+<div class="ml-print">
+${printGroups}
+</div>
+<p class="ml-intro" style="color:var(--muted);font-size:8.5pt">List generated ${today} from ${mods.length} mod files · mod info from Modrinth</p>
 <script>
-const q = document.getElementById('q'), status = document.getElementById('status');
-const items = [...document.querySelectorAll('.mod')], buttons = [...document.querySelectorAll('.filters button')];
-let filter = 'all';
-function apply() {
-  const words = q.value.toLowerCase().trim().split(/\\s+/).filter(Boolean);
-  let shown = 0;
-  for (const li of items) {
-    const tags = li.dataset.tags.split(' ');
-    // libraries stay hidden unless you pick the Libraries filter, or search for something by name
-    const inFilter = filter === 'all' ? (li.dataset.group !== 'library' || words.length > 0) : tags.includes(filter);
-    const ok = inFilter && words.every(w => li.dataset.hay.includes(w));
-    li.classList.toggle('hidden', !ok);
-    if (ok) shown++;
+(() => {
+  const q = document.getElementById('ml-q'), status = document.getElementById('ml-status');
+  const items = [...document.querySelectorAll('.ml-mod')], buttons = [...document.querySelectorAll('.ml-filters button')];
+  let filter = 'all';
+  function apply() {
+    const words = q.value.toLowerCase().trim().split(/\\s+/).filter(Boolean);
+    let shown = 0;
+    for (const li of items) {
+      // libraries stay hidden unless you pick the Libraries filter, or search for something by name
+      const inFilter = filter === 'all' ? (li.dataset.group !== 'library' || words.length > 0) : li.dataset.tags.split(' ').includes(filter);
+      const ok = inFilter && words.every(w => li.dataset.hay.includes(w));
+      li.classList.toggle('ml-hidden', !ok);
+      if (ok) shown++;
+    }
+    status.textContent = shown + (shown === 1 ? ' mod' : ' mods') + ' shown' + (filter === 'all' && !words.length ? ' (libraries hidden: pick 📚 Libraries to see them)' : '');
   }
-  status.textContent = shown + (shown === 1 ? ' mod' : ' mods') + ' shown' + (filter === 'all' && !words.length ? ' (libraries hidden: pick 📚 Libraries to see them)' : '');
-}
-for (const b of buttons) b.addEventListener('click', () => {
-  filter = b.dataset.f;
-  for (const x of buttons) x.setAttribute('aria-pressed', String(x === b));
+  for (const b of buttons) b.addEventListener('click', () => {
+    filter = b.dataset.f;
+    for (const x of buttons) x.setAttribute('aria-pressed', String(x === b));
+    apply();
+  });
+  q.addEventListener('input', apply);
   apply();
-});
-q.addEventListener('input', apply);
-apply();
+})();
 </script>
-</body>
-</html>
+</section>
 `;
-writeFileSync(join(DIR, 'mods.html'), html);
-console.log(`mods.html: ${main.length} mods + ${libs} libraries (${(Buffer.byteLength(html) / 1024).toFixed(0)} KB)`);
-console.log('Groups: ' + GROUPS.map(([k, n]) => `${n} ${mods.filter(m => m.group === k).length}`).join(', '));
 
-// ---------- 6. refresh the counts in guide.html ----------
 const guidePath = join(DIR, 'guide.html');
-if (existsSync(guidePath)) {
-  const g = readFileSync(guidePath, 'utf8');
-  const g2 = g.replace(/(<span data-modcount>)[^<]*(<\/span>)/g, `$1${main.length}$2`).replace(/(<span data-libcount>)[^<]*(<\/span>)/g, `$1${libs}$2`);
-  if (g2 !== g) { writeFileSync(guidePath, g2); console.log('guide.html mod counts updated'); }
+const guide = readFileSync(guidePath, 'utf8');
+const START = /<!-- MODLIST:START[^>]*-->/, END = '<!-- MODLIST:END -->';
+if (!START.test(guide) || !guide.includes(END)) {
+  console.error('guide.html is missing the <!-- MODLIST:START --> ... <!-- MODLIST:END --> markers; nothing written.');
+  process.exit(1);
 }
+let out = guide.replace(/(<!-- MODLIST:START[^>]*-->)[\s\S]*?(<!-- MODLIST:END -->)/, (_, a, b) => a + section + b);
+// mod counts elsewhere in the guide (header chip etc.)
+out = out.replace(/(<span data-modcount>)[^<]*(<\/span>)/g, `$1${main.length}$2`).replace(/(<span data-libcount>)[^<]*(<\/span>)/g, `$1${libs}$2`);
+writeFileSync(guidePath, out);
+// mods.html is no longer produced: the list lives in guide.html
+if (existsSync(join(DIR, 'mods.html'))) { rmSync(join(DIR, 'mods.html')); console.log('removed old mods.html'); }
+console.log(`guide.html: mod list section updated, ${main.length} mods + ${libs} libraries (${(Buffer.byteLength(out) / 1024).toFixed(0)} KB)`);
+console.log('Groups: ' + GROUPS.map(([k, n]) => `${n} ${mods.filter(m => m.group === k).length}`).join(', '));

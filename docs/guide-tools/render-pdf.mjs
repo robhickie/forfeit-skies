@@ -21,11 +21,8 @@ const EDGE = 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe'
 
 let html = readFileSync(join(DIR, 'guide.html'), 'utf8');
 if (!html.includes('{{SERVER_ADDRESS}}')) throw new Error('guide.html has no {{SERVER_ADDRESS}} placeholder');
-html = html.replaceAll('{{SERVER_ADDRESS}}', ADDRESS)
-  // in the PDF, name mods.html as plain text: a link would point at a file path on this PC
-  .replace(/<a href="mods\.html">([\s\S]*?)<\/a>/g, '$1')
-  // relative paths (logo/, mods.html) keep pointing at the guide folder from the temp copy
-  .replace('<head>', `<head>\n<base href="${pathToFileURL(DIR + '\\').href}">`);
+// guide.html is self-contained (logo and icons inlined), so the temp copy needs no base URL
+html = html.replaceAll('{{SERVER_ADDRESS}}', ADDRESS);
 const tmp = join(tmpdir(), `forfeit-guide-${process.pid}.html`);
 writeFileSync(tmp, html);
 try {

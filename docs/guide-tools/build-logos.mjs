@@ -4,7 +4,7 @@
 //
 //   node build-logos.mjs          -> writes the SVGs and exports PNGs with headless Edge
 //
-import { readFileSync, writeFileSync, mkdirSync, rmSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, rmSync, existsSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
 import { join, dirname } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
@@ -175,3 +175,15 @@ if (!process.argv.includes('--no-png')) {
   png('forfeit-skies-wide.svg', 'forfeit-skies-wide.png', Math.round(WIDE_W * 4), WIDE_H * 4);
 }
 console.log('logos written to', OUT);
+
+// --- inline the wide logo into guide.html (between the LOGO markers) so the guide works as a single downloaded file
+const guidePath = join(DIR, 'guide.html');
+if (existsSync(guidePath)) {
+  const g = readFileSync(guidePath, 'utf8');
+  const inline = files['forfeit-skies-wide.svg'].trim()
+    .replace(/ width="\d+" height="\d+"/, ` class="logo" role="img" aria-label="Forfeit Skies" style="height:96px;width:${(96 * WIDE_W / WIDE_H).toFixed(1)}px"`)
+    .replace(/\n\s*/g, ' ');
+  const g2 = g.replace(/(<!-- LOGO:START[^>]*-->)[\s\S]*?(<!-- LOGO:END -->)/, (_, a, b) => a + inline + b);
+  if (g2 === g && !g.includes(inline)) console.warn('guide.html has no <!-- LOGO:START --> ... <!-- LOGO:END --> markers; logo not inlined');
+  else if (g2 !== g) { writeFileSync(guidePath, g2); console.log('wide logo inlined into guide.html'); }
+}
