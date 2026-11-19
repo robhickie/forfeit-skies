@@ -620,6 +620,11 @@ hash = "a94fc065cf1183dfc804a1592aa02a035a5ac7177f6e1c34f555b5c369b8d469"
 metafile = true
 
 [[files]]
+file = "mods/enchanted-witchcraft.pw.toml"
+hash = "4a082b19098f0cfac6bf8b65fa154e1e06ecb5cd7b6636942e2d373d72f00253"
+metafile = true
+
+[[files]]
 file = "mods/enchantment-descriptions.pw.toml"
 hash = "88b9e727611f06350c407aeb4ccb41207b5058fef127abe0ff24c13505618aaf"
 metafile = true
@@ -761,7 +766,7 @@ metafile = true
 
 [[files]]
 file = "mods/geckolib.pw.toml"
-hash = "35779b39ddc06059ec483b33de2ecfdc3adb95c0a49e69b6701fb0024827e2f5"
+hash = "4cf7eb494f48576e28895ee5f362878f95c6bad65372666106140fdae82d0c4c"
 metafile = true
 
 [[files]]
@@ -1110,6 +1115,11 @@ hash = "895b41750406b96342b8f3e875a4764e96f4450461e663ecf8d7fe7c7f519867"
 metafile = true
 
 [[files]]
+file = "mods/modopedia.pw.toml"
+hash = "547f54d0587d4f4201073b2bc498831a6e22b67630699e01d9e1f0afbe36b7d8"
+metafile = true
+
+[[files]]
 file = "mods/modular-routers.pw.toml"
 hash = "2d0e07346e9d59b3839eb3564d5d6a3a53d8bc93d24892a857c5769f239e5c92"
 metafile = true
@@ -1402,6 +1412,11 @@ metafile = true
 [[files]]
 file = "mods/sparsestructures.pw.toml"
 hash = "993b4e4970e1a5ef2fe7c6712212f57a84dcf8b31d4b6863540b6395c4f9ce09"
+metafile = true
+
+[[files]]
+file = "mods/stateobserver.pw.toml"
+hash = "322a7defbd55448f14fcf447fd4514156aa6c083fb095a3347aebdf04e10069b"
 metafile = true
 
 [[files]]

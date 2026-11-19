@@ -1,0 +1,13 @@
+name = "Modopedia"
+filename = "modopedia-neoforge-1.21.1-1.1.11.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "086e80d3d763c491576012ff230b45ba6f477e83"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8043293
+project-id = 1132038

@@ -1,0 +1,13 @@
+name = "Enchanted: Witchcraft"
+filename = "enchanted-neoforge-1.21.1-4.2.7.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "2380cb5a49c7eb86afa6f790a920d1872d5cb85e"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8055168
+project-id = 560363
