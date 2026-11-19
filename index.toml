@@ -90,6 +90,11 @@ hash = "e5a4c0315e40bab4b2ba410dd5d2dd8b7662eaea525c1b2e6bebfa35fe3e71c7"
 metafile = true
 
 [[files]]
+file = "mods/aeronautics-structures.pw.toml"
+hash = "2a8b9014e2a03441eb25964c9ee6e8f4fe531071a9387bd48905b6e159c35db0"
+metafile = true
+
+[[files]]
 file = "mods/aether.pw.toml"
 hash = "cc3f6e6e8f1838d16e47cce9241e32176279673efb1438ff4451ccffa9579b14"
 metafile = true
@@ -195,6 +200,11 @@ hash = "e735b472ad5c38359636d5abb84ed1baeb461f72aa19c324c349543823a16188"
 metafile = true
 
 [[files]]
+file = "mods/ars-elemental.pw.toml"
+hash = "9c3e1f4d0290d2b784675093169566b3094646df138482d5fa38d48c47dfbc87"
+metafile = true
+
+[[files]]
 file = "mods/ars-energistique.pw.toml"
 hash = "8ad679c28c8d8ebf85609b571b4556bfd9f605506efbaa6907a3045c965ce8b8"
 metafile = true
@@ -295,6 +305,11 @@ hash = "22d9510588b081cf9905f6549d24bc11012aa8d9c7d38a8619ab9db5ccb7b9a8"
 metafile = true
 
 [[files]]
+file = "mods/building-gadgets.pw.toml"
+hash = "2ddd7b954c4a91910405e392b07f059c010dd092e9da096f381e925595ce741f"
+metafile = true
+
+[[files]]
 file = "mods/carry-on.pw.toml"
 hash = "838dbcb90c93bab58691e82c95045bd97c3e096e3a2680a00cf063e56ce35ce3"
 metafile = true
@@ -365,6 +380,11 @@ hash = "2bd9170c8b9275f9e6861bec3a020f4200a388207720428ce5105cd062a1f01d"
 metafile = true
 
 [[files]]
+file = "mods/construction-sticks.pw.toml"
+hash = "f9467bea7593983f43d8cbaeb34ec5ea3d643992843b8455a0b80e94f8f2a105"
+metafile = true
+
+[[files]]
 file = "mods/controlling.pw.toml"
 hash = "65c8086d2ec3d39acc7bd36c7a0306ccc43b602b38fa07d13291bc478ef7dfff"
 metafile = true
@@ -410,6 +430,11 @@ hash = "d66f3ca71587c7ab8076f4a0154b0d3aa2f043c29c6373f2b8b2e5d6c3c3e91f"
 metafile = true
 
 [[files]]
+file = "mods/create-aeronautics-discovery.pw.toml"
+hash = "da400e22ffbbe487b0309bc69b48e9d7574c33941a70db5fb950b31a80da827f"
+metafile = true
+
+[[files]]
 file = "mods/create-aeronautics-transmission-linkage.pw.toml"
 hash = "0444cab2b465f9a1ed5fff83edfe5453efe75a0b1257492e10302465897b3a93"
 metafile = true
@@ -422,6 +447,11 @@ metafile = true
 [[files]]
 file = "mods/create-aeroworks.pw.toml"
 hash = "210419599e24212d879f58d0b3bacb74dec6d64703f49f1c547440bf7705e942"
+metafile = true
+
+[[files]]
+file = "mods/create-ars-nouveau-compat.pw.toml"
+hash = "a2ad64c11c1a8a7b0f88ec846907f2f57d54c9fdd7b2410c88f89ff11553583a"
 metafile = true
 
 [[files]]
@@ -447,6 +477,11 @@ metafile = true
 [[files]]
 file = "mods/create-central-kitchen.pw.toml"
 hash = "3752b1dcdfebbb1e79c97c847095153155d64636576a9c0ac11ffa6506c62922"
+metafile = true
+
+[[files]]
+file = "mods/create-compat-core.pw.toml"
+hash = "39d60522ed3966e0da6c610e7ec88bed68d4f8fd6397e2b58077ac6db42a504a"
 metafile = true
 
 [[files]]
@@ -547,6 +582,11 @@ metafile = true
 [[files]]
 file = "mods/create-tweaked-controllers.pw.toml"
 hash = "2c72104b4cf249d4f096f673293a41c199d611dc9b99a9055d463fa5cd90c7cd"
+metafile = true
+
+[[files]]
+file = "mods/create-warnautics.pw.toml"
+hash = "134f02a1af52c0c1942956faddd80b1610b832d13b30da99773c5a2a1234a7f5"
 metafile = true
 
 [[files]]
