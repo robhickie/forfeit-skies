@@ -450,6 +450,11 @@ hash = "222486a7dc5c6f8443d1520f36d6da41e74bfa191263c5188c4db7a999043bc8"
 metafile = true
 
 [[files]]
+file = "mods/ftb-filter-system.pw.toml"
+hash = "8a133f808bce32c9a28edde809ec726800d5afa5c52458ed4befbd862dc9a013"
+metafile = true
+
+[[files]]
 file = "mods/ftb-library-forge.pw.toml"
 hash = "1c653566b0cea97e9282c23458a28b7de879e5fd226f5bb3455502adabfc839d"
 metafile = true
@@ -512,6 +517,11 @@ metafile = true
 [[files]]
 file = "mods/idas.pw.toml"
 hash = "b13158a1f8daea08344c22f072a708fd658a958e06a24560e5a3016e69c16375"
+metafile = true
+
+[[files]]
+file = "mods/im-fast.pw.toml"
+hash = "6c9b73eaf6e794e43d7fd60519c42eb3fd15b9198c76139fc2647ea354d94b3f"
 metafile = true
 
 [[files]]
