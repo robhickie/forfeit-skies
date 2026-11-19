@@ -1,6 +1,6 @@
 {
   "name": "Forfeit Skies: Mod Book",
-  "landing_text": "Every mod in $(l)Forfeit Skies$(), grouped by type and by family: each mod sits next to its addons.$(br2)248 mods, 7 compatibility patches and 68 background libraries.$(br2)Press $(l)R$() on any item for its recipe.",
+  "landing_text": "Every mod in $(l)Forfeit Skies$(), grouped by type and by family: each mod sits next to its addons.$(br2)276 mods, 12 compatibility patches and 68 background libraries.$(br2)Press $(l)R$() on any item for its recipe.",
   "version": 2,
   "use_resource_pack": false,
   "show_progress": false,

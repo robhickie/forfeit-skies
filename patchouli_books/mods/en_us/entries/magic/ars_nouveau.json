@@ -14,7 +14,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(l)Ars Ocultas$()$(br)Ars Nouveau Integration for Occultism"
+      "text": "$(l)Ars Ocultas$()$(br)Ars Nouveau Integration for Occultism$(br2)$(l)Reliquified Ars Nouveau$()$(br)Compatibility addon between Relics and Ars Nouveau"
     },
     {
       "type": "patchouli:text",

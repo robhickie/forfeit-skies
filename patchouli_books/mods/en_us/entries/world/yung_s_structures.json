@@ -18,7 +18,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(l)Tip$()$(br2)Mark your base with a $(l)waystone$() so the whole party can teleport home."
+      "text": "$(l)Tip$()$(br2)Stuck? The $(l)quest book$() walks you through each mod step by step."
     }
   ]
 }

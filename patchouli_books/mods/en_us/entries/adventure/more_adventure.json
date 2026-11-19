@@ -6,35 +6,43 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(l)Alex's Mobs (Unofficial Port)$()$(br)85+ New mobs with stylistic quality above the default game.$(br2)$(l)Aquaculture 2$()$(br)Spices up fishing with a number of new biome-specific fish, recipes, and more!"
+      "text": "$(l)[Let's Do] Lili's Lucky Lures$()$(br)Let's go fishing! We pack our Gear: A Fishing Rod, Fishing Hat, Dynamite...$(br2)$(l)[Let's Do] Meadow$()$(br)A Mod offering a slight overhaul for the meadow biome by adding two new sub biomes…"
     },
     {
       "type": "patchouli:text",
-      "text": "$(l)Aquamirae$()$(br)Ship graveyard with terrible deep sea creatures!$(br2)$(l)Artifacts$()$(br)Adds various treasure items that can be found through exploration"
+      "text": "$(l)[Let's Do] WilderNature$()$(br)Wilder Nature introduces immersive wildlife, hunting systems, bounties, and…$(br2)$(l)Alex's Mobs (Unofficial Port)$()$(br)85+ New mobs with stylistic quality above the default game."
     },
     {
       "type": "patchouli:text",
-      "text": "$(l)Born in Chaos$()$(br)Adds a lot of aggressive mobs, with their unique properties that can diversify and…$(br2)$(l)DivineRPG$()$(br)8 New Dimensions ♦ 115+ New Mobs/Bosses ♦ Hundreds of New Blocks and Items ♦ Unique…"
+      "text": "$(l)Aquaculture 2$()$(br)Spices up fishing with a number of new biome-specific fish, recipes, and more!$(br2)$(l)Aquamirae$()$(br)Ship graveyard with terrible deep sea creatures!"
     },
     {
       "type": "patchouli:text",
-      "text": "$(l)Explorer's Compass$()$(br)Allows you to locate structures anywhere in the world.$(br2)$(l)Grappling Hook Mod: Skybound$()$(br)Grappling hooks that can hook onto airships and contraptions."
+      "text": "$(l)Artifacts$()$(br)Adds various treasure items that can be found through exploration$(br2)$(l)Born in Chaos$()$(br)Adds a lot of aggressive mobs, with their unique properties that can diversify and…"
     },
     {
       "type": "patchouli:text",
-      "text": "$(l)Guard Villagers$()$(br)Village Pest Control$(br2)$(l)Hardcore Revival$()$(br)Help your friends back up after they die (if you can make it in time)"
+      "text": "$(l)DivineRPG$()$(br)8 New Dimensions ♦ 115+ New Mobs/Bosses ♦ Hundreds of New Blocks and Items ♦ Unique…$(br2)$(l)Easy NPC$()$(br)Create easily NPCs with dialogs for your world or for your mods."
     },
     {
       "type": "patchouli:text",
-      "text": "$(l)L2 Hostility$()$(br)Enemy enhancement mod that buffs enemy and adds special traits for them.$(br2)$(l)Nature's Compass$()$(br)Allows you to locate biomes anywhere in the world."
+      "text": "$(l)Easy NPC: Core$()$(br)Provides the core functionallity for the Easy NPC mod.$(br2)$(l)Explorer's Compass$()$(br)Allows you to locate structures anywhere in the world."
     },
     {
       "type": "patchouli:text",
-      "text": "$(l)Rotten Creatures$()$(br)Rotten Creatures is a mod that aims to add a lot of awesome new zombie mobs to…"
+      "text": "$(l)Grappling Hook Mod: Skybound$()$(br)Grappling hooks that can hook onto airships and contraptions.$(br2)$(l)Guard Villagers$()$(br)Village Pest Control"
     },
     {
       "type": "patchouli:text",
-      "text": "$(l)Tip$()$(br2)The three paths need each other: trade with the Create, magic and tech players."
+      "text": "$(l)Hardcore Revival$()$(br)Help your friends back up after they die (if you can make it in time)$(br2)$(l)L2 Hostility$()$(br)Enemy enhancement mod that buffs enemy and adds special traits for them."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Nature's Compass$()$(br)Allows you to locate biomes anywhere in the world.$(br2)$(l)Rotten Creatures$()$(br)Rotten Creatures is a mod that aims to add a lot of awesome new zombie mobs to…"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)WH: NPCs$()$(br)Build NPCs in-game with a clean GUI: JRPG-style dialogues, companions, shops…"
     }
   ]
 }

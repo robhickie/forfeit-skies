@@ -11,6 +11,14 @@
     {
       "type": "patchouli:text",
       "text": "- Copycats+ aeronautics weight$(br)- Create Aeronautics: Compatibility$(br)- Create Stuff 'N Additions x Sable & Aeronautics Compat$(br)- Create: Ars Nouveau Compat$(br)- Create: Compat Core$(br)- Create: Design n' Decor - Aeronautics Compat$(br)- Gravestone and Sable Compatibility Patch"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "- Jade Sable Compat$(br)- Sable: Physics Compat$(br)- [Let's Do] Bakery - Farm&Charm Compat$(br)- [Let's Do] Brewery - Farm&Charm Compat$(br)- [Let's Do] Candlelight - Farm&Charm compat"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Tip$()$(br2)Stuck? The $(l)quest book$() walks you through each mod step by step."
     }
   ]
 }

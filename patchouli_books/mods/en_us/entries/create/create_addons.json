@@ -18,7 +18,11 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(l)Create Ore Excavation$()$(br)Extract resources using machines powered by Rotational Force$(br2)$(l)Create Slice & Dice$()$(br)Making automation for Farmers Delight more sensible"
+      "text": "$(l)Create Ore Excavation$()$(br)Extract resources using machines powered by Rotational Force$(br2)$(l)Create Propulsion: Simulated$()$(br)Port of Create: Propulsion mod to NeoForge 1.21.1 with support of Sable and Create…"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Create Simulated Additions$()$(br)A few additions and tweaks for the Create Simulated/Aeronautics mod$(br2)$(l)Create Slice & Dice$()$(br)Making automation for Farmers Delight more sensible"
     },
     {
       "type": "patchouli:text",
@@ -26,27 +30,31 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(l)Create: Bits 'n' Bobs$()$(br)Decorative and mechanical additions to create!$(br2)$(l)Create: Central Kitchen$()$(br)Offering more tools and methods to automate food processing of other mod in Create."
+      "text": "$(l)Create: Ballast$()$(br)Adds a new layerable block that has more mass with each added layer.$(br2)$(l)Create: Bits 'n' Bobs$()$(br)Decorative and mechanical additions to create!"
     },
     {
       "type": "patchouli:text",
-      "text": "$(l)Create: Connected$()$(br)QoL blocks that you wish existed in Create - Highly configurable, disable what you…$(br2)$(l)Create: Copycats+$()$(br)All the copycats you've ever wanted, combined into a single mod!"
+      "text": "$(l)Create: Central Kitchen$()$(br)Offering more tools and methods to automate food processing of other mod in Create.$(br2)$(l)Create: Connected$()$(br)QoL blocks that you wish existed in Create - Highly configurable, disable what you…"
     },
     {
       "type": "patchouli:text",
-      "text": "$(l)Create: Design n' Decor$()$(br)Adds decor blocks to spice up your factory!$(br2)$(l)Create: Diesel Generators$()$(br)Adds compact diesel generators (engines), simple industrial features and crude oil…"
+      "text": "$(l)Create: Copycats+$()$(br)All the copycats you've ever wanted, combined into a single mod!$(br2)$(l)Create: Design n' Decor$()$(br)Adds decor blocks to spice up your factory!"
     },
     {
       "type": "patchouli:text",
-      "text": "$(l)Create: Dragons Plus$()$(br)Provide convenient features to players and dev utilities for Create addon developers.$(br2)$(l)Create: Enchantment Industry$()$(br)Automatic Enchanting, with Create"
+      "text": "$(l)Create: Diesel Generators$()$(br)Adds compact diesel generators (engines), simple industrial features and crude oil…$(br2)$(l)Create: Dragons Plus$()$(br)Provide convenient features to players and dev utilities for Create addon developers."
     },
     {
       "type": "patchouli:text",
-      "text": "$(l)Create: Interiors$()$(br)A complement to the Create mod that adds new furniture.$(br2)$(l)Create: New Age$()$(br)Create: New Age is an addon for the Create mod that adds integration with…"
+      "text": "$(l)Create: Enchantment Industry$()$(br)Automatic Enchanting, with Create$(br2)$(l)Create: Interiors$()$(br)A complement to the Create mod that adds new furniture."
     },
     {
       "type": "patchouli:text",
-      "text": "$(l)Create: Occult Engineering$()$(br)An integration mod between Create and Occultism.$(br2)$(l)Create: Power Loader$()$(br)A Create mod add-on adding immersive chunk loaders."
+      "text": "$(l)Create: New Age$()$(br)Create: New Age is an addon for the Create mod that adds integration with…$(br2)$(l)Create: Occult Engineering$()$(br)An integration mod between Create and Occultism."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Create: Power Loader$()$(br)A Create mod add-on adding immersive chunk loaders.$(br2)$(l)Create: Tracks+$()$(br)A fork of qwxon's Create:Tracks. Add Create:Trackwork style tracks to game."
     },
     {
       "type": "patchouli:text",

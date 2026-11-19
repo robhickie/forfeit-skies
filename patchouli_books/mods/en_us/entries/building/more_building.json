@@ -6,27 +6,27 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(l)Amendments$()$(br)Many changes to vanilla blocks$(br2)$(l)Another Furniture$()$(br)Vanilla-styled Minecraft furniture mod."
+      "text": "$(l)[Let's Do] Furniture$()$(br)Let's expand your world with a whole set of new and exciting furnitures!$(br2)$(l)[Let's Do] Hearth & Timber$()$(br)Craft timber houses with beams, frames and sturdy wooden details that make every…"
     },
     {
       "type": "patchouli:text",
-      "text": "$(l)Diagonal Fences$()$(br)Fences connecting diagonally? Wait. That's illegal.$(br2)$(l)FramedBlocks$()$(br)Fancy building blocks"
+      "text": "$(l)[Let's Do] Lili's Pottery$()$(br)Lili’s Pottery brings handcrafted ceramics to Minecraft, turning clay and glaze into…$(br2)$(l)Amendments$()$(br)Many changes to vanilla blocks"
     },
     {
       "type": "patchouli:text",
-      "text": "$(l)Handcrafted$()$(br)Make your house a home!$(br2)$(l)Immersive Paintings$()$(br)Drag and drop, pixelate and hang up beautiful art. On servers too."
+      "text": "$(l)Another Furniture$()$(br)Vanilla-styled Minecraft furniture mod.$(br2)$(l)Diagonal Fences$()$(br)Fences connecting diagonally? Wait. That's illegal."
     },
     {
       "type": "patchouli:text",
-      "text": "$(l)Strut Your Stuff (Struts)$()$(br)Minecraft mod library for \"strut\" blocks, that span between two positions.$(br2)$(l)Supplementaries$()$(br)Vanilla+ additions: Jars, signposts, faucets, weather vanes spring launchers…"
+      "text": "$(l)FramedBlocks$()$(br)Fancy building blocks$(br2)$(l)Handcrafted$()$(br)Make your house a home!"
     },
     {
       "type": "patchouli:text",
-      "text": "$(l)Twigs$()$(br)A Minecraft building blocks mod"
+      "text": "$(l)Immersive Paintings$()$(br)Drag and drop, pixelate and hang up beautiful art. On servers too.$(br2)$(l)Strut Your Stuff (Struts)$()$(br)Minecraft mod library for \"strut\" blocks, that span between two positions."
     },
     {
       "type": "patchouli:text",
-      "text": "$(l)Tip$()$(br2)Hold $(l)`$() while mining to break a whole vein or tree at once."
+      "text": "$(l)Supplementaries$()$(br)Vanilla+ additions: Jars, signposts, faucets, weather vanes spring launchers…$(br2)$(l)Twigs$()$(br)A Minecraft building blocks mod"
     }
   ]
 }

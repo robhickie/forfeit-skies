@@ -63,7 +63,7 @@ const FAMILIES = {
     ["YUNG's Structures", 'minecraft:mossy_cobblestone', /yung/i],
     ["Moog's Structures", 'minecraft:spyglass', /moog/i],
     ['Dungeons Arise', 'minecraft:cracked_stone_bricks', /dungeons-arise|dungeons arise/i],
-    ['Terrain & Biomes', 'minecraft:grass_block', /tectonic|terralith|biomes-o-plenty|regions-unexplored|nullscape|incendium|alexs-caves|serene|sparse/i],
+    ['Islands & Biomes', 'minecraft:grass_block', /archipelago|tectonic|terralith|biomes-o-plenty|regions-unexplored|nullscape|incendium|alexs-caves|serene|sparse/i],
     ['Dimensions', 'aether:aether_portal_frame', /aether|bumblezone|undergarden|deeper|divinerpg/i],
   ],
   building: [
@@ -107,6 +107,8 @@ const DESC = {
   'create-tweaked-controllers': 'Use a gamepad-style controller to steer contraptions.',
   'grapplemod-skybound': 'Grappling hooks that can hook onto airships and contraptions.',
   'sable': 'The physics engine that makes Create Aeronautics ships fly and collide.',
+  'sky-archipelago': 'Turns the overworld into floating islands over the void, in layers up to the clouds.',
+  'tectonic': 'Raises the world height limit so the islands can stack high into the sky.',
 };
 
 // Patchouli text: escape its formatting char; trim to a sentence or a clean word boundary.
@@ -132,6 +134,7 @@ const TIPS = [
   'Stuck? The $(l)quest book$() walks you through each mod step by step.',
   'The three paths need each other: trade with the Create, magic and tech players.',
   'Mark your base with a $(l)waystone$() so the whole party can teleport home.',
+  'The world is floating islands: an airship is the best way between them. Mind the edge!',
 ];
 
 const out = join(PACK, 'patchouli_books', BOOK);
