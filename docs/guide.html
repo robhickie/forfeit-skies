@@ -160,7 +160,8 @@ The server updates itself too, at its daily restart.</p>
 <p><b>World:</b> Tectonic + Terralith + Biomes O' Plenty + Regions Unexplored (huge mountains, hundreds of biomes),
 YUNG's dungeons and mineshafts, When Dungeons Arise, Towns &amp; Towers, Mowzie's Mobs bosses, Farmer's Delight cooking,
 Sophisticated Backpacks and Storage.</p>
-<p>Every mod is listed by category in the <a href="#mods">last section</a> of this guide.</p>
+<p class="screen-only">Every mod is listed by category in the <a href="#mods">last section</a> of this guide.</p>
+<p class="print-only">Want the full list of every mod? Open the browser version of this guide (<b>guide.html</b>, pinned in Discord) to search and filter them all.</p>
 </section>
 
 <section>
@@ -854,6 +855,11 @@ It does not provide any game-relevant features on its own (save for maybe a coup
 </script>
 </section>
 <!-- MODLIST:END -->
+<style>/* Print: keep the PDF short. The full mod list is browser-only. */
+.print-only{display:none}
+@media print{#mods{display:none!important}.screen-only{display:none!important}.print-only{display:block}}
+</style>
+
 
 <footer>Forfeit Skies · a Forfeit community server · pack source: github.com/robhickie/forfeit-skies</footer>
 
