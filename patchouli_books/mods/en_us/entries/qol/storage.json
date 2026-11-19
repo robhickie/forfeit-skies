@@ -1,0 +1,16 @@
+{
+  "name": "Storage",
+  "icon": "sophisticatedbackpacks:backpack",
+  "category": "patchouli:qol",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Sophisticated Backpacks$()$(br)Yet another backpack mod this time with backpack you can place in world, color in…$(br2)$(l)Functional Storage$()$(br)Functional Storage is an alternative take on the drawer storage solution, with an…"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Sophisticated Storage$()$(br)Storage mod with multiple tiers and functional upgrades"
+    }
+  ]
+}

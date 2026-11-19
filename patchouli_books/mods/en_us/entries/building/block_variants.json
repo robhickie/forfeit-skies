@@ -1,0 +1,16 @@
+{
+  "name": "Block Variants",
+  "icon": "chipped:botanist_workbench",
+  "category": "patchouli:building",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Chipped$()$(br)Every block deserves a friend.$(br2)$(l)Rechiseled$()$(br)Rechiseled allows you to chisel blocks into various decorative blocks with connected…"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Tip$()$(br2)Hold $(l)`$() while mining to break a whole vein or tree at once."
+    }
+  ]
+}

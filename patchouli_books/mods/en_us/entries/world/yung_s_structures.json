@@ -1,21 +1,24 @@
 {
-  "name": "YUNG's Structures (6)",
+  "name": "YUNG's Structures",
   "icon": "minecraft:mossy_cobblestone",
   "category": "patchouli:world",
   "sortnum": 0,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(l)YUNG's Better Desert Temples$()$(br)A complete redesign of Minecraft's desert temples!$(br2)$(l)YUNG's Better Dungeons$()$(br)A complete redesign of Minecraft's dungeons!",
-      "title": "YUNG's Structures"
+      "text": "$(l)YUNG's Better Desert Temples$()$(br)A complete redesign of Minecraft's desert temples!$(br2)$(l)YUNG's Better Dungeons$()$(br)A complete redesign of Minecraft's dungeons!"
     },
     {
       "type": "patchouli:text",
-      "text": "$(l)YUNG's Better Mineshafts$()$(br)A long-awaited and much-needed abandoned mineshaft overhaul!$(br2)$(l)YUNG's Better Nether Fortresses$()$(br)A complete redesign of Minecraft's Nether fortresses!$(br2)$(l)YUNG's Better Ocean Monuments$()$(br)A complete redesign of Minecraft's ocean monuments!"
+      "text": "$(l)YUNG's Better Mineshafts$()$(br)A long-awaited and much-needed abandoned mineshaft overhaul!$(br2)$(l)YUNG's Better Nether Fortresses$()$(br)A complete redesign of Minecraft's Nether fortresses!"
     },
     {
       "type": "patchouli:text",
-      "text": "$(l)YUNG's Better Strongholds$()$(br)A complete redesign of Minecraft's strongholds!"
+      "text": "$(l)YUNG's Better Ocean Monuments$()$(br)A complete redesign of Minecraft's ocean monuments!$(br2)$(l)YUNG's Better Strongholds$()$(br)A complete redesign of Minecraft's strongholds!"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Tip$()$(br2)Press $(l)R$() on any item for its recipe, $(l)U$() for what it is used in."
     }
   ]
 }

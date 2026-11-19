@@ -1,0 +1,32 @@
+{
+  "name": "Airships",
+  "icon": "aeronautics:propeller_bearing",
+  "category": "patchouli:create",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Create Aeronautics$()$(br)Build working airships, planes and cars out of any blocks.$(br2)$(l)Climbable Ropes for Create Aeronautics$()$(br)Climb vertical ropes on your airships with an empty hand."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Create Aeronautics: Automated Logistics$()$(br)Station networks and automated docking, so airships can run cargo routes.$(br2)$(l)Create Aeronautics: Transmission & Linkage$()$(br)Linkages and transmissions for building more complex vehicles."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Create: Aeroworks$()$(br)Gyroscopes, control desks, joysticks and other airship controls.$(br2)$(l)Create: Avionics — ComputerCraft for Aeronautics$()$(br)ComputerCraft control for airships: program your own autopilot."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Create: Radars$()$(br)Radars, tracking and targeting for ships and cannons.$(br2)$(l)Create: Tweaked Controllers$()$(br)Use a gamepad-style controller to steer contraptions."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Waystones: Sable (Create Aeronautics Addon)$()$(br)A compatibility mod that allows Waystones to work properly within Sable's SubLevel…"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Tip$()$(br2)Press $(l)R$() on any item for its recipe, $(l)U$() for what it is used in."
+    }
+  ]
+}

@@ -1,17 +1,24 @@
 {
-  "name": "Dimensions (5)",
+  "name": "Dimensions",
   "icon": "aether:aether_portal_frame",
   "category": "patchouli:world",
   "sortnum": 4,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(l)Deep Aether$()$(br)Deep Aether is an addon for the original version of The Aether mod. It aims…$(br2)$(l)Deeper and Darker$()$(br)A Minecraft mod which features more blocks, items, armors, and hidden…",
-      "title": "Dimensions"
+      "text": "$(l)The Aether$()$(br)The Aether Team presents the original Aether mod!$(br2)$(l)Deep Aether$()$(br)Deep Aether is an addon for the original version of The Aether mod."
     },
     {
       "type": "patchouli:text",
-      "text": "$(l)The Aether$()$(br)The Aether Team presents the original Aether mod! Maintained and kept up to…$(br2)$(l)The Bumblezone - NeoForge/Forge$()$(br)An unBEElievable dimension full of bees that becomes REALLY angry if you…$(br2)$(l)The Undergarden$()$(br)Deep underground, a forgotten land awaits."
+      "text": "$(l)Deeper and Darker$()$(br)Features more blocks, items, armors, and hidden mysteries to complement the Deep…$(br2)$(l)The Bumblezone - NeoForge/Forge$()$(br)An unBEElievable dimension full of bees that becomes REALLY angry if you take their…"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)The Undergarden$()$(br)Deep underground, a forgotten land awaits."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Tip$()$(br2)Mark your base with a $(l)waystone$() so the whole party can teleport home."
     }
   ]
 }

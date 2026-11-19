@@ -1,13 +1,16 @@
 {
-  "name": "Apotheosis (1)",
+  "name": "Apotheosis",
   "icon": "apotheosis:gem",
   "category": "patchouli:adventure",
   "sortnum": 3,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(l)Apotheosis$()$(br)All things that should have been",
-      "title": "Apotheosis"
+      "text": "$(l)Apotheosis$()$(br)All things that should have been"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Tip$()$(br2)The three paths need each other: trade with the Create, magic and tech players."
     }
   ]
 }

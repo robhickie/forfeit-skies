@@ -1,0 +1,16 @@
+{
+  "name": "Compat Patches",
+  "icon": "minecraft:command_block",
+  "category": "patchouli:qol",
+  "sortnum": 100,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Small fixes that make mods work together, mostly on airships. Nothing to craft or learn: they just work in the background."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "- Copycats+ aeronautics weight$(br)- Create Aeronautics: Compatibility$(br)- Create Stuff 'N Additions x Sable & Aeronautics Compat$(br)- Create: Design n' Decor - Aeronautics Compat$(br)- Gravestone and Sable Compatibility Patch"
+    }
+  ]
+}

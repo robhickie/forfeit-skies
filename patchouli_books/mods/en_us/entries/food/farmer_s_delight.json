@@ -1,0 +1,24 @@
+{
+  "name": "Farmer's Delight",
+  "icon": "farmersdelight:cooking_pot",
+  "category": "patchouli:food",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Farmer's Delight$()$(br)A cozy expansion to farming and cooking!$(br2)$(l)Brewin' And Chewin'$()$(br)Fermenting addon for Farmer's Delight."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Chef's Delight - Farmer's Delight Villagers$()$(br)Add-on for the Farmer's Delight mod. Adds 2 new professions to villagers.$(br2)$(l)End's Delight$()$(br)End's Delight is an addon mod for Farmer's Delight based around adding culinary…"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)L_Ender 's Cataclysm Delight$()$(br)Adds 50+ dishes, linking L_Ender's Cataclysm and Farmer's Delight in a Vanilla style.$(br2)$(l)Miner's Delight$()$(br)Farmer's Delight add-on for miners"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)My Nether's Delight$()$(br)New Nether addon for Farmer's Delight$(br2)$(l)Ocean's Delight$()$(br)Ocean's Delight is an addon mod for Farmer's Delight based around adding culinary…"
+    }
+  ]
+}

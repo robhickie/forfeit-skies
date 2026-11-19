@@ -1,13 +1,16 @@
 {
-  "name": "Apotheosis (2)",
+  "name": "Apotheosis",
   "icon": "apotheosis:gem",
   "category": "patchouli:magic",
   "sortnum": 3,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(l)Apothic-Enchanting$()$(br)A huge extension of the Enchanting system$(br2)$(l)Apothic-Spawners$()$(br)A mod about moving and modifying Mob Spawners",
-      "title": "Apotheosis"
+      "text": "$(l)Apothic-Enchanting$()$(br)A huge extension of the Enchanting system$(br2)$(l)Apothic-Spawners$()$(br)A mod about moving and modifying Mob Spawners"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Tip$()$(br2)Hold $(l)`$() while mining to break a whole vein or tree at once."
     }
   ]
 }

@@ -1,0 +1,32 @@
+{
+  "name": "Macaw's",
+  "icon": "minecraft:oak_door",
+  "category": "patchouli:building",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Macaw's Bridges$()$(br)A simple mod that adds a lot of bridges!$(br2)$(l)Macaw's Doors$()$(br)Adds vanilla doors with every wood color and new unique doors!"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Macaw's Fences and Walls$()$(br)Adds new vanilla styled fences, walls and gates!$(br2)$(l)Macaw's Furniture$()$(br)Decorate your world with wardrobes, drawers, chairs, desks, couches, chaise, sinks…"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Macaw's Lights and Lamps$()$(br)Adds vanilla styled lamps, torches, street lamps, paper lamps, wall lamps, slabs...$(br2)$(l)Macaw's Paths and Pavings$()$(br)Adds vanila styled paths and pavings!"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Macaw's Roofs$()$(br)Build roofs with actual roofs instead of stairs!$(br2)$(l)Macaw's Stairs$()$(br)Adds new Vanilla styled Stairs, Handrails for Stairs and Balconies!"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Macaw's Trapdoors$()$(br)Adds vanila trapdoors in every plank variation, and some new trapdoors too!$(br2)$(l)Macaw's Windows$()$(br)Adds lots of Windows, Mosaic Glass, Blinds, Shutters, Curtains and more...!"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Tip$()$(br2)Press $(l)R$() on any item for its recipe, $(l)U$() for what it is used in."
+    }
+  ]
+}

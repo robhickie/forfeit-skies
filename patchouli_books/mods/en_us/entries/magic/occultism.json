@@ -1,0 +1,16 @@
+{
+  "name": "Occultism",
+  "icon": "occultism:spirit_attuned_gem",
+  "category": "patchouli:magic",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Occultism$()$(br)A ritual magic system centered around summonable spirits allows you to automate…"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Tip$()$(br2)Press $(l)R$() on any item for its recipe, $(l)U$() for what it is used in."
+    }
+  ]
+}

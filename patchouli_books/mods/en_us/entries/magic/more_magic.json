@@ -1,0 +1,32 @@
+{
+  "name": "More Magic",
+  "icon": "minecraft:enchanted_book",
+  "category": "patchouli:magic",
+  "sortnum": 99,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Ace's Spell Utils$()$(br)A util API for making Iron's Spells and Spellbooks addons$(br2)$(l)Eidolon:Repraised$()$(br)Unofficial port of Eidolon to 1.19/1.20/1.21"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Enhanced Celestials 2: Core$()$(br)Enhanced Celestials 2: Core is a rewritten version of the first Enhanced Celestial's…$(br2)$(l)Enhanced Celestials 2: Default Lunar Events$()$(br)All Lunar Events from the first mod rewritten entirely to work better!"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Forbidden and Arcanus$()$(br)Adds magical themed content and building blocks.$(br2)$(l)Goety - The Dark Arts$()$(br)Perform necromancy and dark rituals using the power of souls. Highly configurable."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Hexerei$()$(br)A mod based off witchcraft and lore within it. Welcome to the world of Hexerei!$(br2)$(l)Mahou Tsukai$()$(br)A magic mod focused on special effects and spell uniqueness"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Malum$()$(br)Malum - A minecraft mod about dark magic.$(br2)$(l)Relics$()$(br)Just a mod about useful items with unique mechanics :3"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Theurgy$()$(br)Theurgy is an open-source magic mod built around classical alchemy to replicate and…$(br2)$(l)Vampirism$()$(br)Become a powerful vampire or hunt them down."
+    }
+  ]
+}

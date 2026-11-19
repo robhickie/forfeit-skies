@@ -1,13 +1,12 @@
 {
-  "name": "Mekanism & Addons (4)",
+  "name": "Mekanism",
   "icon": "mekanism:metallurgic_infuser",
   "category": "patchouli:tech",
   "sortnum": 1,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(l)Mekanism$()$(br)High-tech machinery, powerful energy generation, fancy gadgets and more. Now…$(br2)$(l)Mekanism Additions$()$(br)Additions module for Mekanism, contains things that don't quite fit in the…",
-      "title": "Mekanism & Addons"
+      "text": "$(l)Mekanism$()$(br)High-tech machinery, powerful energy generation, fancy gadgets and more.$(br2)$(l)Mekanism Additions$()$(br)Additions module for Mekanism, contains things that don't quite fit in the other…"
     },
     {
       "type": "patchouli:text",

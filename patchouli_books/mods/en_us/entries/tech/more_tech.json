@@ -1,0 +1,24 @@
+{
+  "name": "More Tech",
+  "icon": "minecraft:redstone",
+  "category": "patchouli:tech",
+  "sortnum": 99,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Draconic Evolution$()$(br)End game tech$(br2)$(l)Ender IO$()$(br)Ender IO is a full-featured tech mod. It has armor, tools, weapons, machines…"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Industrial Foregoing$()$(br)A collection of machines to make your minecraft builds easier to automate$(br2)$(l)Integrated Dynamics$()$(br)Take full and automated control of your appliances"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Modular Routers$()$(br)A flexible mod for moving items, fluids, and energy around the world$(br2)$(l)Pipez$()$(br)Simple and efficient pipes"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)PneumaticCraft: Repressurized$()$(br)Doing cool stuff with compressed air$(br2)$(l)Powah!$()$(br)A tech mod that adds various ways to generate, store and transmit Energy."
+    }
+  ]
+}

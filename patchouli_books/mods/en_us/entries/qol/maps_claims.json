@@ -1,17 +1,16 @@
 {
-  "name": "Maps & Claims (4)",
+  "name": "Maps & Claims",
   "icon": "minecraft:filled_map",
   "category": "patchouli:qol",
   "sortnum": 1,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(l)Open Parties and Claims$()$(br)Adds the ability to claim chunks and make player parties, integrates with…$(br2)$(l)Xaero's Minimap$()$(br)Displays a map of the nearby world terrain, players, mobs, entities in the…",
-      "title": "Maps & Claims"
+      "text": "$(l)Xaero's World Map$()$(br)Adds a full screen world map which shows you what you have explored in the world.$(br2)$(l)Open Parties and Claims$()$(br)Adds the ability to claim chunks and make player parties, integrates with Xaero's…"
     },
     {
       "type": "patchouli:text",
-      "text": "$(l)Xaero's World Map$()$(br)Adds a full screen world map which shows you what you have explored in the…$(br2)$(l)XaeroPlus$()$(br)Xaero WorldMap / Minimap Extra Features"
+      "text": "$(l)Xaero's Minimap$()$(br)Displays a map of the nearby world terrain, players, mobs, entities in the corner of…$(br2)$(l)XaeroPlus$()$(br)Xaero WorldMap / Minimap Extra Features"
     }
   ]
 }

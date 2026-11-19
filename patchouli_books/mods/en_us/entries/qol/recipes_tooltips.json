@@ -1,25 +1,32 @@
 {
-  "name": "Recipes & Tooltips (9)",
+  "name": "Recipes & Tooltips",
   "icon": "minecraft:knowledge_book",
   "category": "patchouli:qol",
   "sortnum": 2,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(l)Better Advanced Tooltips$()$(br)Adds tag, component and other tooltips to items in F3+H mode$(br2)$(l)Crafting Tweaks$()$(br)Allows you to rotate, balance or clear crafting grids by the press of a…",
-      "title": "Recipes & Tooltips"
+      "text": "$(l)Just Enough Items (JEI)$()$(br)View Items and Recipes$(br2)$(l)Better Advanced Tooltips$()$(br)Adds tag, component and other tooltips to items in F3+H mode"
     },
     {
       "type": "patchouli:text",
-      "text": "$(l)Enchantment Descriptions$()$(br)Provides a way to get enchantment descriptions from enchanted books.$(br2)$(l)Jade 🔍$()$(br)Shows information about what you are looking at. (Hwyla/Waila fork for…$(br2)$(l)Just Enough Items (JEI)$()$(br)View Items and Recipes"
+      "text": "$(l)Crafting Tweaks$()$(br)Allows you to rotate, balance or clear crafting grids by the press of a button.$(br2)$(l)Enchantment Descriptions$()$(br)Provides a way to get enchantment descriptions from enchanted books."
     },
     {
       "type": "patchouli:text",
-      "text": "$(l)Just Enough Professions (JEP)$()$(br)A JEI addon that adds profession workstations$(br2)$(l)Just Enough Resources (JER)$() $(7)(your game only)$()$(br)JEI integration that adds info on mobs, world gen, villagers and many more!$(br2)$(l)Polymorph$()$(br)No more recipe conflicts! Adds an option to choose the crafting result if…"
+      "text": "$(l)Jade 🔍$()$(br)Shows information about what you are looking at.$(br2)$(l)Just Enough Professions (JEP)$()$(br)A JEI addon that adds profession workstations"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Just Enough Resources (JER)$() $(7)(your game only)$()$(br)JEI integration that adds info on mobs, world gen, villagers and many more!$(br2)$(l)Polymorph$()$(br)No more recipe conflicts! Adds an option to choose the crafting result if more than…"
     },
     {
       "type": "patchouli:text",
       "text": "$(l)Simply Tooltips$() $(7)(your game only)$()$(br)Modern data driven tooltip rendering"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Tip$()$(br2)Hold $(l)`$() while mining to break a whole vein or tree at once."
     }
   ]
 }

@@ -1,13 +1,16 @@
 {
-  "name": "Moog's Structures (2)",
+  "name": "Moog's Structures",
   "icon": "minecraft:spyglass",
   "category": "patchouli:world",
   "sortnum": 1,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(l)MES - Moog's End Structures$()$(br)Lots of Vanilla styled structrues to fill up the end dimension with life!$(br2)$(l)MVS - Moog's Voyager Structures$()$(br)adds 130+ vanilla style structures to your world to bring it alive, using…",
-      "title": "Moog's Structures"
+      "text": "$(l)MES - Moog's End Structures$()$(br)Lots of Vanilla styled structrues to fill up the end dimension with life!$(br2)$(l)MVS - Moog's Voyager Structures$()$(br)Adds 130+ vanilla style structures to your world to bring it alive, using vanilla…"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Tip$()$(br2)Hold $(l)`$() while mining to break a whole vein or tree at once."
     }
   ]
 }

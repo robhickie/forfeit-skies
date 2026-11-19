@@ -1,0 +1,24 @@
+{
+  "name": "Ars Nouveau",
+  "icon": "ars_nouveau:novice_spell_book",
+  "category": "patchouli:magic",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Ars Nouveau$()$(br)Craft spells and construct magical automations$(br2)$(l)Ars Additions$()$(br)An Ars Nouveau addon focused on small tweaks and quality of life additions."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Ars Creo$()$(br)An addon for Ars Nouveau and Create$(br2)$(l)Ars Énergistique$()$(br)Bringing magic to the digital age. (Ars Nouveau x Applied Energistics 2)"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Ars Ocultas$()$(br)Ars Nouveau Integration for Occultism"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Tip$()$(br2)Mark your base with a $(l)waystone$() so the whole party can teleport home."
+    }
+  ]
+}

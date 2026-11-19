@@ -1,5 +1,5 @@
 {
-  "name": "FTB (Quests, Teams, Vein-Mining) (2)",
+  "name": "FTB",
   "icon": "ftbquests:book",
   "category": "patchouli:qol",
   "sortnum": 0,
@@ -7,6 +7,10 @@
     {
       "type": "patchouli:text",
       "text": "$(l)FTB Quests (NeoForge)$()$(br)$(br2)$(l)FTB Ultimine (NeoForge)$()$(br)"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Tip$()$(br2)Press $(l)R$() on any item for its recipe, $(l)U$() for what it is used in."
     }
   ]
 }

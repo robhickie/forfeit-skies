@@ -1,0 +1,16 @@
+{
+  "name": "Trains",
+  "icon": "create:track_station",
+  "category": "patchouli:create",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Steam 'n' Rails Neoforge$()$(br)More track types, bogeys, couplers and handcars for Create trains.$(br2)$(l)Create Railways Navigator$()$(br)Train timetables and a route planner for your Create railway network."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Tip$()$(br2)Stuck? The $(l)quest book$() walks you through each mod step by step."
+    }
+  ]
+}

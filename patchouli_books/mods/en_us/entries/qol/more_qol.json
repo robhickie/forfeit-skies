@@ -1,0 +1,64 @@
+{
+  "name": "More QoL",
+  "icon": "minecraft:chest",
+  "category": "patchouli:qol",
+  "sortnum": 99,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l)AmbientSounds$() $(7)(your game only)$()$(br)#listentonature$(br2)$(l)AppleSkin$()$(br)Food/hunger-related HUD improvements"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Better Advancements$() $(7)(your game only)$()$(br)Better Advancements tries to improve the UI and UX for the advancements system in…$(br2)$(l)Carry On$()$(br)Carry On allows you to pick up Tile Entities and Mobs and carry them around!"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Chat Heads$() $(7)(your game only)$()$(br)See who you're chatting with!$(br2)$(l)Comforts$()$(br)Adds sleeping bags and hammocks for, respectively, portability and turning day to…"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Controlling$() $(7)(your game only)$()$(br)Adds a search bar to the Key-Bindings menu$(br2)$(l)Easy Villagers$()$(br)Never get annoyed by villagers again!"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Enchanted: Witchcraft$()$(br)$(br2)$(l)Etched$()$(br)A new form of entertainment. Create and play your very own records that everyone can…"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Exposure$()$(br)Camera mod with focus on process and aesthetics$(br2)$(l)GeckoLib$()$(br)"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)GraveStone Mod$()$(br)Places a gravestone with your inventory items inside when you die$(br2)$(l)Inventory Essentials$()$(br)The most essential inventory tweaks. Now with sorting!"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)L2 Complements$()$(br)Adds various end game material that can be obtained in a special way.$(br2)$(l)Lootr$()$(br)Makes it so nobody misses out on Loot! All loot chests are instanced per player and…"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Modopedia$()$(br)$(br2)$(l)Mouse Tweaks$() $(7)(your game only)$()$(br)Enhances inventory management by adding various functions to the mouse buttons."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)No Chat Reports$()$(br)Makes chat unreportable (where possible)$(br2)$(l)Quark$()$(br)A Quark is a very small thing. This mod is a collection of small things..."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Sleep Tight$()$(br)Sleep and bed overhaul: hammocks, bedbugs, night bags, nightmares and dream essence$(br2)$(l)Sound Physics Remastered$()$(br)Provides realistic sound attenuation, reverberation, and absorption through blocks."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)StateObserver$()$(br)$(br2)$(l)TorchMaster$()$(br)Control Mob Spawning with simple to use Blocks like the Mega Torch or the Dread Lamp"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Traveler's Titles$() $(7)(your game only)$()$(br)Epic, RPG-like titles when entering biomes & dimensions!$(br2)$(l)Waystones$()$(br)Teleport from waystone to waystone or craft magical scrolls to warp."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Tip$()$(br2)The three paths need each other: trade with the Create, magic and tech players."
+    }
+  ]
+}

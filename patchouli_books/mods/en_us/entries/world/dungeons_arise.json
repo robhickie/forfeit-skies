@@ -1,0 +1,16 @@
+{
+  "name": "Dungeons Arise",
+  "icon": "minecraft:cracked_stone_bricks",
+  "category": "patchouli:world",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l)When Dungeons Arise$()$(br)Adds various elegant -and likely hostile- roguelike dungeons and structures that…$(br2)$(l)When Dungeons Arise: Seven Seas$()$(br)Elegant - and likely hostile - vessels lost in the seven seas..."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Tip$()$(br2)Stuck? The $(l)quest book$() walks you through each mod step by step."
+    }
+  ]
+}

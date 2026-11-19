@@ -1,0 +1,32 @@
+{
+  "name": "Performance",
+  "icon": "minecraft:redstone_torch",
+  "category": "patchouli:qol",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l)ModernFix$()$(br)All-in-one mod that improves performance, reduces memory usage, and fixes many bugs.$(br2)$(l)Chunky$() $(7)(server only)$()$(br)Pre-generates chunks, quickly and efficiently"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Clumps$()$(br)Clumps XP orbs together to reduce lag$(br2)$(l)Dynamic FPS$() $(7)(your game only)$()$(br)Reduce resource usage while Minecraft is in the background, idle, or on battery."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)FerriteCore$()$(br)Memory usage optimizations$(br2)$(l)I'm Fast$() $(7)(server only)$()$(br)Remove minecraft moved too quickly! and moved wrongly (speed limits)"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Leaves Be Gone$()$(br)Quick leaf decay from cutting down trees. Built for fast performance and mod compat!$(br2)$(l)Packet Fixer$()$(br)A simple mod to fix various problems with packets, nbt and timeouts."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)spark$()$(br)Spark is a performance profiler for Minecraft clients, servers and proxies."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Tip$()$(br2)Stuck? The $(l)quest book$() walks you through each mod step by step."
+    }
+  ]
+}

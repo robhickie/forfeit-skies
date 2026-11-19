@@ -1,0 +1,16 @@
+{
+  "name": "Big Cannons",
+  "icon": "createbigcannons:cannon_mount",
+  "category": "patchouli:create",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Create Big Cannons$()$(br)A Minecraft mod for building large cannons with the Create mod.$(br2)$(l)Create Big Cannons: Advanced Technologies$()$(br)An Addon for the Create Big Cannons Mod, adding new Cannons and Mechanics"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Tip$()$(br2)Hold $(l)`$() while mining to break a whole vein or tree at once."
+    }
+  ]
+}

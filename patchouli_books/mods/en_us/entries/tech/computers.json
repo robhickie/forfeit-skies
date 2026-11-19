@@ -1,13 +1,16 @@
 {
-  "name": "Computers (2)",
+  "name": "Computers",
   "icon": "computercraft:computer_advanced",
   "category": "patchouli:tech",
   "sortnum": 3,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(l)Advanced Peripherals$()$(br)Advanced Peripherals is a mod that adds many useful extensions for…$(br2)$(l)CC: Tweaked$()$(br)ComputerCraft fork adding programmable computers, turtles and more to…",
-      "title": "Computers"
+      "text": "$(l)CC: Tweaked$()$(br)ComputerCraft fork adding programmable computers, turtles and more to Minecraft.$(br2)$(l)Advanced Peripherals$()$(br)Advanced Peripherals is a mod that adds many useful extensions for…"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Tip$()$(br2)Stuck? The $(l)quest book$() walks you through each mod step by step."
     }
   ]
 }

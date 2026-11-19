@@ -1,0 +1,16 @@
+{
+  "name": "More Food",
+  "icon": "minecraft:bread",
+  "category": "patchouli:food",
+  "sortnum": 99,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Cooking for Blockheads$()$(br)Adds a multiblock kitchen that shows recipes you can make with what ingredients you…"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Tip$()$(br2)Mark your base with a $(l)waystone$() so the whole party can teleport home."
+    }
+  ]
+}

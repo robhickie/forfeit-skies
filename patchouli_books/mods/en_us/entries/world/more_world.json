@@ -1,0 +1,32 @@
+{
+  "name": "More World",
+  "icon": "minecraft:compass",
+  "category": "patchouli:world",
+  "sortnum": 99,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Battle Towers$()$(br)Adds Battle Towers (WIP)$(br2)$(l)Better Archeology$()$(br)Discover artifacts & fossils by encountering new structures that'll enhance your…"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)ChoiceTheorem's Overhauled Village$()$(br)Enhances and creates new villages and pillager outposts, that perfectly fit into…$(br2)$(l)Dungeons and Taverns$()$(br)A Structure Datapack adding dungeons, taverns and other structures to find while you…"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Explorify$()$(br)A simplistic, vanilla-friendly collection of new structures.$(br2)$(l)Friends&Foes (Forge/NeoForge)$()$(br)Adds outvoted and forgotten mobs from the mob vote, expanding on their original…"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Integrated Dungeons and Structures$()$(br)Integrated Dungeons and Structures (aka IDAS) is a mod that adds heavily detailed…$(br2)$(l)Naturalist$()$(br)Adds 47 animals *(and 66 variants)* to your world with immersive behaviors and drops."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Repurposed Structures - Neoforge/Forge$()$(br)Adds more variations of vanilla structures and features such as a Jungle Fortress!$(br2)$(l)Structory$()$(br)A seasonally updated and atmospheric structure mod with light lore"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Towns and Towers$()$(br)Spice up your world with new villages, pillager outposts, and even new ships!"
+    }
+  ]
+}
