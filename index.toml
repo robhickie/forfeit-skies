@@ -610,11 +610,6 @@ hash = "269fd9857766e196a16c976e9c0b37210d4508573263a8302c4f1b058bccecd3"
 metafile = true
 
 [[files]]
-file = "mods/create-sourceworks.pw.toml"
-hash = "9ab83c8cba38157bf72a6bfb61354c5b24b705eae73b969ad8aa8c17322d1903"
-metafile = true
-
-[[files]]
 file = "mods/create-steam-n-rails-1.21.1.pw.toml"
 hash = "80332cead695f1e3c27e99133a48709767d1106f836792bb2fc4d594b88f1a68"
 metafile = true
