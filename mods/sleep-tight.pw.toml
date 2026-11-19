@@ -1,0 +1,13 @@
+name = "Sleep Tight"
+filename = "sleep_tight-1.21-1.6.4-neoforge.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/tNai0h2Y/versions/NYkiLTMl/sleep_tight-1.21-1.6.4-neoforge.jar"
+hash-format = "sha512"
+hash = "157c96c32a2d7f200544f7be220b91902ca3e75c22bf41596bf233b5e010335d73b48137e1c3efc3413414a4a79f72c724d2885172013e748e7d1e950bf573c1"
+
+[update]
+[update.modrinth]
+mod-id = "tNai0h2Y"
+version = "NYkiLTMl"
