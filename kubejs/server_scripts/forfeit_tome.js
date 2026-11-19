@@ -52,8 +52,22 @@ PlayerEvents.loggedIn(event => {
   try {
     player.give(buildTome())
     player.persistentData.putBoolean(TOME_FLAG, true)
-    player.tell(Text.of('[Forfeit Skies] ').darkPurple().append(Text.of('Here is your Akashic Tome with every guide book inside. Sneak + scroll to pick a book.').gray()))
+    player.tell(Text.of('[Forfeit Skies] ').darkPurple().append(Text.of('Here is your Akashic Tome with every guide book inside. Right-click it, pick a book, right-click again to read.').gray()))
+    // Some mods hand out their own starter book on first join (no config switch for these). They're all in the
+    // Tome, so tidy up the loose copies a few seconds later. Only runs on this first join, never again.
+    const name = player.username
+    event.server.scheduleInTicks(100, () => {
+      STARTER_BOOKS.forEach(pred => event.server.runCommandSilent(`clear ${name} ${pred}`))
+    })
   } catch (e) {
     console.error(`Forfeit tome: could not build the tome: ${e}`)
   }
 })
+
+// Loose starter books removed on first join (item predicates for /clear).
+const STARTER_BOOKS = [
+  'ftbquests:book', 'alshanex_familiars:familiar_guide', 'ars_nouveau:worn_notebook', 'alexsmobs:animal_dictionary',
+  'integrateddynamics:on_the_dynamics_of_integration',
+  'patchouli:guide_book[patchouli:book="divinerpg:divine"]', 'patchouli:guide_book[patchouli:book="advancedperipherals:manual"]',
+  'patchouli:guide_book[patchouli:book="patchouli:mods"]',
+]

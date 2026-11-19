@@ -1,9 +1,21 @@
 hash-format = "sha256"
 
 [[files]]
+file = "config/Advancedperipherals/world.toml"
+hash = "b9dcc5e7c2cbb453d11a4324b99341e6b08ad57e042151bf3e4b6c4336edd010"
+
+[[files]]
 file = "config/DistantHorizons.toml"
 hash = "5136c44783775137090c1c530f89d250f74c31ab501ec2159bcb1d86126917d3"
 preserve = true
+
+[[files]]
+file = "config/alexsmobs-common.toml"
+hash = "199780a11fff42f04e8806677fff6255d51e815493b52fa7224be8b6b344306d"
+
+[[files]]
+file = "config/ars_nouveau-common.toml"
+hash = "b1a7e267eac38e5dab7a225798f854333eb45a405e1caee6e895af1cc51b006f"
 
 [[files]]
 file = "config/carryon-common.toml"
@@ -12,6 +24,10 @@ hash = "ab0d5f2234aec2266b7ce6f9d772623b29924649015d261f95871153906c2f1c"
 [[files]]
 file = "config/enhancedcelestials2core/translations.json"
 hash = "ca187fe5c82c892b512d33479b28c0ade281734322ad2261732654cb3fb52d88"
+
+[[files]]
+file = "config/integrateddynamics-common.toml"
+hash = "d416445d5ce82b27037f039521accbdfda1acdb3189f15a4b46f71fa7d294990"
 
 [[files]]
 file = "config/openpartiesandclaims-server.toml"
@@ -43,11 +59,11 @@ hash = "15156495d47316c909f7ccf140e6b3840004528e0735abc767835c1edd67ee23"
 
 [[files]]
 file = "kubejs/server_scripts/forfeit_modbook.js"
-hash = "9bef316203785663c8e3efd5ec161c4194190625b277734a87da30a7bf3f5c8c"
+hash = "5221a7ff3079bbcce2cc9431efc8245eadb3d77b093c07624bbea4f97207b02b"
 
 [[files]]
 file = "kubejs/server_scripts/forfeit_tome.js"
-hash = "a568f5fccb96481fc5989857d1c9ad7580e204f0b8120e204da0f555b79653cc"
+hash = "948807fb60a2951e00f41a67889e366f2ec9641d7790f9fa680f8a3d1c510e1e"
 
 [[files]]
 file = "kubejs/server_scripts/forfeit_welcome.js"
