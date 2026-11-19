@@ -59,7 +59,8 @@ PlayerEvents.loggedIn(event => {
     const uuid = String(player.uuid)
     if (/^[0-9a-f-]{36}$/i.test(uuid)) {
       event.server.scheduleInTicks(100, () => {
-        STARTER_BOOKS.forEach(pred => event.server.runCommandSilent(`clear ${uuid} ${pred}`))
+        // /clear won't take a bare UUID (it could be any entity), so run it as that player.
+        STARTER_BOOKS.forEach(pred => event.server.runCommandSilent(`execute as ${uuid} run clear @s ${pred}`))
       })
     }
   } catch (e) {

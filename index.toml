@@ -63,7 +63,7 @@ hash = "5221a7ff3079bbcce2cc9431efc8245eadb3d77b093c07624bbea4f97207b02b"
 
 [[files]]
 file = "kubejs/server_scripts/forfeit_tome.js"
-hash = "43b63546a094908d57a344d1be5b29879c153576b0ed0b7b853476478e139aeb"
+hash = "a574374c74e2dc9f54177aca55363ebaa03b60e291bc208d8efe3c1b156eebe0"
 
 [[files]]
 file = "kubejs/server_scripts/forfeit_welcome.js"
