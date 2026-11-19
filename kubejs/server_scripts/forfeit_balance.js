@@ -26,6 +26,8 @@ ServerEvents.recipes(event => {
   event.replaceInput({ id: 'ars_nouveau:enchanting_apparatus' }, '#c:gems/diamond', 'create:precision_mechanism')
 
   // MAGIC needs TECH: Iron's Spells netherite spell book takes Mekanism reinforced alloy instead of blood vials.
+  // Create: Wizardry adds a Create-machine route to the same book that would skip this; remove it.
+  event.remove({ id: 'irons_spellbooks:sequenced_assembly/netherite_spell_book' })
   event.replaceInput({ id: 'irons_spellbooks:netherite_spell_book' }, 'irons_spellbooks:blood_vial', 'mekanism:alloy_reinforced')
 
   // CREATE needs TECH: the advanced (gyroscopic) propeller bearing needs an AE2 logic processor instead of a wooden slab.

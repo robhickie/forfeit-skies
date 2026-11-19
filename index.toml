@@ -15,7 +15,7 @@ hash = "ca187fe5c82c892b512d33479b28c0ade281734322ad2261732654cb3fb52d88"
 
 [[files]]
 file = "config/openpartiesandclaims-server.toml"
-hash = "e85b4e2f89da3f5087946a3bb2a3aef872049a51d14f42f3718cbef0b67e7385"
+hash = "5d94b7046299d68b034938e0818c4d54142fa59775334e8d535b19b87dcab5d4"
 
 [[files]]
 file = "config/sparsestructures.json5"
@@ -39,7 +39,7 @@ hash = "b7168fc43ae4a9000a78a128d8edec73155d6e4d2a975faccba0344bf4aca496"
 
 [[files]]
 file = "kubejs/server_scripts/forfeit_balance.js"
-hash = "db6a96f88d0a39e1c6339bdb2ae67002b98eaf11b96fae79ef32647c01b80873"
+hash = "15156495d47316c909f7ccf140e6b3840004528e0735abc767835c1edd67ee23"
 
 [[files]]
 file = "kubejs/server_scripts/forfeit_modbook.js"
