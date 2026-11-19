@@ -55,7 +55,7 @@ hash = "b7168fc43ae4a9000a78a128d8edec73155d6e4d2a975faccba0344bf4aca496"
 
 [[files]]
 file = "kubejs/data/minecraft/dimension/overworld.json"
-hash = "b5297d8beb7f6098737b7c54bcfea34a95deea08250a0c52411a65a564286702"
+hash = "b596a942526029946559d59deaf4ac7589713938eed4a421c5e25414bb99d324"
 
 [[files]]
 file = "kubejs/server_scripts/forfeit_balance.js"
