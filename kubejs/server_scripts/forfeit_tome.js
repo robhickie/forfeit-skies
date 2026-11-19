@@ -28,16 +28,16 @@ const TOME_PATCHOULI = [
 ]
 const TOME_FLAG = 'forfeit_got_tome_v1'
 
+// Ask the item registry directly: Item.of() with an unknown id throws an error that escapes try/catch.
+const $Registries = Java.loadClass('net.minecraft.core.registries.BuiltInRegistries')
+const $RL = Java.loadClass('net.minecraft.resources.ResourceLocation')
+const itemExists = (id) => $Registries.ITEM.containsKey($RL.parse(id))
+
 function buildTome() {
   const parts = []
   TOME_ITEMS.forEach(id => {
-    const mod = id.split(':')[0]
-    if (!Platform.isLoaded(mod)) return
-    let ok = false
-    // Item.of() returns a placeholder for unknown ids instead of throwing, so compare the id it actually made.
-    try { const s = Item.of(id); ok = !s.isEmpty() && String(s.id) === id } catch (e) { ok = false }
-    if (!ok) console.warn(`Forfeit tome: skipping ${id} (no such item)`)
-    if (ok) parts.push(`{id:"${id}",count:1}`)
+    if (!Platform.isLoaded(id.split(':')[0]) || !itemExists(id)) { console.warn(`Forfeit tome: skipping ${id} (no such item)`); return }
+    parts.push(`{id:"${id}",count:1}`)
   })
   TOME_PATCHOULI.forEach(([mod, book]) => {
     if (Platform.isLoaded(mod)) parts.push(`{id:"patchouli:guide_book",count:1,components:{"patchouli:book":"${book}"}}`)
