@@ -47,7 +47,7 @@ hash = "9bef316203785663c8e3efd5ec161c4194190625b277734a87da30a7bf3f5c8c"
 
 [[files]]
 file = "kubejs/server_scripts/forfeit_tome.js"
-hash = "2d1f687c162cacd357dbf509b49f9ab03e7b7cc7ac882553dfacd9ef27e7fd41"
+hash = "3f9d1b5f5c402c630d2be90939968cca845126000213b19d2cf3ccefb3c1a055"
 
 [[files]]
 file = "kubejs/server_scripts/forfeit_welcome.js"
@@ -1221,6 +1221,11 @@ metafile = true
 [[files]]
 file = "mods/no-chat-reports.pw.toml"
 hash = "5da18814472be5dc93a21886983646da3a7236413800075ac75229be82d114fa"
+metafile = true
+
+[[files]]
+file = "mods/notimeout.pw.toml"
+hash = "0ebcae98636a6bcf9a4c3e659aa7b0ddde1bfdff9c9a8790634df23ae9c4c8d3"
 metafile = true
 
 [[files]]

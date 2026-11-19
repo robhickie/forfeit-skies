@@ -34,7 +34,9 @@ function buildTome() {
     const mod = id.split(':')[0]
     if (!Platform.isLoaded(mod)) return
     let ok = false
-    try { ok = !Item.of(id).isEmpty() } catch (e) { ok = false }
+    // Item.of() returns a placeholder for unknown ids instead of throwing, so compare the id it actually made.
+    try { const s = Item.of(id); ok = !s.isEmpty() && String(s.id) === id } catch (e) { ok = false }
+    if (!ok) console.warn(`Forfeit tome: skipping ${id} (no such item)`)
     if (ok) parts.push(`{id:"${id}",count:1}`)
   })
   TOME_PATCHOULI.forEach(([mod, book]) => {
