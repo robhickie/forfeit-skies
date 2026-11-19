@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Forfeit Skies: Player Guide</title>
+<style>
+  @page { size: A4; margin: 16mm 15mm; }
+  :root { --ink:#1d2430; --muted:#5b6575; --sky:#2b6cb0; --sky-soft:#e8f1fb; --brass:#b7791f; --brass-soft:#fdf3e2; --line:#dbe2ea; }
+  * { box-sizing: border-box; }
+  body { font-family: "Segoe UI", system-ui, sans-serif; color: var(--ink); font-size: 10.5pt; line-height: 1.5; margin: 0; }
+  header { background: linear-gradient(135deg, #1e3a5f, #2b6cb0 60%, #4a90c8); color: #fff; border-radius: 10px; padding: 18px 22px; margin-bottom: 16px; }
+  header h1 { margin: 0; font-size: 24pt; letter-spacing: .5px; }
+  header p { margin: 4px 0 0; opacity: .9; }
+  h2 { font-size: 13.5pt; margin: 18px 0 6px; color: #1e3a5f; display: flex; align-items: center; gap: 10px; break-after: avoid; }
+  .n { background: var(--sky); color: #fff; border-radius: 50%; width: 24px; height: 24px; display: inline-flex; align-items: center; justify-content: center; font-size: 11pt; flex: none; }
+  section { break-inside: avoid; }
+  ol, ul { margin: 4px 0 6px; padding-left: 22px; }
+  li { margin: 2px 0; }
+  b.ui { background: #eef1f5; border: 1px solid var(--line); border-radius: 4px; padding: 0 5px; font-weight: 600; white-space: nowrap; }
+  code, .link { font-family: Consolas, monospace; font-size: 9.5pt; background: #f3f5f8; border-radius: 4px; padding: 1px 5px; word-break: break-all; }
+  .box { border-radius: 8px; padding: 10px 14px; margin: 8px 0; }
+  .tip { background: var(--sky-soft); border-left: 4px solid var(--sky); }
+  .warn { background: var(--brass-soft); border-left: 4px solid var(--brass); }
+  .addr { background: #1e3a5f; color: #fff; text-align: center; padding: 12px; border-radius: 8px; margin: 8px 0; }
+  .addr .big { font-family: Consolas, monospace; font-size: 15pt; font-weight: 700; letter-spacing: .5px; }
+  table { border-collapse: collapse; width: 100%; margin: 6px 0; font-size: 9.8pt; }
+  th, td { border: 1px solid var(--line); padding: 5px 8px; text-align: left; vertical-align: top; }
+  th { background: #f3f6fa; }
+  .lanes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 6px 0; }
+  .lane { border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; font-size: 9.6pt; }
+  .lane h3 { margin: 0 0 3px; font-size: 10.5pt; }
+  .page-break { break-before: page; }
+  footer { margin-top: 14px; color: var(--muted); font-size: 8.5pt; text-align: center; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Forfeit Skies</h1>
+  <p>Player guide: install once, then it keeps itself updated. Minecraft 1.21.1 · NeoForge · about 66 mods</p>
+</header>
+
+<div class="box tip"><b>The short version:</b> install Prism Launcher, sign in, import our zip, press Launch, join the server.
+You only do this once. Every time you press Launch afterwards, the pack updates itself.</div>
+
+<section>
+<h2><span class="n">1</span>Install Prism Launcher</h2>
+<ol>
+  <li>Go to <span class="link">prismlauncher.org</span> → <b class="ui">Download</b> and pick your system (Windows: the normal <i>Setup</i> installer).</li>
+  <li>Run the installer and open Prism Launcher. On first start it asks about Java and language: the defaults are fine.</li>
+</ol>
+<div class="box warn">Use <b>Prism</b>, not the CurseForge app or the normal Minecraft launcher. Prism is what does the automatic updates.</div>
+</section>
+
+<section>
+<h2><span class="n">2</span>Sign in with your Minecraft account</h2>
+<ol>
+  <li>Top right of Prism, click the account button → <b class="ui">Manage Accounts</b> → <b class="ui">Add Microsoft</b>.</li>
+  <li>Follow the steps in your browser (it's the same Microsoft account you use to play Minecraft).</li>
+  <li>Close the accounts window. Your name and skin should now show top right.</li>
+</ol>
+</section>
+
+<section>
+<h2><span class="n">3</span>Add the Forfeit Skies pack</h2>
+<ol>
+  <li>Download the pack file (about 90 KB, it's tiny):<br>
+    <span class="link">https://github.com/robhickie/forfeit-skies/releases/latest/download/Forfeit-Skies-Prism.zip</span></li>
+  <li>In Prism click <b class="ui">Add Instance</b> → <b class="ui">Import</b> (left side) → <b class="ui">Browse</b>, pick <code>Forfeit-Skies-Prism.zip</code> → <b class="ui">OK</b>.<br>
+      <i>(Or just drag the zip onto the Prism window.)</i></li>
+  <li><b>Don't unzip it.</b> Prism wants the zip as it is.</li>
+</ol>
+</section>
+
+<section>
+<h2><span class="n">4</span>Check the memory (RAM)</h2>
+<p>The pack is set to use <b>8 GB</b>. That's right for most gaming PCs.</p>
+<table>
+  <tr><th>Your PC's RAM</th><th>Set Maximum memory to</th></tr>
+  <tr><td>32 GB or more</td><td>8192 MB to 10240 MB</td></tr>
+  <tr><td>16 GB</td><td>8192 MB (leave as is)</td></tr>
+  <tr><td>8 GB</td><td>6144 MB, and close Chrome/Discord video while playing</td></tr>
+</table>
+<p>To change it: select <b>Forfeit Skies</b> → <b class="ui">Edit</b> → <b class="ui">Settings</b> → <b class="ui">Java</b> tab → tick <b class="ui">Memory</b> → set <b>Maximum memory allocation</b>.</p>
+</section>
+
+<section>
+<h2><span class="n">5</span>Launch (the first time takes a few minutes)</h2>
+<ol>
+  <li>Select <b>Forfeit Skies</b> and click <b class="ui">Launch</b>.</li>
+  <li>If Prism says it needs <b>Java 21</b>, click to let it download it automatically.</li>
+  <li>A small <b>"Updating"</b> window appears and downloads the mods. Let it finish. Minecraft then opens.</li>
+  <li>The first start of a modded game is slow (1 to 3 minutes on the loading screen). That's normal.</li>
+</ol>
+</section>
+
+<section>
+<h2><span class="n">6</span>Join the server</h2>
+<ol>
+  <li><b class="ui">Multiplayer</b> → <b class="ui">Add Server</b>.</li>
+  <li>Server Name: <code>Forfeit Skies</code>. Server Address:</li>
+</ol>
+<div class="addr"><div class="big">{{SERVER_ADDRESS}}</div></div>
+<ol start="3">
+  <li><b class="ui">Done</b> → double-click the server to join.</li>
+</ol>
+</section>
+
+<section>
+<h2><span class="n">7</span>Updates: nothing to do</h2>
+<p>When new mods or fixes are added, they download automatically the next time you press <b class="ui">Launch</b>.
+The server updates itself too, at its daily restart.</p>
+<div class="box warn"><b>"Mod mismatch" / "missing mods" / can't join after an update?</b> Close Minecraft completely and press
+<b class="ui">Launch</b> again. If it still fails, wait 5 minutes (GitHub takes a moment to share a new update) and try once more.</div>
+</section>
+
+<section class="page-break">
+<h2><span class="n">8</span>Good to know</h2>
+<ul>
+  <li><b>Daily restart at 6:00 am</b> with warnings in chat (10 min, 5 min, 1 min). Land your airship before it.</li>
+  <li><b>Backups every 12 hours</b>, so if something gets griefed or blown up we can roll back.</li>
+  <li><b>Recipes:</b> press <b class="ui">R</b> on any item for how to make it, <b class="ui">U</b> for what it's used in (JEI).</li>
+  <li><b>Map:</b> <b class="ui">M</b> opens the world map. <b>Claims:</b> open the Open Parties and Claims menu with <b class="ui">'</b> (apostrophe) to protect your base and make a party with friends.</li>
+  <li><b>Waystones</b> let you teleport between bases. The terrain is huge, with mountains up to build height, so it's worth it.</li>
+</ul>
+
+<h2><span class="n">★</span>What's in the pack: pick your path</h2>
+<div class="lanes">
+  <div class="lane"><h3>⚙️ Create &amp; Airships</h3>Create, <b>Create Aeronautics</b> (build flying ships from any blocks), Big Cannons, Steam 'n' Rails trains, Enchantment Industry, Crafts &amp; Additions.</div>
+  <div class="lane"><h3>✨ Magic</h3><b>Ars Nouveau</b> (design your own spells), <b>Iron's Spells 'n Spellbooks</b> (combat magic and bosses), <b>Occultism</b> (rituals and spirits). Ars Creo links magic to Create.</div>
+  <div class="lane"><h3>🔋 Tech</h3><b>Mekanism</b> (machines, ore multiplying, power), <b>Applied Energistics 2</b> (digital storage and autocrafting) with wireless terminals.</div>
+</div>
+<p><b>World:</b> Tectonic + Terralith + Biomes O' Plenty + Regions Unexplored (huge mountains, hundreds of biomes),
+YUNG's dungeons and mineshafts, When Dungeons Arise, Towns &amp; Towers, Mowzie's Mobs bosses, Farmer's Delight cooking,
+Sophisticated Backpacks and Storage.</p>
+
+<h2><span class="n">?</span>Something wrong?</h2>
+<table>
+  <tr><th>Problem</th><th>Fix</th></tr>
+  <tr><td>Game crashes or won't start</td><td>In Prism: select the pack → <b class="ui">Edit</b> → <b class="ui">Minecraft Log</b> → <b class="ui">Upload</b>, and post the link in Discord.</td></tr>
+  <tr><td>Very low FPS</td><td>Options → Video Settings: Render Distance 8 to 10, turn Clouds off. Don't add shaders (they break airships right now).</td></tr>
+  <tr><td>"Out of memory" crash</td><td>Raise memory (step 4), but never above about half your PC's RAM.</td></tr>
+  <tr><td>Kicked for "flying"</td><td>Shouldn't happen (flight is allowed for airships). Tell Rob if it does.</td></tr>
+  <tr><td>Want to add a mod yourself?</td><td>Don't. Your game would no longer match the server. Ask in Discord and it gets added for everyone.</td></tr>
+</table>
+
+<footer>Forfeit Skies · pack source: github.com/robhickie/forfeit-skies</footer>
+</section>
+
+</body>
+</html>
