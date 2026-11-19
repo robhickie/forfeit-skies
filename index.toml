@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = "config/carryon-common.toml"
-hash = "a93d7844f25b128cac2734121f759fc7f6e65a5f704f9245e1d8bfd249e3ea1e"
+hash = "ab0d5f2234aec2266b7ce6f9d772623b29924649015d261f95871153906c2f1c"
 
 [[files]]
 file = "config/openpartiesandclaims-server.toml"
@@ -247,11 +247,6 @@ metafile = true
 [[files]]
 file = "mods/carry-on.pw.toml"
 hash = "838dbcb90c93bab58691e82c95045bd97c3e096e3a2680a00cf063e56ce35ce3"
-metafile = true
-
-[[files]]
-file = "mods/carryon-aeronautics-compat.pw.toml"
-hash = "5dd4552f1e29c6db54ea43a7c56e298de7f8e467bd5a61a211f9c3362b5528b2"
 metafile = true
 
 [[files]]
