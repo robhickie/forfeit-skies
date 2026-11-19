@@ -55,10 +55,13 @@ PlayerEvents.loggedIn(event => {
     player.tell(Text.of('[Forfeit Skies] ').darkPurple().append(Text.of('Here is your Akashic Tome with every guide book inside. Right-click it, pick a book, right-click again to read.').gray()))
     // Some mods hand out their own starter book on first join (no config switch for these). They're all in the
     // Tome, so tidy up the loose copies a few seconds later. Only runs on this first join, never again.
-    const name = player.username
-    event.server.scheduleInTicks(100, () => {
-      STARTER_BOOKS.forEach(pred => event.server.runCommandSilent(`clear ${name} ${pred}`))
-    })
+    // Target by UUID (a fixed hex format) rather than building the command from the player name.
+    const uuid = String(player.uuid)
+    if (/^[0-9a-f-]{36}$/i.test(uuid)) {
+      event.server.scheduleInTicks(100, () => {
+        STARTER_BOOKS.forEach(pred => event.server.runCommandSilent(`clear ${uuid} ${pred}`))
+      })
+    }
   } catch (e) {
     console.error(`Forfeit tome: could not build the tome: ${e}`)
   }
