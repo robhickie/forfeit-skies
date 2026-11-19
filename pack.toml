@@ -1,12 +1,12 @@
 name = "Forfeit Skies"
 author = "robhickie"
-version = "0.4.0"
+version = "0.4.1"
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "a219c942de0401feb8f51dcdc0f602e3c2700aa961d3c10dca3b8e46909bc946"
+hash = "3d18e16eb653699eda16b73e0b9210698ce579259f2de45f6ae46daa2079447b"
 
 [versions]
 minecraft = "1.21.1"
