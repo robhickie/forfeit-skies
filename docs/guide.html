@@ -4,40 +4,64 @@
 <meta charset="utf-8">
 <title>Forfeit Skies: Player Guide</title>
 <style>
-  @page { size: A4; margin: 16mm 15mm; }
-  :root { --ink:#1d2430; --muted:#5b6575; --sky:#2b6cb0; --sky-soft:#e8f1fb; --brass:#b7791f; --brass-soft:#fdf3e2; --line:#dbe2ea; }
-  * { box-sizing: border-box; }
-  body { font-family: "Segoe UI", system-ui, sans-serif; color: var(--ink); font-size: 10.5pt; line-height: 1.5; margin: 0; }
-  header { background: linear-gradient(135deg, #1e3a5f, #2b6cb0 60%, #4a90c8); color: #fff; border-radius: 10px; padding: 18px 22px; margin-bottom: 16px; }
-  header h1 { margin: 0; font-size: 24pt; letter-spacing: .5px; }
-  header p { margin: 4px 0 0; opacity: .9; }
-  h2 { font-size: 13.5pt; margin: 18px 0 6px; color: #1e3a5f; display: flex; align-items: center; gap: 10px; break-after: avoid; }
-  .n { background: var(--sky); color: #fff; border-radius: 50%; width: 24px; height: 24px; display: inline-flex; align-items: center; justify-content: center; font-size: 11pt; flex: none; }
+  @page { size: A4; margin: 14mm 15mm; }
+  /* Forfeit colours, taken from forfeit-logo.svg: black #000 and purple #681d9e */
+  :root { --ink:#000; --text:#16131a; --purple:#681d9e; --purple-dark:#4a1471; --purple-soft:#f3ebfa; --grey-soft:#f2f1f4; --muted:#5d5866; --line:#e0dbe6;
+          --heavy: "Segoe UI Black", "Arial Black", "Segoe UI", sans-serif; }
+  * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family: "Segoe UI", system-ui, sans-serif; color: var(--text); font-size: 10.5pt; line-height: 1.5; margin: 0; }
+  header { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 0 0 10px; margin-bottom: 14px;
+           border-bottom: 7px solid var(--ink); position: relative; }
+  header::after { content: ""; position: absolute; left: 50%; right: 0; bottom: -7px; height: 7px; background: var(--purple); }
+  header .logo { height: 96px; display: block; }
+  header .what { text-align: right; }
+  header .what h1 { margin: 0; font-family: var(--heavy); font-weight: 900; font-size: 19pt; letter-spacing: .14em; text-transform: uppercase; line-height: 1.1; }
+  header .what p { margin: 4px 0 0; color: var(--muted); font-size: 9.6pt; }
+  header .what .chips { margin-top: 6px; display: flex; gap: 5px; justify-content: flex-end; flex-wrap: wrap; }
+  .chip { font-size: 8.4pt; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; border-radius: 4px; padding: 1px 7px; background: var(--ink); color: #fff; }
+  .chip.p { background: var(--purple); }
+  h2 { font-family: var(--heavy); font-weight: 900; font-size: 12.5pt; letter-spacing: .05em; text-transform: uppercase; margin: 16px 0 6px; color: var(--ink);
+       display: flex; align-items: center; gap: 10px; break-after: avoid; }
+  /* step badge: the Forfeit split disc */
+  .n { background: linear-gradient(90deg, var(--ink) 50%, var(--purple) 50%); color: #fff; border-radius: 50%; width: 27px; height: 27px; display: inline-flex;
+       align-items: center; justify-content: center; font-family: var(--heavy); font-size: 11pt; letter-spacing: 0; flex: none; }
   section { break-inside: avoid; }
   ol, ul { margin: 4px 0 6px; padding-left: 22px; }
   li { margin: 2px 0; }
-  b.ui { background: #eef1f5; border: 1px solid var(--line); border-radius: 4px; padding: 0 5px; font-weight: 600; white-space: nowrap; }
-  code, .link { font-family: Consolas, monospace; font-size: 9.5pt; background: #f3f5f8; border-radius: 4px; padding: 1px 5px; word-break: break-all; }
+  li::marker { color: var(--purple); font-weight: 700; }
+  b.ui { background: var(--grey-soft); border: 1px solid #cfc9d6; border-bottom-width: 2px; border-radius: 4px; padding: 0 5px; font-weight: 600; white-space: nowrap; color: var(--ink); }
+  code, .link { font-family: Consolas, monospace; font-size: 9.5pt; background: var(--grey-soft); border-radius: 4px; padding: 1px 5px; word-break: break-all; }
+  .link { color: var(--purple-dark); font-weight: 600; }
   .box { border-radius: 8px; padding: 10px 14px; margin: 8px 0; }
-  .tip { background: var(--sky-soft); border-left: 4px solid var(--sky); }
-  .warn { background: var(--brass-soft); border-left: 4px solid var(--brass); }
-  .addr { background: #1e3a5f; color: #fff; text-align: center; padding: 12px; border-radius: 8px; margin: 8px 0; }
+  .tip { background: var(--purple-soft); border-left: 5px solid var(--purple); }
+  .warn { background: var(--grey-soft); border-left: 5px solid var(--ink); }
+  .warn::before { content: "!"; display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; margin-right: 6px; border-radius: 50%;
+                  background: var(--ink); color: #fff; font-weight: 900; font-size: 9pt; vertical-align: 1px; }
+  .addr { background: var(--ink); color: #fff; text-align: center; padding: 12px; border-radius: 8px; margin: 8px 0; border-bottom: 5px solid var(--purple); }
   .addr .big { font-family: Consolas, monospace; font-size: 15pt; font-weight: 700; letter-spacing: .5px; }
   table { border-collapse: collapse; width: 100%; margin: 6px 0; font-size: 9.8pt; }
   th, td { border: 1px solid var(--line); padding: 5px 8px; text-align: left; vertical-align: top; }
-  th { background: #f3f6fa; }
+  th { background: var(--ink); color: #fff; border-color: var(--ink); font-weight: 600; }
+  tr:nth-child(odd) td { background: #faf8fc; }
   .lanes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 6px 0; }
-  .lane { border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; font-size: 9.6pt; }
-  .lane h3 { margin: 0 0 3px; font-size: 10.5pt; }
+  .lane { border: 1px solid var(--line); border-top: 5px solid var(--purple); border-radius: 8px; padding: 8px 10px; font-size: 9.6pt; }
+  .lane:nth-child(2) { border-top-color: var(--ink); }
+  .lane h3 { margin: 0 0 3px; font-size: 10.5pt; font-weight: 800; }
   .page-break { break-before: page; }
-  footer { margin-top: 14px; color: var(--muted); font-size: 8.5pt; text-align: center; }
+  footer { margin-top: 14px; padding-top: 8px; border-top: 1px solid var(--line); color: var(--muted); font-size: 8.5pt; text-align: center; }
+  a { color: var(--purple-dark); }
+  @media screen { body { max-width: 820px; margin: 24px auto; padding: 0 18px; } }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>Forfeit Skies</h1>
-  <p>Player guide: install once, then it keeps itself updated. Minecraft 1.21.1 · NeoForge · about 66 mods</p>
+  <img class="logo" src="logo/forfeit-skies-wide.svg" alt="Forfeit Skies">
+  <div class="what">
+    <h1>Player guide</h1>
+    <p>Install once, then it keeps itself updated.</p>
+    <div class="chips"><span class="chip">Minecraft 1.21.1</span><span class="chip">NeoForge</span><span class="chip p"><span data-modcount>240</span> mods</span><span class="chip">Hard</span></div>
+  </div>
 </header>
 
 <div class="box tip"><b>The short version:</b> install Prism Launcher, sign in, import our zip, press Launch, join the server.
@@ -115,16 +139,21 @@ The server updates itself too, at its daily restart.</p>
 <b class="ui">Launch</b> again. If it still fails, wait 5 minutes (GitHub takes a moment to share a new update) and try once more.</div>
 </section>
 
-<section class="page-break">
+<section>
 <h2><span class="n">8</span>Good to know</h2>
 <ul>
+  <li><b>Difficulty is Hard.</b> Mobs hit harder and hunger can starve you, so bring food and armour before you go exploring.</li>
   <li><b>Daily restart at 6:00 am</b> with warnings in chat (10 min, 5 min, 1 min). Land your airship before it.</li>
   <li><b>Backups every 12 hours</b>, so if something gets griefed or blown up we can roll back.</li>
+  <li><b>Quest book:</b> open it with the quest book button in your inventory screen (FTB Quests). It guides you through each mod step by step, so it's the best place to start.</li>
+  <li><b>Vein-mining:</b> hold <b class="ui">`</b> (the key top-left, under <b class="ui">Esc</b>) while you mine to break a whole vein of ore or a whole tree at once (FTB Ultimine).</li>
   <li><b>Recipes:</b> press <b class="ui">R</b> on any item for how to make it, <b class="ui">U</b> for what it's used in (JEI).</li>
   <li><b>Map:</b> <b class="ui">M</b> opens the world map. <b>Claims:</b> open the Open Parties and Claims menu with <b class="ui">'</b> (apostrophe) to protect your base and make a party with friends.</li>
   <li><b>Waystones</b> let you teleport between bases. The terrain is huge, with mountains up to build height, so it's worth it.</li>
 </ul>
+</section>
 
+<section>
 <h2><span class="n">★</span>What's in the pack: pick your path</h2>
 <div class="lanes">
   <div class="lane"><h3>⚙️ Create &amp; Airships</h3>Create, <b>Create Aeronautics</b> (build flying ships from any blocks), Big Cannons, Steam 'n' Rails trains, Enchantment Industry, Crafts &amp; Additions.</div>
@@ -134,7 +163,12 @@ The server updates itself too, at its daily restart.</p>
 <p><b>World:</b> Tectonic + Terralith + Biomes O' Plenty + Regions Unexplored (huge mountains, hundreds of biomes),
 YUNG's dungeons and mineshafts, When Dungeons Arise, Towns &amp; Towers, Mowzie's Mobs bosses, Farmer's Delight cooking,
 Sophisticated Backpacks and Storage.</p>
+<div class="box tip"><b>The full list:</b> all <span data-modcount>240</span> mods (plus <span data-libcount>68</span> background libraries) are in
+<a href="mods.html"><b>mods.html</b></a>, which comes with this guide. Open it in any browser to search by name or filter by category
+(Create &amp; airships, magic, tech, adventure, world, building, food, quality of life).</div>
+</section>
 
+<section>
 <h2><span class="n">?</span>Something wrong?</h2>
 <table>
   <tr><th>Problem</th><th>Fix</th></tr>
@@ -145,7 +179,7 @@ Sophisticated Backpacks and Storage.</p>
   <tr><td>Want to add a mod yourself?</td><td>Don't. Your game would no longer match the server. Ask in Discord and it gets added for everyone.</td></tr>
 </table>
 
-<footer>Forfeit Skies · pack source: github.com/robhickie/forfeit-skies</footer>
+<footer>Forfeit Skies · a Forfeit community server · pack source: github.com/robhickie/forfeit-skies</footer>
 </section>
 
 </body>
