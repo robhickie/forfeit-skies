@@ -1,0 +1,8 @@
+# Forfeit Skies defaults (only written on first install; your own DH settings are kept after that)
+[common.logging.warning]
+	showModCompatibilityWarningsOnStartup = false
+	showGarbageCollectorWarning = false
+	logGarbageCollectorWarning = false
+
+[client.advanced.autoUpdater]
+	enableAutoUpdater = false

@@ -1,8 +1,17 @@
 hash-format = "sha256"
 
 [[files]]
+file = "config/DistantHorizons.toml"
+hash = "5136c44783775137090c1c530f89d250f74c31ab501ec2159bcb1d86126917d3"
+preserve = true
+
+[[files]]
 file = "config/carryon-common.toml"
 hash = "ab0d5f2234aec2266b7ce6f9d772623b29924649015d261f95871153906c2f1c"
+
+[[files]]
+file = "config/enhancedcelestials2core/translations.json"
+hash = "ca187fe5c82c892b512d33479b28c0ade281734322ad2261732654cb3fb52d88"
 
 [[files]]
 file = "config/openpartiesandclaims-server.toml"
@@ -35,6 +44,10 @@ hash = "db6a96f88d0a39e1c6339bdb2ae67002b98eaf11b96fae79ef32647c01b80873"
 [[files]]
 file = "kubejs/server_scripts/forfeit_modbook.js"
 hash = "9bef316203785663c8e3efd5ec161c4194190625b277734a87da30a7bf3f5c8c"
+
+[[files]]
+file = "kubejs/server_scripts/forfeit_welcome.js"
+hash = "7b26d9caee06dcd3bd7e979239c94c44bf52fe6f4eea6c8a168e4660606e61c3"
 
 [[files]]
 file = "mods/aces-spell-utils.pw.toml"
