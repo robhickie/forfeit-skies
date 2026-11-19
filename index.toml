@@ -46,6 +46,10 @@ file = "kubejs/server_scripts/forfeit_modbook.js"
 hash = "9bef316203785663c8e3efd5ec161c4194190625b277734a87da30a7bf3f5c8c"
 
 [[files]]
+file = "kubejs/server_scripts/forfeit_tome.js"
+hash = "2d1f687c162cacd357dbf509b49f9ab03e7b7cc7ac882553dfacd9ef27e7fd41"
+
+[[files]]
 file = "kubejs/server_scripts/forfeit_welcome.js"
 hash = "7b26d9caee06dcd3bd7e979239c94c44bf52fe6f4eea6c8a168e4660606e61c3"
 
