@@ -1,6 +1,14 @@
 hash-format = "sha256"
 
 [[files]]
+file = "config/carryon-common.toml"
+hash = "a93d7844f25b128cac2734121f759fc7f6e65a5f704f9245e1d8bfd249e3ea1e"
+
+[[files]]
+file = "config/openpartiesandclaims-server.toml"
+hash = "e85b4e2f89da3f5087946a3bb2a3aef872049a51d14f42f3718cbef0b67e7385"
+
+[[files]]
 file = "config/sparsestructures.json5"
 hash = "75a830a8a005a44bbc21b51066d54558f6dd1fa61960e9fedd173ade24913725"
 
