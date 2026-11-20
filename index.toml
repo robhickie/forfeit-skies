@@ -62,6 +62,14 @@ file = "kubejs/assets/forfeit/textures/quests/logo.png"
 hash = "b7168fc43ae4a9000a78a128d8edec73155d6e4d2a975faccba0344bf4aca496"
 
 [[files]]
+file = "kubejs/data/enhancedcelestials2defaultlunarevents/enhancedcelestials2core/lunar/event_modifier/blood_moon_spawn_category_multiplier.json"
+hash = "abe2e74280e0ef936f2c06a598fc46364f4b5f49e80441c8b4d268f0bef9fba1"
+
+[[files]]
+file = "kubejs/data/enhancedcelestials2defaultlunarevents/enhancedcelestials2core/lunar/event_modifier/super_blood_moon_spawn_category_multiplier.json"
+hash = "abe2e74280e0ef936f2c06a598fc46364f4b5f49e80441c8b4d268f0bef9fba1"
+
+[[files]]
 file = "kubejs/data/forbidden_arcanus/neoforge/biome_modifier/add_lost_soul_overworld.json"
 hash = "274ef41dd58e89c672337a35de7100b877d83a58e75bd7df4f4106eae4a74cc4"
 
