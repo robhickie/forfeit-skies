@@ -121,7 +121,7 @@ largeIslandWeight = 0.35
 #Minimum Y for island centers. Values above 320 require world-height expansion mods/settings.
 # Default: -30
 # Range: -32 ~ 2000
-minIslandY = 40
+minIslandY = -32
 #Maximum Y for island centers. Values above 320 require world-height expansion mods/settings.
 # Default: 250
 # Range: -16 ~ 2000

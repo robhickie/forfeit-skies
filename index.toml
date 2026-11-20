@@ -35,7 +35,7 @@ hash = "5d94b7046299d68b034938e0818c4d54142fa59775334e8d535b19b87dcab5d4"
 
 [[files]]
 file = "config/sky_archipelago-common.toml"
-hash = "53c00ee30bded62046fef06f2e6a47874c2cd02d6ea708bcc5d996217baa7cce"
+hash = "9e50efde2267a29e74b9fe1a1db5d2befd34261dfc21fe25156981462450965c"
 
 [[files]]
 file = "config/sky_archipelago-server.toml"
