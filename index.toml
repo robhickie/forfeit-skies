@@ -66,6 +66,10 @@ file = "kubejs/server_scripts/forfeit_balance.js"
 hash = "15156495d47316c909f7ccf140e6b3840004528e0735abc767835c1edd67ee23"
 
 [[files]]
+file = "kubejs/server_scripts/forfeit_idle_pregen.js"
+hash = "7abb9717b44bcf81b40cf24a98fce9cb5efff5f169a1e3f6669176ae35fd08b5"
+
+[[files]]
 file = "kubejs/server_scripts/forfeit_modbook.js"
 hash = "5221a7ff3079bbcce2cc9431efc8245eadb3d77b093c07624bbea4f97207b02b"
 
@@ -75,7 +79,7 @@ hash = "a574374c74e2dc9f54177aca55363ebaa03b60e291bc208d8efe3c1b156eebe0"
 
 [[files]]
 file = "kubejs/server_scripts/forfeit_welcome.js"
-hash = "221961f5be6c2f43861b6e5d8d6b5d22f8b33f68761c00d16d6d22f210ced2aa"
+hash = "f87c779f85593b4acf74af15c099c307e5dfbf6dd7fd32d0b86e896d863a9d6a"
 
 [[files]]
 file = "mods/aces-spell-utils.pw.toml"
