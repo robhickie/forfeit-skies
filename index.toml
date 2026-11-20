@@ -74,6 +74,10 @@ file = "kubejs/data/forbidden_arcanus/neoforge/biome_modifier/add_lost_soul_over
 hash = "274ef41dd58e89c672337a35de7100b877d83a58e75bd7df4f4106eae4a74cc4"
 
 [[files]]
+file = "kubejs/data/forfeit/neoforge/biome_modifier/farm_animals.json"
+hash = "736151649566703e5cc6da07139b1459d7c8ea0b8623b7a74391d97be9f7a2a7"
+
+[[files]]
 file = "kubejs/data/forfeit/neoforge/biome_modifier/sky_ores.json"
 hash = "9f104451335f9a0340e6253f01aabb2297885e1d6fc305a3cf1c12e71b9356fe"
 
