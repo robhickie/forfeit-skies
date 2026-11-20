@@ -26,6 +26,8 @@ ServerEvents.tick(event => {
 })
 
 PlayerEvents.loggedIn(event => {
+  // Always pause on join, even if Chunky was started by hand (not by this script): generation + players + Distant Horizons don't mix.
   forfeitIdleMinutes = 0
-  if (forfeitPregenRunning) { event.server.runCommandSilent('chunky pause'); forfeitPregenRunning = false }
+  event.server.runCommandSilent('chunky pause')
+  forfeitPregenRunning = false
 })
