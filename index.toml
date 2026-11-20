@@ -62,6 +62,58 @@ file = "kubejs/assets/forfeit/textures/quests/logo.png"
 hash = "b7168fc43ae4a9000a78a128d8edec73155d6e4d2a975faccba0344bf4aca496"
 
 [[files]]
+file = "kubejs/data/forfeit/neoforge/biome_modifier/sky_ores.json"
+hash = "7a234badd12d30340aa7e429e7538b03d7e6ce485298cb030e0591331e177b1b"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/configured_feature/sky_arlemite.json"
+hash = "243eb71ca496dbcd207d7c437b5a40c24d48cd134687ec107bfab264e96f09d3"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/configured_feature/sky_diamond.json"
+hash = "b425b02e4d4aa6cf049ad4154ff97f703756f35275a3a3b3da986a339e6a30f8"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/configured_feature/sky_draconium.json"
+hash = "8f68b348292607646132cae8328bcfd7d724c725a051fe7d67e0c41854cf9994"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/configured_feature/sky_gold.json"
+hash = "f31018e07105fd1f4c39920aa8c52afc7a2710477536a14a62ec7e35ec4bb196"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/configured_feature/sky_redstone.json"
+hash = "37b8818031a2422b86db0e4431331347b9facc03813ad9cc26c8a86625c5f9b7"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/configured_feature/sky_rupee.json"
+hash = "83e1f6e04b3b232bce32242f8174e56ca8b668bd3faa63089984ae87a8bcfd0b"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/placed_feature/sky_arlemite.json"
+hash = "da27f293970fa294933b8aa78133f9339b0f4cdbceadfe0cd25b9b6189ece220"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/placed_feature/sky_diamond.json"
+hash = "c66d691e7fa6ce7010843947bc3d5d0adc2f937978f37e0c4f0c4e8c87b21edf"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/placed_feature/sky_draconium.json"
+hash = "9681efea7cb33d8b6001c964fe70537caf44f7ee4bf987be0a8ed9a691617d96"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/placed_feature/sky_gold.json"
+hash = "6197372e2fab3e4e6f9ad7a77cfbb21039257fd053b27790c78c28fca6fbd568"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/placed_feature/sky_redstone.json"
+hash = "baff758133bfa303c0eef861b3789a5484f913f09f0d8fa0454c0d43d53cefc8"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/placed_feature/sky_rupee.json"
+hash = "da52d7aa7d5d061909ca1dd4b22e121993d0ade5134ca64c065fcfba9866fb02"
+
+[[files]]
 file = "kubejs/server_scripts/forfeit_balance.js"
 hash = "15156495d47316c909f7ccf140e6b3840004528e0735abc767835c1edd67ee23"
 
@@ -72,6 +124,10 @@ hash = "7abb9717b44bcf81b40cf24a98fce9cb5efff5f169a1e3f6669176ae35fd08b5"
 [[files]]
 file = "kubejs/server_scripts/forfeit_modbook.js"
 hash = "5221a7ff3079bbcce2cc9431efc8245eadb3d77b093c07624bbea4f97207b02b"
+
+[[files]]
+file = "kubejs/server_scripts/forfeit_skyfixes.js"
+hash = "87e6db8ce6878f57ab388c0bf3f6781b7ee304d42c5c277fdba25f7b69fe82b5"
 
 [[files]]
 file = "kubejs/server_scripts/forfeit_tome.js"
@@ -1855,6 +1911,11 @@ metafile = true
 file = "mods/zeta.pw.toml"
 hash = "cb474b6c0dde741836ed4f796f3b6ab0b9d3cdc0453e651122cd002d5d1f8df8"
 metafile = true
+
+[[files]]
+file = "options.txt"
+hash = "aabbe68d0bb7693a69e1b2cc01e9475d960d100043fd3b0589623da7b1fe12ca"
+preserve = true
 
 [[files]]
 file = "patchouli_books/mods/book.json"

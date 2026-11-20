@@ -1,0 +1,13 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#minecraft:is_overworld",
+  "features": [
+    "forfeit:sky_diamond",
+    "forfeit:sky_gold",
+    "forfeit:sky_redstone",
+    "forfeit:sky_rupee",
+    "forfeit:sky_arlemite",
+    "forfeit:sky_draconium"
+  ],
+  "step": "underground_ores"
+}
