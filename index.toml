@@ -246,6 +246,10 @@ file = "kubejs/server_scripts/forfeit_modbook.js"
 hash = "5221a7ff3079bbcce2cc9431efc8245eadb3d77b093c07624bbea4f97207b02b"
 
 [[files]]
+file = "kubejs/server_scripts/forfeit_recipebook.js"
+hash = "b9f46a6741a5df46ac99ec257e5b513fc2f31c4cca76951065c6a9a3c4874af1"
+
+[[files]]
 file = "kubejs/server_scripts/forfeit_skyfixes.js"
 hash = "87e6db8ce6878f57ab388c0bf3f6781b7ee304d42c5c277fdba25f7b69fe82b5"
 
