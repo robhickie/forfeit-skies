@@ -1165,11 +1165,6 @@ hash = "0004feab868f7b873c12db05aae0d0dac6c87b497490b48bb66480e7c8d0f340"
 metafile = true
 
 [[files]]
-file = "mods/hardcore-revival.pw.toml"
-hash = "b40bf18d55e384abd8799b611c84a264518e4fc6aed6f49aa568a49578bae083"
-metafile = true
-
-[[files]]
 file = "mods/hexerei.pw.toml"
 hash = "bd496127dfae8939188c1eb6d6e77930a2f89514308169abed5d27a7b3199ac2"
 metafile = true
