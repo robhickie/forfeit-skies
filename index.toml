@@ -147,7 +147,7 @@ hash = "a574374c74e2dc9f54177aca55363ebaa03b60e291bc208d8efe3c1b156eebe0"
 
 [[files]]
 file = "kubejs/server_scripts/forfeit_waystones.js"
-hash = "435a522d31023775419152a99f2e7ca74bddd8a3648236fdc38dbc7089920d1a"
+hash = "ca7a45e99ea36ca931a2e5c3095e4f2cabbb0ad2783ee92375ea24a97f6e7717"
 
 [[files]]
 file = "kubejs/server_scripts/forfeit_welcome.js"
