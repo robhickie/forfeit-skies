@@ -1945,6 +1945,11 @@ hash = "2561e6b42014863c3576a63022977b2a1de408f98ee6ec1c7bf9ab11321430fa"
 metafile = true
 
 [[files]]
+file = "mods/veil-hand-patch.pw.toml"
+hash = "9c5c1513491d15a1cc1af69187f118208d8e883a5b95af379e6bf2b648e7ac31"
+metafile = true
+
+[[files]]
 file = "mods/waystones-sable.pw.toml"
 hash = "bbd6bfe1d01c35b7d689aba2eb759e5e232791f8cdcf986af6e94f881bf3813a"
 metafile = true
