@@ -70,7 +70,7 @@ riverEcologicalBankWidth = 4
 #Chance that a cluster cell becomes an island anchor. Lower values create larger sky gaps.
 # Default: 0.4
 # Range: 0.01 ~ 1.0
-islandDensity = 0.45
+islandDensity = 0.4
 #Minimum horizontal island radius in blocks.
 # Default: 24
 # Range: 8 ~ 600
@@ -85,47 +85,47 @@ islandSizeMode = "SPECIFIC"
 #Specific mode: minimum radius for small islands.
 # Default: 50
 # Range: 8 ~ 600
-smallIslandMinRadius = 30
+smallIslandMinRadius = 24
 #Specific mode: maximum radius for small islands.
 # Default: 60
 # Range: 8 ~ 600
-smallIslandMaxRadius = 50
+smallIslandMaxRadius = 41
 #Specific mode: spawn weight for small islands.
 # Default: 0.1
 # Range: 0.0 ~ 1.0
-smallIslandWeight = 0.2
+smallIslandWeight = 0.34
 #Specific mode: minimum radius for medium islands.
 # Default: 70
 # Range: 8 ~ 600
-mediumIslandMinRadius = 70
+mediumIslandMinRadius = 42
 #Specific mode: maximum radius for medium islands.
 # Default: 95
 # Range: 8 ~ 600
-mediumIslandMaxRadius = 110
+mediumIslandMaxRadius = 58
 #Specific mode: spawn weight for medium islands.
 # Default: 0.6
 # Range: 0.0 ~ 1.0
-mediumIslandWeight = 0.45
+mediumIslandWeight = 0.33
 #Specific mode: minimum radius for large islands.
 # Default: 150
 # Range: 8 ~ 600
-largeIslandMinRadius = 140
+largeIslandMinRadius = 60
 #Specific mode: maximum radius for large islands.
 # Default: 160
 # Range: 8 ~ 600
-largeIslandMaxRadius = 200
+largeIslandMaxRadius = 110
 #Specific mode: spawn weight for large islands.
 # Default: 0.3
 # Range: 0.0 ~ 1.0
-largeIslandWeight = 0.35
+largeIslandWeight = 0.33
 #Minimum Y for island centers. Values above 320 require world-height expansion mods/settings.
 # Default: -30
 # Range: -32 ~ 2000
-minIslandY = -32
+minIslandY = 0
 #Maximum Y for island centers. Values above 320 require world-height expansion mods/settings.
 # Default: 250
 # Range: -16 ~ 2000
-maxIslandY = 380
+maxIslandY = 340
 #Maximum vertical island thickness in blocks. Prevents giant islands from becoming too tall/deep.
 # Default: 140
 # Range: 24 ~ 1024
@@ -133,11 +133,11 @@ maxIslandThicknessBlocks = 140
 #Relative weight of the uncommon low-island height band.
 # Default: 0.5
 # Range: 0.0 ~ 10.0
-lowBandWeight = 0.3
+lowBandWeight = 0.25
 #Relative weight of the dominant mid/high island height band.
 # Default: 0.3
 # Range: 0.0 ~ 10.0
-midHighBandWeight = 0.45
+midHighBandWeight = 0.5
 #Relative weight of the rare very-high island height band.
 # Default: 0.2
 # Range: 0.0 ~ 10.0
@@ -160,15 +160,15 @@ clusterSpacingMode = "DYNAMIC"
 #Dynamic spacing mode: minimum cluster spacing in blocks.
 # Default: 150
 # Range: 32 ~ 2000
-minClusterSpacing = 180
+minClusterSpacing = 110
 #Dynamic spacing mode: maximum cluster spacing in blocks.
 # Default: 250
 # Range: 32 ~ 2000
-maxClusterSpacing = 300
+maxClusterSpacing = 160
 #Multiplier for island top-surface height variation. Higher values create rougher, less flat tops.
 # Default: 1.0
 # Range: 0.0 ~ 40.0
-terrainReliefScale = 3.0
+terrainReliefScale = 1.0
 #Whether the classic island archetype is allowed to spawn.
 classicArchetypeEnabled = true
 #Relative spawn weight for the classic island archetype.

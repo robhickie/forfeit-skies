@@ -35,7 +35,7 @@ hash = "5d94b7046299d68b034938e0818c4d54142fa59775334e8d535b19b87dcab5d4"
 
 [[files]]
 file = "config/sky_archipelago-common.toml"
-hash = "9e50efde2267a29e74b9fe1a1db5d2befd34261dfc21fe25156981462450965c"
+hash = "a4a4d93e6974f0adc70ef9f3ac92a18f3dd059769a3137800ea3380262eb06bd"
 
 [[files]]
 file = "config/sky_archipelago-server.toml"
@@ -67,11 +67,19 @@ hash = "274ef41dd58e89c672337a35de7100b877d83a58e75bd7df4f4106eae4a74cc4"
 
 [[files]]
 file = "kubejs/data/forfeit/neoforge/biome_modifier/sky_ores.json"
-hash = "7a234badd12d30340aa7e429e7538b03d7e6ce485298cb030e0591331e177b1b"
+hash = "9f104451335f9a0340e6253f01aabb2297885e1d6fc305a3cf1c12e71b9356fe"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/configured_feature/sky_arcane_crystal.json"
+hash = "fce0c9c02eac28608135d19ea1a04908ab85aa2d153a370781c288dc9b787db6"
 
 [[files]]
 file = "kubejs/data/forfeit/worldgen/configured_feature/sky_arlemite.json"
 hash = "243eb71ca496dbcd207d7c437b5a40c24d48cd134687ec107bfab264e96f09d3"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/configured_feature/sky_cthonic_gold.json"
+hash = "e03aba6f8b902e797ddb7f19628e0c4ceec29978e8e1291bdb3b0882ab51e994"
 
 [[files]]
 file = "kubejs/data/forfeit/worldgen/configured_feature/sky_diamond.json"
@@ -86,6 +94,42 @@ file = "kubejs/data/forfeit/worldgen/configured_feature/sky_gold.json"
 hash = "f31018e07105fd1f4c39920aa8c52afc7a2710477536a14a62ec7e35ec4bb196"
 
 [[files]]
+file = "kubejs/data/forfeit/worldgen/configured_feature/sky_ie_nickel.json"
+hash = "7ab1dbea010be5284b9847113bbab3476de60ab80cf0a75afc906ce42d272660"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/configured_feature/sky_ie_silver.json"
+hash = "8b68300ff5a4a37186a4692dd660a1be5fb176fa43488be93b9de3a1d2c76521"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/configured_feature/sky_ie_uranium.json"
+hash = "01b7c6b0545039d2cb2f66a07e6e9eabafd64114c5748f1cb5fd9f058ac1bb92"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/configured_feature/sky_lapis.json"
+hash = "caeb899ea5873e136b2a4d97c978c6d9d2c21e308631840e675b8bc8feeee9ac"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/configured_feature/sky_malum_quartz.json"
+hash = "3976a7c95f748684e78bc83ebbbde3d65676c044b7a00ee46272af866f79369c"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/configured_feature/sky_mek_fluorite.json"
+hash = "ef163892dcd0271e4012f1a13c507947a7154b492b641d5a2f39c35c9cbd6da9"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/configured_feature/sky_mek_uranium.json"
+hash = "8c56bfd7639227529b758be953b0ab2acc770fbbc61bb4be23600a2faab3ddb3"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/configured_feature/sky_mithril.json"
+hash = "e1483b4024015c7a678216ce4fa6b196de5699a05a6adad08bda2f92c583ff7b"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/configured_feature/sky_platinum.json"
+hash = "f7d724cd9a10ecffc2a2b6842a8f20e925c8a46097a40bf8601866f0908cc3a8"
+
+[[files]]
 file = "kubejs/data/forfeit/worldgen/configured_feature/sky_redstone.json"
 hash = "37b8818031a2422b86db0e4431331347b9facc03813ad9cc26c8a86625c5f9b7"
 
@@ -94,28 +138,80 @@ file = "kubejs/data/forfeit/worldgen/configured_feature/sky_rupee.json"
 hash = "83e1f6e04b3b232bce32242f8174e56ca8b668bd3faa63089984ae87a8bcfd0b"
 
 [[files]]
+file = "kubejs/data/forfeit/worldgen/configured_feature/sky_uraninite.json"
+hash = "b17ecccec6d13bd020a797a6267fe95c2af76923738db64a61c3e00e23be8f5a"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/placed_feature/sky_arcane_crystal.json"
+hash = "43363bdaab844a393c033e4032fd47bee13498963ea4ccabc25c035779b3169b"
+
+[[files]]
 file = "kubejs/data/forfeit/worldgen/placed_feature/sky_arlemite.json"
-hash = "2efa2919804def1bd2e25befdd5fd01329b36b8fc75f0809ce4d4f6c6dfca46f"
+hash = "5083d8b7d27c3bd982e75e9feb60ac108eae59ae31d9af9d2b94b2011c8edc26"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/placed_feature/sky_cthonic_gold.json"
+hash = "4736899441a1beb73a190c52be7dcd5edcab9e9b9b5a7e7a2aeddae311545b85"
 
 [[files]]
 file = "kubejs/data/forfeit/worldgen/placed_feature/sky_diamond.json"
-hash = "7be619282388edd9818106f4a3fef9aebf9ff93ceac5a46599c19456262c0ec9"
+hash = "4d27974b17cb844f6cd320783f4ee87f017d09d2774e4986b29568cd2dcdda1c"
 
 [[files]]
 file = "kubejs/data/forfeit/worldgen/placed_feature/sky_draconium.json"
-hash = "ba36b3f5cdebf697adc8a194f45d16b40a335c138c525594e9984687b6592d48"
+hash = "08f1328848be4f89a34f72aa9857ed6a878bcb9ab2097c31d44c39c9cf174584"
 
 [[files]]
 file = "kubejs/data/forfeit/worldgen/placed_feature/sky_gold.json"
-hash = "d45f1aaff37359b75e21f3041895a0ff837e3ca6f357644d0deaf76ace124ed0"
+hash = "2529c003e2e20c1b09ce4e95c2f8bcbbe189c8836ae577d559c4f8eda6105641"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/placed_feature/sky_ie_nickel.json"
+hash = "b6872753176c439566712413ae04ccab859547e062af52f7ae13f15acf7b4ad8"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/placed_feature/sky_ie_silver.json"
+hash = "56ef8dfe4cdab666e5d82d9d17f7e5f6fa6e81fea4d7d91d7b6f18a02fe7680d"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/placed_feature/sky_ie_uranium.json"
+hash = "7d1e88b1c515e4519cb9bb1cc3e84dff1bd97aee32ab751ef8c41c9c23347aa3"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/placed_feature/sky_lapis.json"
+hash = "7eba82f179be342b82e9381f6cf26a9274f52e9f296fbf2bf163abd0dac399c6"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/placed_feature/sky_malum_quartz.json"
+hash = "ffe0d1fdf3023cbd16354866452bdc7e12454a2a557b56578016d0df013b730d"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/placed_feature/sky_mek_fluorite.json"
+hash = "602f83092f54512785f03b21562cca7a58ecfbaf100fe50324956c4704125aaa"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/placed_feature/sky_mek_uranium.json"
+hash = "eec8c41c03fbd3c4e14c355e9e383b02d3a687142f0ab56f629b7e9b29f2a820"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/placed_feature/sky_mithril.json"
+hash = "d7b35be367cca2f133b91a25170a5ea57b0fa56896c12b72b40bd3cd4017de58"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/placed_feature/sky_platinum.json"
+hash = "8f3913dd21d0ef8e36701bd5ef87e35897371efdc2ac5b7af1db6c89f10fa0c6"
 
 [[files]]
 file = "kubejs/data/forfeit/worldgen/placed_feature/sky_redstone.json"
-hash = "0777db5236f5fe64edacb7bd44608cabfadc3e3094de30178c92aafe8aa0d87a"
+hash = "200a36a0f9fcca930b6525fdbfdca4f96f15d4a1348f1d834838ac5371efbe7b"
 
 [[files]]
 file = "kubejs/data/forfeit/worldgen/placed_feature/sky_rupee.json"
-hash = "af20c9b6b8dfcd68694e81ebc88293984b8b781a117f128dd9c08e72a12c047b"
+hash = "abf505c3c1541d41e3cc834fdf1389de8a4c456bdc810e8bbff18903bf5370ea"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/placed_feature/sky_uraninite.json"
+hash = "a790ac3787e4447ba57e7097c665e112d6a1be61375762550eb3a877bd9470ce"
 
 [[files]]
 file = "kubejs/data/vampirism/neoforge/biome_modifier/spawn/advanced_vampire_spawns.json"

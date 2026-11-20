@@ -5,9 +5,21 @@
     "forfeit:sky_diamond",
     "forfeit:sky_gold",
     "forfeit:sky_redstone",
+    "forfeit:sky_lapis",
     "forfeit:sky_rupee",
     "forfeit:sky_arlemite",
-    "forfeit:sky_draconium"
+    "forfeit:sky_draconium",
+    "forfeit:sky_mithril",
+    "forfeit:sky_ie_uranium",
+    "forfeit:sky_ie_nickel",
+    "forfeit:sky_ie_silver",
+    "forfeit:sky_mek_uranium",
+    "forfeit:sky_mek_fluorite",
+    "forfeit:sky_uraninite",
+    "forfeit:sky_platinum",
+    "forfeit:sky_arcane_crystal",
+    "forfeit:sky_malum_quartz",
+    "forfeit:sky_cthonic_gold"
   ],
   "step": "underground_ores"
 }
