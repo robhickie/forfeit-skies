@@ -6,7 +6,7 @@ hash = "b9dcc5e7c2cbb453d11a4324b99341e6b08ad57e042151bf3e4b6c4336edd010"
 
 [[files]]
 file = "config/DistantHorizons.toml"
-hash = "5136c44783775137090c1c530f89d250f74c31ab501ec2159bcb1d86126917d3"
+hash = "f2d4aad580e0708657f5ea5630a4403d521ed4a965bfebb20f6c706654612254"
 preserve = true
 
 [[files]]
@@ -739,7 +739,7 @@ metafile = true
 
 [[files]]
 file = "mods/distanthorizons.pw.toml"
-hash = "6d37de7b436e094a7834d51b5d9d803653ab445e1041853f32a61599b054c7bf"
+hash = "0c20fea3407ed0db85b4b171f1820a24987f2659946fadd30bae044205041b09"
 metafile = true
 
 [[files]]

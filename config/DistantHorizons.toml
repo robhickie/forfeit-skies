@@ -4,5 +4,26 @@
 	showGarbageCollectorWarning = false
 	logGarbageCollectorWarning = false
 
+[common.multiThreading]
+	# Light on your PC: 2 threads, each idling a quarter of the time. Raise these in the DH settings if your PC has spare power.
+	numberOfThreads = 2
+	threadRunTimeRatio = "0.75"
+
+[common.worldGenerator]
+	# In multiplayer the server sends far terrain from chunks that already exist; nothing new is generated.
+	chunkGeneratorMode = "PRE_EXISTING_ONLY"
+
 [client.advanced.autoUpdater]
 	enableAutoUpdater = false
+
+[client.advanced.graphics.culling]
+	# Off: cave culling draws big dark shadows under floating islands.
+	enableCaveCulling = false
+
+[client.advanced.graphics.quality]
+	# About 2 km of far view. Higher = more GPU/RAM.
+	lodChunkRenderDistanceRadius = 128
+	maxHorizontalResolution = "TWO_BLOCKS"
+	horizontalQuality = "MEDIUM"
+	# MEDIUM or higher is needed for floating islands (lower settings fill them down to the void).
+	verticalQuality = "MEDIUM"
