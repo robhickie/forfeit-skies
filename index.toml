@@ -146,6 +146,10 @@ file = "kubejs/server_scripts/forfeit_tome.js"
 hash = "a574374c74e2dc9f54177aca55363ebaa03b60e291bc208d8efe3c1b156eebe0"
 
 [[files]]
+file = "kubejs/server_scripts/forfeit_waystones.js"
+hash = "435a522d31023775419152a99f2e7ca74bddd8a3648236fdc38dbc7089920d1a"
+
+[[files]]
 file = "kubejs/server_scripts/forfeit_welcome.js"
 hash = "f87c779f85593b4acf74af15c099c307e5dfbf6dd7fd32d0b86e896d863a9d6a"
 
