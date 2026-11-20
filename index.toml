@@ -91,27 +91,27 @@ hash = "83e1f6e04b3b232bce32242f8174e56ca8b668bd3faa63089984ae87a8bcfd0b"
 
 [[files]]
 file = "kubejs/data/forfeit/worldgen/placed_feature/sky_arlemite.json"
-hash = "da27f293970fa294933b8aa78133f9339b0f4cdbceadfe0cd25b9b6189ece220"
+hash = "2efa2919804def1bd2e25befdd5fd01329b36b8fc75f0809ce4d4f6c6dfca46f"
 
 [[files]]
 file = "kubejs/data/forfeit/worldgen/placed_feature/sky_diamond.json"
-hash = "c66d691e7fa6ce7010843947bc3d5d0adc2f937978f37e0c4f0c4e8c87b21edf"
+hash = "7be619282388edd9818106f4a3fef9aebf9ff93ceac5a46599c19456262c0ec9"
 
 [[files]]
 file = "kubejs/data/forfeit/worldgen/placed_feature/sky_draconium.json"
-hash = "9681efea7cb33d8b6001c964fe70537caf44f7ee4bf987be0a8ed9a691617d96"
+hash = "ba36b3f5cdebf697adc8a194f45d16b40a335c138c525594e9984687b6592d48"
 
 [[files]]
 file = "kubejs/data/forfeit/worldgen/placed_feature/sky_gold.json"
-hash = "6197372e2fab3e4e6f9ad7a77cfbb21039257fd053b27790c78c28fca6fbd568"
+hash = "d45f1aaff37359b75e21f3041895a0ff837e3ca6f357644d0deaf76ace124ed0"
 
 [[files]]
 file = "kubejs/data/forfeit/worldgen/placed_feature/sky_redstone.json"
-hash = "baff758133bfa303c0eef861b3789a5484f913f09f0d8fa0454c0d43d53cefc8"
+hash = "0777db5236f5fe64edacb7bd44608cabfadc3e3094de30178c92aafe8aa0d87a"
 
 [[files]]
 file = "kubejs/data/forfeit/worldgen/placed_feature/sky_rupee.json"
-hash = "da52d7aa7d5d061909ca1dd4b22e121993d0ade5134ca64c065fcfba9866fb02"
+hash = "af20c9b6b8dfcd68694e81ebc88293984b8b781a117f128dd9c08e72a12c047b"
 
 [[files]]
 file = "kubejs/server_scripts/forfeit_balance.js"
