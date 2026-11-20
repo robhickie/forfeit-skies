@@ -215,11 +215,11 @@ hash = "a790ac3787e4447ba57e7097c665e112d6a1be61375762550eb3a877bd9470ce"
 
 [[files]]
 file = "kubejs/data/vampirism/neoforge/biome_modifier/spawn/advanced_vampire_spawns.json"
-hash = "ac621e718aa2b80e6a4cf2b92256bab42ecbecece22a437a348d0be6825155ce"
+hash = "20e75b710857e1ab945f3933c73c5aac53eeda5c5ce0192308869618451b24bf"
 
 [[files]]
 file = "kubejs/data/vampirism/neoforge/biome_modifier/spawn/vampire_spawns.json"
-hash = "42640991d50fb55454c141af94cf4b998e8e10d322bda714cab113feba7ef7b7"
+hash = "2f4e1570609fd8aaa43a2f48bcb1385cefc98c5de967fd1dd3b02855b3e185fd"
 
 [[files]]
 file = "kubejs/server_scripts/forfeit_balance.js"
