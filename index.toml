@@ -39,7 +39,7 @@ hash = "53c00ee30bded62046fef06f2e6a47874c2cd02d6ea708bcc5d996217baa7cce"
 
 [[files]]
 file = "config/sky_archipelago-server.toml"
-hash = "533189f0d5948e871b890c92c26acce985428ac0a591aeb41f5c7c36662f56eb"
+hash = "6dd91203b55d6f95085cd8bfad5a9001eace0ca401df71971f3e6f9318fd121a"
 
 [[files]]
 file = "config/sparsestructures.json5"

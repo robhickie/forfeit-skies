@@ -43,7 +43,7 @@ adaptiveColumnCacheTargetHitRate = 0.85
 #Guard per-structure feature placement failures so one bad structure cannot crash chunk generation.
 structurePlacementCrashShieldEnabled = true
 #Serialize final structure placement mutations for compatibility with parallel worldgen mods such as C2ME. Disable only for benchmarking or debugging.
-serializeStructurePlacementForParallelWorldgen = false
+serializeStructurePlacementForParallelWorldgen = true
 #Strict mode for structure placement crash shield. When true, guarded placement failures are rethrown.
 structurePlacementCrashShieldStrict = false
 #Rate limit window in seconds for repeating crash-shield warning logs per structure id.
