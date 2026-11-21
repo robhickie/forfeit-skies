@@ -238,6 +238,10 @@ file = "kubejs/data/vampirism/neoforge/biome_modifier/spawn/vampire_spawns.json"
 hash = "2f4e1570609fd8aaa43a2f48bcb1385cefc98c5de967fd1dd3b02855b3e185fd"
 
 [[files]]
+file = "kubejs/server_scripts/forfeit_ae2.js"
+hash = "e0fc2087ad9b83f5f2881ccb74c4957c1514a0ad1f29c80ef66146273d2ce0ed"
+
+[[files]]
 file = "kubejs/server_scripts/forfeit_balance.js"
 hash = "15156495d47316c909f7ccf140e6b3840004528e0735abc767835c1edd67ee23"
 
@@ -251,7 +255,7 @@ hash = "94e779dab22e1663d2a09a6333570477b41fc615fa6c7e7fc7e410c89420c2f6"
 
 [[files]]
 file = "kubejs/server_scripts/forfeit_joinprotect.js"
-hash = "87986544ff15513c49f2a93acc5c63198e434c80c492fe960938450d0387e151"
+hash = "ea5f63ae07fc855f79e65ca2c4bb0429280041bbe19b23450f41cc1709f2b48f"
 
 [[files]]
 file = "kubejs/server_scripts/forfeit_modbook.js"

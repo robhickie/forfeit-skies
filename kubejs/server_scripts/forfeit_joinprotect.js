@@ -1,9 +1,9 @@
 // Forfeit Skies: players can't be hurt while their game is still loading in after joining.
 // Joining can take 10+ seconds on this pack (the server freezes loading advancements), and mobs were killing people
-// before their screen even appeared. Protection lasts until the player first moves (after a 3 s grace) or 60 s, whichever is first.
+// before their screen even appeared. Protection lasts until the player first moves (after a 3 s grace) or 3 minutes, whichever is first.
 // Void damage and /kill still go through, so nobody gets stuck alive in the void.
 const forfeitJoinProtect = {}
-const JOIN_PROTECT_MAX_TICKS = 1200 // 60 s
+const JOIN_PROTECT_MAX_TICKS = 3600 // 3 min (timed joins took 66-84 s to load terrain)
 const JOIN_PROTECT_MIN_TICKS = 60   // 3 s before moving can end it
 const JOIN_PROTECT_ALWAYS = ['outOfWorld', 'genericKill'] // damage msgIds: void, /kill
 
