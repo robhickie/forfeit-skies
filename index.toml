@@ -247,7 +247,7 @@ hash = "ea7a1130447edd3c49d0a2078f685aee46ccf06eaf3d812889e732c70b97e385"
 
 [[files]]
 file = "kubejs/server_scripts/forfeit_idle_pregen.js"
-hash = "a1d59aaf4032b9a612c442c586975efc7ada0e6460f899bab0bc5255608d6970"
+hash = "5428dcf6ae21a9b47d74094ad21834b3c67abd4e7549822bc120e785a036a45d"
 
 [[files]]
 file = "kubejs/server_scripts/forfeit_modbook.js"
@@ -566,6 +566,11 @@ metafile = true
 [[files]]
 file = "mods/chipped.pw.toml"
 hash = "24c6c3fe917ffbcef04e788dec3e003d0ed03433bc00f9cf4f23fe9b85636aa7"
+metafile = true
+
+[[files]]
+file = "mods/chunky.pw.toml"
+hash = "68cc51e721e993a8b7a2cbaf45369933b22b07a9c82327ab14757ee10684aa81"
 metafile = true
 
 [[files]]
@@ -940,7 +945,7 @@ metafile = true
 
 [[files]]
 file = "mods/distanthorizons.pw.toml"
-hash = "0c20fea3407ed0db85b4b171f1820a24987f2659946fadd30bae044205041b09"
+hash = "6d37de7b436e094a7834d51b5d9d803653ab445e1041853f32a61599b054c7bf"
 metafile = true
 
 [[files]]

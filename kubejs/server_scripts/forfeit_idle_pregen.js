@@ -6,9 +6,9 @@
 // Start a new area with e.g. `chunky radius 4500` + `chunky start` while nobody is on; this script carries it on.
 let forfeitIdleMinutes = 0
 let forfeitPregenRunning = false
-// PAUSED 2026-11-21: Distant Horizons now runs on the server, and DH + an active Chunky task froze the server thread.
+// Distant Horizons is client-only again (2026-11-21), so idle pre-generation is back on.
 // Set to true only if Distant Horizons is removed from the server again (or Chunky is replaced).
-const FORFEIT_IDLE_PREGEN_ENABLED = false
+const FORFEIT_IDLE_PREGEN_ENABLED = true
 
 ServerEvents.tick(event => {
   const server = event.server
