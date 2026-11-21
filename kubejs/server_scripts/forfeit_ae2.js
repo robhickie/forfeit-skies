@@ -7,15 +7,15 @@ ServerEvents.recipes(event => {
     O: 'minecraft:obsidian', B: 'minecraft:blackstone', E: 'minecraft:ender_pearl'
   }).id('forfeit:ae2_sky_stone')
 
-  // Certus source: no recipe on purpose. Rob hands out the first flawed budding certus by command;
+  // Certus source: no recipe on purpose. The quest book gives one flawed budding certus for owning all four presses
   // after that players make more with AE2's own water transform (certus quartz block + charged certus crystal).
 
-  // Inscriber presses: sky stone + iron blocks around a key item
+  // Inscriber presses: sky stone + iron blocks around a key item. No key needs certus: the presses come first, then certus.
   const press = (out, key) => event.shaped(out, ['SIS', 'IKI', 'SIS'], {
     S: 'ae2:sky_stone_block', I: 'minecraft:iron_block', K: key
   }).id(`forfeit:${out.split(':')[1]}`)
-  press('ae2:calculation_processor_press', 'ae2:quartz_block')
+  press('ae2:calculation_processor_press', 'minecraft:quartz_block')
   press('ae2:engineering_processor_press', 'minecraft:diamond_block')
   press('ae2:logic_processor_press', 'minecraft:gold_block')
-  press('ae2:silicon_press', 'ae2:fluix_block')
+  press('ae2:silicon_press', 'minecraft:lapis_block')
 })
