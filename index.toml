@@ -58,6 +58,10 @@ file = "config/terrablender.toml"
 hash = "386b0318404124fc17b67fc7e5b19407aa8fbe6d20f414d1d2a417b2f7893ac2"
 
 [[files]]
+file = "config/vampirism-common.toml"
+hash = "ad0faeb216f0c7b68184d81d8a970ae8c818f692ba803ad21c71af679640ec16"
+
+[[files]]
 file = "kubejs/assets/forfeit/textures/quests/badge.png"
 hash = "52415b656766d03c8988baef7e68df00dd2a7cf674101a8fc45643083e7d3980"
 
@@ -1998,6 +2002,11 @@ metafile = true
 [[files]]
 file = "mods/valhelsia-core.pw.toml"
 hash = "f05197caaa06d6cf3807ae2d81928c4f5eff1336597b863207c6320ab7f2e4b0"
+metafile = true
+
+[[files]]
+file = "mods/vampires-need-umbrellas.pw.toml"
+hash = "5044244197219c2d0dcca141c78c0dd1837d27954e1a4ebb05aa60a59bb87bf9"
 metafile = true
 
 [[files]]
