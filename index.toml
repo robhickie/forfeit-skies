@@ -19,7 +19,7 @@ hash = "b1a7e267eac38e5dab7a225798f854333eb45a405e1caee6e895af1cc51b006f"
 
 [[files]]
 file = "config/betterdays-common.toml"
-hash = "04b5eab63f125a086ecb5d322267b2954e1a16f94c434433138edc5aeb91ec42"
+hash = "f35963319fa6dbbeed98e28e164043bcf226bec357c02c4f2a6c31edcb55382c"
 
 [[files]]
 file = "config/carryon-common.toml"

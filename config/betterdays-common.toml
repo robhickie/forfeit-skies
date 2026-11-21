@@ -28,7 +28,7 @@
 	#This setting defines the length of the night in real-world minutes.
 	#Vanilla length: 10.0 minutes
 	#Range: 0.1 ~ 10000.0
-	nightSpeedMinutes = 10.0
+	nightSpeedMinutes = 7.0
 	#The time to start day. This is configurable within the time the sun appears and day starts.
 	#Default: 23500
 	#Range: 22300.0 ~ 24000.0
