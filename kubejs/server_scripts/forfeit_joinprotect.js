@@ -22,12 +22,14 @@ EntityEvents.beforeHurt(event => {
   const key = String(e.uuid)
   const s = forfeitJoinProtect[key]
   if (!s) return
-  if (JOIN_PROTECT_ALWAYS.indexOf(String(event.source.getMsgId())) >= 0) return
   const elapsed = e.server.tickCount - s.tick
   const moved = Math.hypot(e.x - s.x, e.z - s.z) > 1.5
   if (elapsed > JOIN_PROTECT_MAX_TICKS || (elapsed >= JOIN_PROTECT_MIN_TICKS && moved)) {
     delete forfeitJoinProtect[key]
     return
   }
+  // DamageSource has no script-visible msgId getter; its text form is "DamageSource (outOfWorld)".
+  const m = String(event.source).match(/\(([^)]*)\)/)
+  if (m && JOIN_PROTECT_ALWAYS.indexOf(m[1]) >= 0) return
   event.cancel()
 })

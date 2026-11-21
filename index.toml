@@ -255,7 +255,7 @@ hash = "94e779dab22e1663d2a09a6333570477b41fc615fa6c7e7fc7e410c89420c2f6"
 
 [[files]]
 file = "kubejs/server_scripts/forfeit_joinprotect.js"
-hash = "ea5f63ae07fc855f79e65ca2c4bb0429280041bbe19b23450f41cc1709f2b48f"
+hash = "752dda6a8d3377612491dc79777af2832d93e92e939048bc3e89255b3d1ad005"
 
 [[files]]
 file = "kubejs/server_scripts/forfeit_modbook.js"
