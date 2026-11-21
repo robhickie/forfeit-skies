@@ -239,7 +239,7 @@ hash = "15156495d47316c909f7ccf140e6b3840004528e0735abc767835c1edd67ee23"
 
 [[files]]
 file = "kubejs/server_scripts/forfeit_idle_pregen.js"
-hash = "325fde899ae7a57a9068ed5edece260e3b435898eb13a2806b4157e03313c610"
+hash = "a1d59aaf4032b9a612c442c586975efc7ada0e6460f899bab0bc5255608d6970"
 
 [[files]]
 file = "kubejs/server_scripts/forfeit_modbook.js"
@@ -478,6 +478,11 @@ metafile = true
 [[files]]
 file = "mods/better-archeology.pw.toml"
 hash = "ddebe944d10b4a129d4fe780f15fa98dcccfabddda76d029307d8e1a8c318104"
+metafile = true
+
+[[files]]
+file = "mods/betterdays.pw.toml"
+hash = "f567df6f58cbb28cd6e28dfa72dde29ed8c787afc6e4694c797b0896fa07c8f6"
 metafile = true
 
 [[files]]
@@ -932,7 +937,7 @@ metafile = true
 
 [[files]]
 file = "mods/distanthorizons.pw.toml"
-hash = "6d37de7b436e094a7834d51b5d9d803653ab445e1041853f32a61599b054c7bf"
+hash = "0c20fea3407ed0db85b4b171f1820a24987f2659946fadd30bae044205041b09"
 metafile = true
 
 [[files]]
