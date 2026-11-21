@@ -18,6 +18,10 @@ file = "config/ars_nouveau-common.toml"
 hash = "b1a7e267eac38e5dab7a225798f854333eb45a405e1caee6e895af1cc51b006f"
 
 [[files]]
+file = "config/betterdays-common.toml"
+hash = "04b5eab63f125a086ecb5d322267b2954e1a16f94c434433138edc5aeb91ec42"
+
+[[files]]
 file = "config/carryon-common.toml"
 hash = "ab0d5f2234aec2266b7ce6f9d772623b29924649015d261f95871153906c2f1c"
 
