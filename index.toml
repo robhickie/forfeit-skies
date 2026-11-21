@@ -239,7 +239,7 @@ hash = "2f4e1570609fd8aaa43a2f48bcb1385cefc98c5de967fd1dd3b02855b3e185fd"
 
 [[files]]
 file = "kubejs/server_scripts/forfeit_ae2.js"
-hash = "e0fc2087ad9b83f5f2881ccb74c4957c1514a0ad1f29c80ef66146273d2ce0ed"
+hash = "2766b5e01a50e8379da869bc60b284a8d6b7f79ef6561eaef793cce64a2ae929"
 
 [[files]]
 file = "kubejs/server_scripts/forfeit_balance.js"
