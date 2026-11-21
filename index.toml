@@ -250,6 +250,10 @@ file = "kubejs/server_scripts/forfeit_idle_pregen.js"
 hash = "94e779dab22e1663d2a09a6333570477b41fc615fa6c7e7fc7e410c89420c2f6"
 
 [[files]]
+file = "kubejs/server_scripts/forfeit_joinprotect.js"
+hash = "87986544ff15513c49f2a93acc5c63198e434c80c492fe960938450d0387e151"
+
+[[files]]
 file = "kubejs/server_scripts/forfeit_modbook.js"
 hash = "5221a7ff3079bbcce2cc9431efc8245eadb3d77b093c07624bbea4f97207b02b"
 
@@ -1630,6 +1634,11 @@ metafile = true
 [[files]]
 file = "mods/natures-compass.pw.toml"
 hash = "35acdf433fe8f8599f59975e848efdb717663c2c471d3a5dc18743799795a736"
+metafile = true
+
+[[files]]
+file = "mods/netherportalfix.pw.toml"
+hash = "5dc059422613b5645cb00e32d3bfd53de428c4939113d11ce2c844cb54165da6"
 metafile = true
 
 [[files]]
