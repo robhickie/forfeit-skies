@@ -75,3 +75,13 @@ const STARTER_BOOKS = [
   'patchouli:guide_book[patchouli:book="divinerpg:divine"]', 'patchouli:guide_book[patchouli:book="advancedperipherals:manual"]',
   'patchouli:guide_book[patchouli:book="patchouli:mods"]',
 ]
+
+// Books some mods hand out on EVERY join (not just the first). They are all inside the Akashic Tome, so remove the loose copy.
+const EVERY_JOIN_BOOKS = ['alshanex_familiars:familiar_guide']
+PlayerEvents.loggedIn(event => {
+  const uuid = String(event.player.uuid)
+  if (!/^[0-9a-f-]{36}$/i.test(uuid)) return
+  event.server.scheduleInTicks(120, () => {
+    EVERY_JOIN_BOOKS.forEach(pred => event.server.runCommandSilent(`execute as ${uuid} run clear @s ${pred}`))
+  })
+})
