@@ -14,8 +14,10 @@ ServerEvents.tick(event => {
   const server = event.server
   if (server.tickCount % 1200 != 0) return // once a minute
   if (server.playerList.playerCount > 0) {
+    // Anyone online: make sure Chunky is paused, however it was started (by this script or by hand).
     forfeitIdleMinutes = 0
-    if (forfeitPregenRunning) { server.runCommandSilent('chunky pause'); forfeitPregenRunning = false }
+    server.runCommandSilent('chunky pause')
+    forfeitPregenRunning = false
     return
   }
   if (!FORFEIT_IDLE_PREGEN_ENABLED) return

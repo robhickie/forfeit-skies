@@ -247,7 +247,7 @@ hash = "ea7a1130447edd3c49d0a2078f685aee46ccf06eaf3d812889e732c70b97e385"
 
 [[files]]
 file = "kubejs/server_scripts/forfeit_idle_pregen.js"
-hash = "5428dcf6ae21a9b47d74094ad21834b3c67abd4e7549822bc120e785a036a45d"
+hash = "94e779dab22e1663d2a09a6333570477b41fc615fa6c7e7fc7e410c89420c2f6"
 
 [[files]]
 file = "kubejs/server_scripts/forfeit_modbook.js"
