@@ -1,0 +1,9 @@
+{
+  "_comment": "Forfeit Skies: Wilden dens almost never generate on the islands, so Wilden Hunters/Stalkers spawn rarely in forests instead.",
+  "type": "neoforge:add_spawns",
+  "biomes": "#minecraft:is_taiga",
+  "spawners": [
+    { "type": "ars_nouveau:wilden_hunter", "weight": 6, "minCount": 1, "maxCount": 2 },
+    { "type": "ars_nouveau:wilden_stalker", "weight": 6, "minCount": 1, "maxCount": 2 }
+  ]
+}

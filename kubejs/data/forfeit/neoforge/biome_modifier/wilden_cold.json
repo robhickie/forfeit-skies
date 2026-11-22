@@ -1,0 +1,8 @@
+{
+  "_comment": "Forfeit Skies: Wilden Defenders (guardian dens are cold-biome only) spawn rarely in snowy biomes instead.",
+  "type": "neoforge:add_spawns",
+  "biomes": "#c:is_snowy",
+  "spawners": [
+    { "type": "ars_nouveau:wilden_guardian", "weight": 6, "minCount": 1, "maxCount": 1 }
+  ]
+}

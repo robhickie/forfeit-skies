@@ -178,6 +178,18 @@ file = "kubejs/data/forfeit/neoforge/biome_modifier/sky_stones.json"
 hash = "4fc6776b7b28b7d9af4e252718d964a3c684afb06b39a50539fca7d80514cfcb"
 
 [[files]]
+file = "kubejs/data/forfeit/neoforge/biome_modifier/wilden_cold.json"
+hash = "8831484addf78b46674616294df5adf80b08359e5ed68248238a4dee07eb5bba"
+
+[[files]]
+file = "kubejs/data/forfeit/neoforge/biome_modifier/wilden_forest.json"
+hash = "69cb7e90f315717e8e5ca7c0ef3b1c9f5c6ed66ce70a41b0438c0bceaa906509"
+
+[[files]]
+file = "kubejs/data/forfeit/neoforge/biome_modifier/wilden_taiga.json"
+hash = "533e22f2f95e425ca6bb7112e24308df559adf9ce3616c459a926bd48d1e7efc"
+
+[[files]]
 file = "kubejs/data/forfeit/worldgen/configured_feature/sky_arcane_crystal.json"
 hash = "fce0c9c02eac28608135d19ea1a04908ab85aa2d153a370781c288dc9b787db6"
 
