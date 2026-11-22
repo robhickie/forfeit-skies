@@ -1,0 +1,7 @@
+{
+  "_comment": "Forfeit Skies: no waystones in CTOV villages (airships first). Disabled by a false condition.",
+  "type": "lithostitched:add_template_pool_elements",
+  "neoforge:conditions": [ { "type": "neoforge:false" } ],
+  "template_pools": "ctov:village/plains/house",
+  "elements": []
+}
