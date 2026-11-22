@@ -498,6 +498,10 @@ file = "kubejs/server_scripts/forfeit_joinprotect.js"
 hash = "752dda6a8d3377612491dc79777af2832d93e92e939048bc3e89255b3d1ad005"
 
 [[files]]
+file = "kubejs/server_scripts/forfeit_moblimit.js"
+hash = "3d25747a2677d1f634b015234adfdb654bb4f801a44020fe028ba1d0938bd2ac"
+
+[[files]]
 file = "kubejs/server_scripts/forfeit_modbook.js"
 hash = "5221a7ff3079bbcce2cc9431efc8245eadb3d77b093c07624bbea4f97207b02b"
 
