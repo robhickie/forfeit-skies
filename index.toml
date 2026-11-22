@@ -11,7 +11,7 @@ preserve = true
 
 [[files]]
 file = "config/alexsmobs-common.toml"
-hash = "199780a11fff42f04e8806677fff6255d51e815493b52fa7224be8b6b344306d"
+hash = "bc33b0f78c880ce8c1f4862d3ed3c2a38a59bf4d85959495914ed1d19c679cb7"
 
 [[files]]
 file = "config/ars_nouveau-common.toml"
