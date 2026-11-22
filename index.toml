@@ -318,6 +318,14 @@ file = "kubejs/data/forfeit/worldgen/placed_feature/sky_uraninite.json"
 hash = "a790ac3787e4447ba57e7097c665e112d6a1be61375762550eb3a877bd9470ce"
 
 [[files]]
+file = "kubejs/data/irons_spellbooks/irons_spellbooks_spell_config/angel_wing.json"
+hash = "ae09fed61454d3f6400bd09598b5e2108ae314c5d867a8e63c2af5f8c008ed8d"
+
+[[files]]
+file = "kubejs/data/irons_spellbooks/irons_spellbooks_spell_config/ascension.json"
+hash = "ae09fed61454d3f6400bd09598b5e2108ae314c5d867a8e63c2af5f8c008ed8d"
+
+[[files]]
 file = "kubejs/data/kaisyn/worldgen/template_pool/village/modded/waystones/waystone_default.json"
 hash = "8d26076d63ac30ba5d269333d37d345b17f8d4d95eabb264ca50af87686e41a6"
 
@@ -348,6 +356,10 @@ hash = "15156495d47316c909f7ccf140e6b3840004528e0735abc767835c1edd67ee23"
 [[files]]
 file = "kubejs/server_scripts/forfeit_compasses.js"
 hash = "ea7a1130447edd3c49d0a2078f685aee46ccf06eaf3d812889e732c70b97e385"
+
+[[files]]
+file = "kubejs/server_scripts/forfeit_flight.js"
+hash = "b488d755c35966222d6dfa41efa79d547da3a3a9f304fd54fe14cb50ab55ba5b"
 
 [[files]]
 file = "kubejs/server_scripts/forfeit_idle_pregen.js"
