@@ -12,7 +12,8 @@ const FORFEIT_NO_FLIGHT = [
   'pneumaticcraft:jet_boots_upgrade_1', 'pneumaticcraft:jet_boots_upgrade_2', 'pneumaticcraft:jet_boots_upgrade_3',
   'pneumaticcraft:jet_boots_upgrade_4', 'pneumaticcraft:jet_boots_upgrade_5', 'pneumaticcraft:elytra_upgrade',
   // Ars Nouveau
-  'ars_nouveau:belt_of_levitation', 'ars_nouveau:thread_gliding', 'ars_nouveau:ritual_flight',
+  // (Belt of Levitation stays: it only lifts you a little above the ground - a climbing aid, no use over the void)
+  'ars_nouveau:thread_gliding', 'ars_nouveau:glyph_glide', 'ars_nouveau:ritual_flight',
   // DivineRPG Angelic armour (full set = flight)
   'divinerpg:angelic_helmet', 'divinerpg:angelic_chestplate', 'divinerpg:angelic_leggings', 'divinerpg:angelic_boots',
   // Draconic Evolution flight modules

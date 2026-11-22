@@ -475,7 +475,7 @@ hash = "ea7a1130447edd3c49d0a2078f685aee46ccf06eaf3d812889e732c70b97e385"
 
 [[files]]
 file = "kubejs/server_scripts/forfeit_flight.js"
-hash = "b488d755c35966222d6dfa41efa79d547da3a3a9f304fd54fe14cb50ab55ba5b"
+hash = "e6def4ae6ca6dbc6daa287e24f1b9d25557e889d5b05f82c83c21f719aef919c"
 
 [[files]]
 file = "kubejs/server_scripts/forfeit_idle_pregen.js"
