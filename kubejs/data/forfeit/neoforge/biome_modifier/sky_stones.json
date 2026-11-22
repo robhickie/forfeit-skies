@@ -1,0 +1,22 @@
+{
+  "_comment": "Forfeit Skies: stone variety at island heights (vanilla/mod stones only generate around y 0-64). New terrain only.",
+  "type": "neoforge:add_features",
+  "biomes": "#minecraft:is_overworld",
+  "features": [
+    "forfeit:sky_stone_granite",
+    "forfeit:sky_stone_diorite",
+    "forfeit:sky_stone_andesite",
+    "forfeit:sky_stone_tuff",
+    "forfeit:sky_stone_calcite",
+    "forfeit:sky_stone_asurine",
+    "forfeit:sky_stone_crimsite",
+    "forfeit:sky_stone_ochrum",
+    "forfeit:sky_stone_scoria",
+    "forfeit:sky_stone_veridium",
+    "forfeit:sky_stone_create_limestone",
+    "forfeit:sky_stone_shale",
+    "forfeit:sky_stone_quark_limestone",
+    "forfeit:sky_stone_jasper"
+  ],
+  "step": "underground_ores"
+}

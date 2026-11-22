@@ -174,6 +174,10 @@ file = "kubejs/data/forfeit/neoforge/biome_modifier/sky_ores.json"
 hash = "9f104451335f9a0340e6253f01aabb2297885e1d6fc305a3cf1c12e71b9356fe"
 
 [[files]]
+file = "kubejs/data/forfeit/neoforge/biome_modifier/sky_stones.json"
+hash = "4fc6776b7b28b7d9af4e252718d964a3c684afb06b39a50539fca7d80514cfcb"
+
+[[files]]
 file = "kubejs/data/forfeit/worldgen/configured_feature/sky_arcane_crystal.json"
 hash = "fce0c9c02eac28608135d19ea1a04908ab85aa2d153a370781c288dc9b787db6"
 
@@ -240,6 +244,62 @@ hash = "37b8818031a2422b86db0e4431331347b9facc03813ad9cc26c8a86625c5f9b7"
 [[files]]
 file = "kubejs/data/forfeit/worldgen/configured_feature/sky_rupee.json"
 hash = "83e1f6e04b3b232bce32242f8174e56ca8b668bd3faa63089984ae87a8bcfd0b"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/configured_feature/sky_stone_andesite.json"
+hash = "9e3b310dfb958d71f40482c6b61dd3880a38b9490c9523c94312e3a2f2914945"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/configured_feature/sky_stone_asurine.json"
+hash = "8585a4614eca6e743aed4600f228411985e65b276c166db03a4fbce6e315b398"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/configured_feature/sky_stone_calcite.json"
+hash = "50259f78c44769fdcadcdb43ccaa112e30287ee4b12b4b7b247d3616b07b62b1"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/configured_feature/sky_stone_create_limestone.json"
+hash = "49e50f8c5aba7c50c60f38ac6a9da1e0259bee22e79a2d7d8555a0bf1df68c8b"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/configured_feature/sky_stone_crimsite.json"
+hash = "669d8bb273d3bd4d2d4e728332ca1a59802181c222f24c670d3e3a994298dcab"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/configured_feature/sky_stone_diorite.json"
+hash = "5afbab8ac74248c399b77500acc64be12a24b80b774c6b1c564ae398ea01ca90"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/configured_feature/sky_stone_granite.json"
+hash = "0b5a6813ddec777d1491996a0a149b9b1db1280cfefeff0df620877fa7d13088"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/configured_feature/sky_stone_jasper.json"
+hash = "420263b0de527ed2648934b42e5cd538e6114804c5667f8f70ec835687d0bb05"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/configured_feature/sky_stone_ochrum.json"
+hash = "39c0b46ed5715cbb35006f7186a291a7a26f2c8a72b17e1e09a9919a44ef7bd0"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/configured_feature/sky_stone_quark_limestone.json"
+hash = "ad7d656ffbd1b1923d9b0ec136c1a9574dcf1939f1257e0a9ebe546627268895"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/configured_feature/sky_stone_scoria.json"
+hash = "1ea4a6311328aff42a70b2edabc99bb202efaa9882937d008c4244997b15489f"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/configured_feature/sky_stone_shale.json"
+hash = "3dc81ded3203ffa9bff352c19a2245e577a3748b764d5ab4b29461370a18642c"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/configured_feature/sky_stone_tuff.json"
+hash = "cd6aa111fff25fba4b8648ee8f4a2371069f264be6dd3f5542d3fc9f57f6e35e"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/configured_feature/sky_stone_veridium.json"
+hash = "9b571b41fa7ea8f73cd2bf29dee8e21992ceb9957aa40f28ad3fb58a0a2cc36e"
 
 [[files]]
 file = "kubejs/data/forfeit/worldgen/configured_feature/sky_uraninite.json"
@@ -312,6 +372,62 @@ hash = "200a36a0f9fcca930b6525fdbfdca4f96f15d4a1348f1d834838ac5371efbe7b"
 [[files]]
 file = "kubejs/data/forfeit/worldgen/placed_feature/sky_rupee.json"
 hash = "abf505c3c1541d41e3cc834fdf1389de8a4c456bdc810e8bbff18903bf5370ea"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/placed_feature/sky_stone_andesite.json"
+hash = "3fd9a1d64066c2fce29cdaa41fdac9aad1e069cea14392e87cdb702edc939b8c"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/placed_feature/sky_stone_asurine.json"
+hash = "c714726e6b2a2371e15f7ac3b18ba8d3d06bbecd6dc79ff3433005054b0f7968"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/placed_feature/sky_stone_calcite.json"
+hash = "a3c1f4a1428d3e2fade3fa1b2afb209fd82510f71a92a274b3ee50f93cc5e6d8"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/placed_feature/sky_stone_create_limestone.json"
+hash = "fcd02faf83d4f4300d31817ea641a10406cbd1888c062ef26122f629d548d0ba"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/placed_feature/sky_stone_crimsite.json"
+hash = "1a3bdd345af451b9f0c0fd8fe25afdf53266bdf785ebbc7719e1950706c3a642"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/placed_feature/sky_stone_diorite.json"
+hash = "0076cd594081ff15619af0d6507b6069d11eff3a6a80895714801e48476c9bc8"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/placed_feature/sky_stone_granite.json"
+hash = "547858ba642350a6bfd69196c17382c9d5593f1fbee073bd1ce49cc2baa357b7"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/placed_feature/sky_stone_jasper.json"
+hash = "59f371e89ec68b3567ecf857ee4c38a9d5bd095cb3b954123e1eb8c9ddc8dbf7"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/placed_feature/sky_stone_ochrum.json"
+hash = "d321657208e533fd45d5e08a91bc95bdbab499758a3d7c86f5527be95cbc3dde"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/placed_feature/sky_stone_quark_limestone.json"
+hash = "6d490048bb3c5706c778360fce151ec55a264a9d34004b0593a4cf70471663b2"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/placed_feature/sky_stone_scoria.json"
+hash = "af2486f7681f91b3815334d3170ba1da6922e3a90d2d8190474f592bed09212d"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/placed_feature/sky_stone_shale.json"
+hash = "eb47647915b2ba11651d44d211fc2eb2f0dc0a2f1c2af092c4360b1c434c0ddc"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/placed_feature/sky_stone_tuff.json"
+hash = "ec1148a712909b78efdb0ca833a5f43fab2fd4bf011fe98c77d6a2de46a5e6d0"
+
+[[files]]
+file = "kubejs/data/forfeit/worldgen/placed_feature/sky_stone_veridium.json"
+hash = "a45f45ee56bb07e6b7395b462e2cd8b5d45241e554413abad450a93438be9b4a"
 
 [[files]]
 file = "kubejs/data/forfeit/worldgen/placed_feature/sky_uraninite.json"
