@@ -3,11 +3,9 @@
 // Gliders, Aether parachutes and Flying Fish Boots stay: they only slow a fall / glide.
 const FORFEIT_NO_FLIGHT = [
   // jetpacks
-  // Create jetpacks (Create Jetpack + Create Stuff & Additions) are craftable again "for now" (Rob, 2026-11-23).
-  // To disable them again, put these 6 back in the list:
-  // 'create_jetpack:jetpack', 'create_jetpack:netherite_jetpack',
-  // 'create_sa:andesite_jetpack_chestplate', 'create_sa:brass_jetpack_chestplate',
-  // 'create_sa:copper_jetpack_chestplate', 'create_sa:netherite_jetpack_chestplate',
+  'create_jetpack:jetpack', 'create_jetpack:netherite_jetpack',
+  'create_sa:andesite_jetpack_chestplate', 'create_sa:brass_jetpack_chestplate',
+  'create_sa:copper_jetpack_chestplate', 'create_sa:netherite_jetpack_chestplate',
   'mekanism:jetpack', 'mekanism:jetpack_armored',
   'mekanism:module_jetpack_unit', 'mekanism:module_gravitational_modulating_unit',
   // PneumaticCraft jet boots + elytra upgrade
