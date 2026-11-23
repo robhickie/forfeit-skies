@@ -478,10 +478,6 @@ file = "kubejs/server_scripts/forfeit_ae2.js"
 hash = "e048c540099ebf5d6e0d55d3b628f90befe2645604062b2add85b2da1817fa30"
 
 [[files]]
-file = "kubejs/server_scripts/forfeit_andesite.js"
-hash = "7fff37c2dfccc284d12bf63c190dc1ffa72312f8f352edb8cdaa7888dc83dfe6"
-
-[[files]]
 file = "kubejs/server_scripts/forfeit_balance.js"
 hash = "15156495d47316c909f7ccf140e6b3840004528e0735abc767835c1edd67ee23"
 
