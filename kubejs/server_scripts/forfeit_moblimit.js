@@ -7,11 +7,13 @@ const FORFEIT_MONSTER_LIMIT = 120
 const FORFEIT_TYPE_LIMITS = {
   'naturalist:butterfly': 15,
   'naturalist:bird': 15,
-  'vampirism:blinding_bat': 10
+  'vampirism:blinding_bat': 10,
+  'naturalist:whale': 2           // 7 whales were 3.5% of tick time (2026-11-24)
 }
 // Nether caps (counted in the Nether only). Striders kept respawning around the Nether hub: 1 -> 94 in under 3 minutes.
 const FORFEIT_NETHER_LIMITS = {
-  'minecraft:strider': 12
+  'minecraft:strider': 12,
+  'alexsmobs:laviathan': 4        // big multi-part lava mobs
 }
 let forfeitNetherCounts = {}
 let forfeitMonsterCount = 0

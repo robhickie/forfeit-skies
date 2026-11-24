@@ -511,7 +511,7 @@ hash = "752dda6a8d3377612491dc79777af2832d93e92e939048bc3e89255b3d1ad005"
 
 [[files]]
 file = "kubejs/server_scripts/forfeit_moblimit.js"
-hash = "1360a97dc8165e684a3b8be535b773ae537b62b974c36a7089abbebfcfce05a6"
+hash = "f5598297897bac9cc223f5f32801adf2fa47c9b20a99e9786da67d6368abbabf"
 
 [[files]]
 file = "kubejs/server_scripts/forfeit_modbook.js"
