@@ -65,3 +65,12 @@ EntityEvents.checkSpawn(event => {
   }
   if (forfeitMonsterCount >= FORFEIT_MONSTER_LIMIT && event.entity.isMonster()) event.cancel()
 })
+
+// Striders never despawn, and Nether chunk generation (pre-generation!) spawned groups of them on every lava lake, so each
+// Nether area a player visits loads dozens of stored striders. Over the cap, unsaddled striders loading in are dropped.
+EntityEvents.spawned('minecraft:strider', event => {
+  if ((forfeitNetherCounts['minecraft:strider'] || 0) < FORFEIT_NETHER_LIMITS['minecraft:strider']) return
+  const e = event.entity
+  try { if (e.isSaddled() || e.isVehicle() || e.hasCustomName()) return } catch (err) { return }
+  event.cancel()
+})
