@@ -7,7 +7,7 @@
 const FORFEIT_BORDERS = {
   'minecraft:overworld': 6000,           // ±3000; pre-generated to ±5000
   'minecraft:the_nether': 3840,          // ±1920; pre-generated to ±2048
-  'minecraft:the_end': 3840,             // not pre-generated yet; no way in
+  'minecraft:the_end': 6000,             // ±3000; pre-generating to ±3200 (24 Nov); no way in yet
   'aether:the_aether': 3840,             // ±1920; pre-generated to ±2048
   'undergarden:undergarden': 2000,       // ±1000; pre-generated to ±1152
   'deeperdarker:otherside': 2000,
