@@ -6,6 +6,7 @@
 // Start a new area with e.g. `chunky radius 4500` + `chunky start` while nobody is on; this script carries it on.
 let forfeitIdleMinutes = 0
 let forfeitPregenRunning = false
+let forfeitChunkyChecked = false
 // Distant Horizons is client-only again (2026-11-21), so idle pre-generation is back on.
 // Set to true only if Distant Horizons is removed from the server again (or Chunky is replaced).
 const FORFEIT_IDLE_PREGEN_ENABLED = true
@@ -26,10 +27,25 @@ ServerEvents.tick(event => {
   if (!forfeitPregenRunning) {
     server.runCommandSilent('chunky continue')
     forfeitPregenRunning = true
-  } else {
+  } else if (forfeitChunkyBusy()) {
+    // Only flush while Chunky is actually generating. With nothing to generate, the per-minute flush just cost
+    // ~0.65 s of server time every minute for nothing (found 2026-11-24).
     server.runCommandSilent('save-all flush')
   }
 })
+
+// True when Chunky has a generation task running. If Chunky's API can't be reached, assume busy (old behaviour).
+function forfeitChunkyBusy() {
+  try {
+    const chunky = Java.loadClass('org.popcraft.chunky.ChunkyProvider').get()
+    const busy = chunky != null && !chunky.getGenerationTasks().isEmpty()
+    if (!forfeitChunkyChecked) { console.info(`[forfeit_idle_pregen] Chunky busy check works: busy=${busy}`); forfeitChunkyChecked = true }
+    return busy
+  } catch (e) {
+    if (!forfeitChunkyChecked) { console.warn(`[forfeit_idle_pregen] Chunky busy check failed, flushing as before: ${e}`); forfeitChunkyChecked = true }
+    return true
+  }
+}
 
 PlayerEvents.loggedIn(event => {
   // Always pause on join, even if Chunky was started by hand (not by this script): generation + players + Distant Horizons don't mix.

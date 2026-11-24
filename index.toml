@@ -503,7 +503,7 @@ hash = "e6def4ae6ca6dbc6daa287e24f1b9d25557e889d5b05f82c83c21f719aef919c"
 
 [[files]]
 file = "kubejs/server_scripts/forfeit_idle_pregen.js"
-hash = "94e779dab22e1663d2a09a6333570477b41fc615fa6c7e7fc7e410c89420c2f6"
+hash = "f2b5f89e74ea5a2b07980793e0aa129451e8144c7d5efe3640a72081c052bb4c"
 
 [[files]]
 file = "kubejs/server_scripts/forfeit_joinprotect.js"
