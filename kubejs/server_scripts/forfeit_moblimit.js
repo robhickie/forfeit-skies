@@ -9,6 +9,11 @@ const FORFEIT_TYPE_LIMITS = {
   'naturalist:bird': 15,
   'vampirism:blinding_bat': 10
 }
+// Nether caps (counted in the Nether only). Striders kept respawning around the Nether hub: 1 -> 94 in under 3 minutes.
+const FORFEIT_NETHER_LIMITS = {
+  'minecraft:strider': 12
+}
+let forfeitNetherCounts = {}
 let forfeitMonsterCount = 0
 let forfeitTypeCounts = {}
 let forfeitMobLimitErrorLogged = false
@@ -28,6 +33,15 @@ ServerEvents.tick(event => {
     }
     forfeitMonsterCount = n
     forfeitTypeCounts = counts
+    let ncounts = {}
+    let forfeitNetherIter = event.server.getLevel('minecraft:the_nether').getAllEntities().iterator()
+    while (forfeitNetherIter.hasNext()) {
+      let forfeitNetherE = forfeitNetherIter.next()
+      if (!forfeitNetherE) continue
+      let forfeitNetherT = String(forfeitNetherE.type)
+      if (FORFEIT_NETHER_LIMITS[forfeitNetherT] !== undefined) ncounts[forfeitNetherT] = (ncounts[forfeitNetherT] || 0) + 1
+    }
+    forfeitNetherCounts = ncounts
   } catch (err) {
     if (!forfeitMobLimitErrorLogged) { console.error('forfeit_moblimit count failed: ' + err); forfeitMobLimitErrorLogged = true }
   }
@@ -36,8 +50,14 @@ ServerEvents.tick(event => {
 EntityEvents.checkSpawn(event => {
   const reason = String(event.type)
   if (reason != 'NATURAL' && reason != 'CHUNK_GENERATION') return
-  if (String(event.level.dimension) != 'minecraft:overworld') return
+  const dim = String(event.level.dimension)
   const t = String(event.entity.type)
+  if (dim == 'minecraft:the_nether') {
+    const ncap = FORFEIT_NETHER_LIMITS[t]
+    if (ncap !== undefined && (forfeitNetherCounts[t] || 0) >= ncap) event.cancel()
+    return
+  }
+  if (dim != 'minecraft:overworld') return
   const cap = FORFEIT_TYPE_LIMITS[t]
   if (cap !== undefined) {
     if ((forfeitTypeCounts[t] || 0) >= cap) event.cancel()
