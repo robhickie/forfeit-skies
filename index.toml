@@ -2101,11 +2101,6 @@ hash = "ce9ddada6ffd55a512149cc474c6a453281a997a5fdf1b7b4a2cc73f875e704a"
 metafile = true
 
 [[files]]
-file = "mods/serene-seasons.pw.toml"
-hash = "bcaac076ac981463ee57b7469430e5fb7ff99f8e2387681e7ac737ca5d22596b"
-metafile = true
-
-[[files]]
 file = "mods/shatterbyte-lib.pw.toml"
 hash = "919deaa10fc414f61ffe85af18100cbd169e1535b6a822eddb18ed19b5cbacf2"
 metafile = true
@@ -2539,7 +2534,7 @@ hash = "eddb8d08ec7a0925a7266198b687f55c8b38f30887ab0d86c531504a4aa71750"
 
 [[files]]
 file = "patchouli_books/mods/en_us/entries/world/islands_biomes.json"
-hash = "6ae041c855c1d0575d03fd908b2e3bdfbaf22d8ee5624e33d3e202b9ee12c350"
+hash = "dfac821d0e619fc5f242f7ffd509169e500dcb231cde3d86d951c5a9bddb5fd4"
 
 [[files]]
 file = "patchouli_books/mods/en_us/entries/world/moog_s_structures.json"
