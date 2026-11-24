@@ -6,9 +6,9 @@
 // Keep each border at least 128 blocks inside the pre-generated area. Sizes are full widths in blocks, centred on 0,0.
 const FORFEIT_BORDERS = {
   'minecraft:overworld': 6000,           // ±3000; pre-generated to ±5000
-  'minecraft:the_nether': 3840,          // ±1920; pre-generated to ±2048
+  'minecraft:the_nether': 4000,          // ±2000; pre-generated to ±2176
   'minecraft:the_end': 6000,             // ±3000; pre-generating to ±3200 (24 Nov); no way in yet
-  'aether:the_aether': 3840,             // ±1920; pre-generated to ±2048
+  'aether:the_aether': 4000,             // ±2000; pre-generated to ±2176
   'undergarden:undergarden': 2000,       // ±1000; pre-generated to ±1152
   'deeperdarker:otherside': 2000,
   'the_bumblezone:the_bumblezone': 2000,
