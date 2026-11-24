@@ -1,18 +1,19 @@
 // Forfeit Skies: per-dimension world borders (Rob, 2026-11-24).
 // Vanilla has ONE border (the overworld's, set with /worldborder) and copies it into every other dimension.
-// This script gives the other dimensions their own size, matched to what has been pre-generated (minus a 128-block margin),
-// and re-applies it every minute in case the overworld border changes (that change is copied to every dimension again).
-// The overworld border itself is still set with /worldborder (it is saved in level.dat).
-// Sizes are full widths in blocks, centred on 0,0.
+// This script sets EVERY dimension's border (overworld included - it comes first, because changing it copies its size into
+// all other dimensions, which the rest of the list then overrides), and re-applies them every minute.
+// /worldborder is no longer the place to change borders: edit this list, upload, `kubejs reload server-scripts`.
+// Keep each border at least 128 blocks inside the pre-generated area. Sizes are full widths in blocks, centred on 0,0.
 const FORFEIT_BORDERS = {
-  'minecraft:the_nether': 3840,          // pre-generated to ±2048
+  'minecraft:overworld': 6000,           // ±3000; pre-generated to ±5000
+  'minecraft:the_nether': 3840,          // ±1920; pre-generated to ±2048
   'minecraft:the_end': 3840,             // not pre-generated yet; no way in
-  'aether:the_aether': 3840,             // pre-generated to ±2048
-  'undergarden:undergarden': 1792,       // pre-generated to ±1024
-  'deeperdarker:otherside': 1792,
-  'the_bumblezone:the_bumblezone': 1792,
-  'divinerpg:eden': 1792, 'divinerpg:wildwood': 1792, 'divinerpg:apalachia': 1792, 'divinerpg:skythern': 1792,
-  'divinerpg:mortum': 1792, 'divinerpg:iceika': 1792, 'divinerpg:arcana': 1792, 'divinerpg:vethea': 1792,
+  'aether:the_aether': 3840,             // ±1920; pre-generated to ±2048
+  'undergarden:undergarden': 2000,       // ±1000; pre-generated to ±1152
+  'deeperdarker:otherside': 2000,
+  'the_bumblezone:the_bumblezone': 2000,
+  'divinerpg:eden': 2000, 'divinerpg:wildwood': 2000, 'divinerpg:apalachia': 2000, 'divinerpg:skythern': 2000,
+  'divinerpg:mortum': 2000, 'divinerpg:iceika': 2000, 'divinerpg:arcana': 2000, 'divinerpg:vethea': 2000,
   // Storage/utility dimensions place things far from 0,0: give them the maximum border so nothing breaks.
   'ae2:spatial_storage': 59999968,
   'irons_spellbooks:pocket_dimension': 59999968

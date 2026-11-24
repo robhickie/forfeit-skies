@@ -491,7 +491,7 @@ hash = "15156495d47316c909f7ccf140e6b3840004528e0735abc767835c1edd67ee23"
 
 [[files]]
 file = "kubejs/server_scripts/forfeit_borders.js"
-hash = "4343f554f8e9a9ed436345e991d39205d88153ef595423711c3502ca671e7cff"
+hash = "963068ba930c23060792f6f97e7dc1014393600e5488b4e6c01437a361dfd8a9"
 
 [[files]]
 file = "kubejs/server_scripts/forfeit_compasses.js"
