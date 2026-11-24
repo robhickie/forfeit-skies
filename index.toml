@@ -490,6 +490,10 @@ file = "kubejs/server_scripts/forfeit_balance.js"
 hash = "15156495d47316c909f7ccf140e6b3840004528e0735abc767835c1edd67ee23"
 
 [[files]]
+file = "kubejs/server_scripts/forfeit_borders.js"
+hash = "4343f554f8e9a9ed436345e991d39205d88153ef595423711c3502ca671e7cff"
+
+[[files]]
 file = "kubejs/server_scripts/forfeit_compasses.js"
 hash = "ea7a1130447edd3c49d0a2078f685aee46ccf06eaf3d812889e732c70b97e385"
 
