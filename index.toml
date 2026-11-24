@@ -913,7 +913,7 @@ metafile = true
 
 [[files]]
 file = "mods/crafting-tweaks.pw.toml"
-hash = "b63999aa63a273098f42e22d8d5018c8617b8e2babdffc752d9aad3eefaaa76d"
+hash = "6cbb545dedcfd210f044b8755b978f29bb2c6e4c8ea749809393c555463d2cf6"
 metafile = true
 
 [[files]]
