@@ -518,6 +518,10 @@ file = "kubejs/server_scripts/forfeit_modbook.js"
 hash = "5221a7ff3079bbcce2cc9431efc8245eadb3d77b093c07624bbea4f97207b02b"
 
 [[files]]
+file = "kubejs/server_scripts/forfeit_notrader.js"
+hash = "44ddbe3044c7dabd1d6b8f2be5d0d7e314095043c732c8e1b226d89c7c1c83bb"
+
+[[files]]
 file = "kubejs/server_scripts/forfeit_skyfixes.js"
 hash = "87e6db8ce6878f57ab388c0bf3f6781b7ee304d42c5c277fdba25f7b69fe82b5"
 
