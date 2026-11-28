@@ -530,6 +530,10 @@ file = "kubejs/server_scripts/forfeit_soulstar.js"
 hash = "a7582900d4d6ba342f6719f295caaeab24ded6cad526bca315ee240ce91e52aa"
 
 [[files]]
+file = "kubejs/server_scripts/forfeit_tagfix.js"
+hash = "289841f2a4102393d11e416190a9a15a2338b2e11c88aec552b4fd82144119f3"
+
+[[files]]
 file = "kubejs/server_scripts/forfeit_tome.js"
 hash = "a00e70f2f60aedfe4f8c9a9662f264774b347baa4480a3e674c5e052ec882ed3"
 
