@@ -13,6 +13,24 @@ const $GraveBlockPos = Java.loadClass('net.minecraft.core.BlockPos')
 const $GraveCompoundTag = Java.loadClass('net.minecraft.nbt.CompoundTag')
 const $GraveNbtUtils = Java.loadClass('net.minecraft.nbt.NbtUtils')
 const $GraveUtils = Java.loadClass('de.maxhenkel.gravestone.GraveUtils')
+// Sable airships live in their own block space; gravestone_sable_compat puts the grave there (ship-local position).
+let $GraveSable = null
+try { $GraveSable = Java.loadClass('dev.ryanhcode.sable.companion.SableCompanion') } catch (e) { console.warn('[gravexp] Sable not found: ' + e) }
+
+// Where GraveStone (with gravestone_sable_compat) will look: the ship-local block position when the player is on a ship.
+function graveXpDeathSpot(p) {
+  let pos = $GraveBlockPos.containing(p.position())
+  let ship = null
+  try {
+    let sub = $GraveSable ? $GraveSable.INSTANCE.getTrackingOrVehicleSubLevel(p) : null
+    if (sub) {
+      pos = $GraveBlockPos.containing(sub.logicalPose().transformPositionInverse(p.position()))
+      let name = sub.getName()
+      ship = name ? `the airship "${name}"` : 'your airship'
+    }
+  } catch (e) { console.error('[gravexp] ship lookup failed: ' + e) }
+  return { x: pos.getX(), y: pos.getY(), z: pos.getZ(), ship: ship }
+}
 
 const graveXpMsg = text => Text.of('[Forfeit Skies] ').darkPurple().append(Text.of(text).gray())
 function graveXpTell(player, text) {
@@ -145,9 +163,11 @@ EntityEvents.death(event => {
   let server = event.server
   let level = event.level
   let uuid = String(p.uuid)
-  let x = Math.floor(p.x)
-  let y = Math.floor(p.y)
-  let z = Math.floor(p.z)
+  let spot = graveXpDeathSpot(p) // ship-local when dying on an airship
+  let x = spot.x
+  let y = spot.y
+  let z = spot.z
+  let worldWhere = graveXpWhere(level, $GraveBlockPos.containing(p.position()))
   let since = Date.now() - 5000
   // Clear XP now so vanilla drops no orbs (it reads the level after this event).
   if (total > 0) {
@@ -169,7 +189,7 @@ EntityEvents.death(event => {
     }
     if (grave) {
       let holds = grave.empty ? 'It holds' : 'It holds your items and'
-      let where = graveXpWhere(level, grave.pos)
+      let where = spot.ship ? `on ${spot.ship}, near ${worldWhere}` : `at ${graveXpWhere(level, grave.pos)}`
       if (keep > 0) {
         let store = graveXpStore(server, GRAVE_XP_STORE)
         let entry = new $GraveCompoundTag()
@@ -178,9 +198,9 @@ EntityEvents.death(event => {
         entry.putLong('t', Date.now())
         store.put(grave.id, entry)
         server.persistentData.put(GRAVE_XP_STORE, store)
-        graveXpTell(p, `Your grave is at ${where}. ${holds} ${keep} of your ${total} XP points; break it to get them back. The rest of the XP is lost.`)
+        graveXpTell(p, `Your grave is ${where}. ${holds} ${keep} of your ${total} XP points; break it to get them back. The rest of the XP is lost.`)
       } else {
-        graveXpTell(p, `Your grave is at ${where}.`)
+        graveXpTell(p, `Your grave is ${where}.`)
       }
       return
     }
@@ -193,12 +213,15 @@ EntityEvents.death(event => {
 
 BlockEvents.broken('gravestone:gravestone', event => {
   let be = event.block.entity
+  console.info('[gravexp] break event at ' + event.block.pos + ' by ' + (event.player ? event.player.username : '?') + ' be=' + be + ' hasDeath=' + (be ? typeof be.getDeath : '-'))
   if (!be || !be.getDeath) return
   let death = be.getDeath()
   if (!death) return
   let id = String(death.getId())
   let server = event.server
-  if (!graveXpStore(server, GRAVE_XP_STORE).contains(id)) return
+  let stored = graveXpStore(server, GRAVE_XP_STORE).contains(id)
+  console.info('[gravexp] grave ' + id + ' stored XP: ' + stored)
+  if (!stored) return
   let level = event.level
   let pos = event.block.pos
   let breaker = event.player ? String(event.player.uuid) : ''
