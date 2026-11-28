@@ -3,6 +3,7 @@
 // Here, on death, GRAVE_XP_KEEP of your total XP points goes into your grave (no vanilla orbs drop) and the rest is lost.
 // Breaking your own grave gives it back. If someone else (an admin) breaks it, the owner gets it on their next
 // respawn/login. If no grave was placed (nothing to store), the share comes back on respawn instead.
+// On death the player is also told the grave's coordinates, and a grave with no items in it is removed.
 // Stored in server.persistentData keyed by the grave's Death id, so it survives restarts, reloads and cloned graves.
 const GRAVE_XP_KEEP = 0.5
 const GRAVE_XP_STORE = 'forfeitGraveXp'          // deathId -> { owner, xp, t }
@@ -63,24 +64,37 @@ function graveXpFindGrave(level, x, z, uuid, since) {
   for (let dx = -1; dx <= 1; dx++) {
     for (let dz = -1; dz <= 1; dz++) {
       for (let y = minY; y < maxY; y++) {
-        const be = level.getBlockEntity(new $GraveBlockPos(x + dx, y, z + dz))
+        const pos = new $GraveBlockPos(x + dx, y, z + dz)
+        const be = level.getBlockEntity(pos)
         if (!be || !be.getDeath) continue
         const death = be.getDeath()
         if (!death || String(death.getPlayerUUID()) !== uuid) continue
         const t = Number(death.getTimestamp())
         if (t < since) continue
-        if (!best || t > best.t) best = { id: String(death.getId()), t: t }
+        if (!best || t > best.t) best = { id: String(death.getId()), t: t, pos: pos, empty: death.getAllItems().isEmpty() }
       }
     }
   }
   return best
 }
 
+// GraveStone always places a grave, even with nothing in it: remove empty ones (keeping water if it was waterlogged).
+function graveXpRemoveEmpty(level, pos) {
+  const block = level.getBlock(pos)
+  const wet = String(block.blockState).indexOf('waterlogged=true') >= 0
+  block.set(wet ? 'minecraft:water' : 'minecraft:air')
+}
+
+function graveXpWhere(level, pos) {
+  const dim = String(level.dimension().location())
+  const where = `${pos.getX()} ${pos.getY()} ${pos.getZ()}`
+  return dim === 'minecraft:overworld' ? where : `${where} (${dim})`
+}
+
 EntityEvents.death(event => {
   const p = event.entity
   if (!p.isPlayer() || p.isSpectator() || p.isCreative()) return
   const total = graveXpTotal(p)
-  if (total <= 0) return
   const keep = Math.floor(total * GRAVE_XP_KEEP)
   const server = event.server
   const level = event.level
@@ -89,26 +103,44 @@ EntityEvents.death(event => {
   const z = Math.floor(p.z)
   const since = Date.now() - 5000
   // Clear XP now so vanilla drops no orbs (it reads the level after this event).
-  p.setExperienceLevels(0)
-  p.setExperiencePoints(0)
-  p.totalExperience = 0
+  if (total > 0) {
+    p.setExperienceLevels(0)
+    p.setExperiencePoints(0)
+    p.totalExperience = 0
+  }
   server.scheduleInTicks(1, () => {
     if (!p.isDeadOrDying()) { // another mod cancelled the death: give everything back
-      p.giveExperiencePoints(total)
+      if (total > 0) p.giveExperiencePoints(total)
       return
     }
-    if (keep <= 0) return
     const grave = graveXpFindGrave(level, x, z, uuid, since)
+    if (grave && grave.empty) {
+      graveXpRemoveEmpty(level, grave.pos)
+      if (keep > 0) {
+        graveXpAddPending(server, uuid, keep)
+        p.tell(graveXpMsg(`You had no items, so no grave was left. You keep ${keep} of your ${total} XP points when you respawn.`))
+      } else {
+        p.tell(graveXpMsg('You had no items, so no grave was left.'))
+      }
+      return
+    }
     if (grave) {
-      const store = graveXpStore(server, GRAVE_XP_STORE)
-      const entry = new $GraveCompoundTag()
-      entry.putString('owner', uuid)
-      entry.putInt('xp', keep)
-      entry.putLong('t', Date.now())
-      store.put(grave.id, entry)
-      server.persistentData.put(GRAVE_XP_STORE, store)
-      p.tell(graveXpMsg(`Your grave holds ${keep} of your ${total} XP points. Break it to get them back; the rest is lost.`))
-    } else {
+      const where = graveXpWhere(level, grave.pos)
+      if (keep > 0) {
+        const store = graveXpStore(server, GRAVE_XP_STORE)
+        const entry = new $GraveCompoundTag()
+        entry.putString('owner', uuid)
+        entry.putInt('xp', keep)
+        entry.putLong('t', Date.now())
+        store.put(grave.id, entry)
+        server.persistentData.put(GRAVE_XP_STORE, store)
+        p.tell(graveXpMsg(`Your grave is at ${where}. It holds your items and ${keep} of your ${total} XP points; break it to get them back. The rest of the XP is lost.`))
+      } else {
+        p.tell(graveXpMsg(`Your grave is at ${where}.`))
+      }
+      return
+    }
+    if (keep > 0) {
       graveXpAddPending(server, uuid, keep)
       p.tell(graveXpMsg(`No grave was placed, so you keep ${keep} of your ${total} XP points when you respawn.`))
     }
