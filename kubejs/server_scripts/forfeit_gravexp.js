@@ -21,7 +21,7 @@ function graveXpForLevel(L) {
 }
 
 function graveXpTotal(p) {
-  const L = p.experienceLevel
+  let L = p.experienceLevel
   return Math.max(0, Math.floor(graveXpForLevel(L) + p.experienceProgress * p.getXpNeededForNextLevel()))
 }
 
@@ -36,18 +36,18 @@ function graveXpOnline(server, uuid) {
 }
 
 function graveXpAddPending(server, uuid, xp) {
-  const pend = graveXpStore(server, GRAVE_XP_PENDING)
+  let pend = graveXpStore(server, GRAVE_XP_PENDING)
   pend.putInt(uuid, pend.getInt(uuid) + xp)
   server.persistentData.put(GRAVE_XP_PENDING, pend)
 }
 
 function graveXpPayPending(player) {
-  const server = player.server
-  const uuid = String(player.uuid)
+  let server = player.server
+  let uuid = String(player.uuid)
   if (player.isDeadOrDying()) return // still on the death screen: wait for the respawn
-  const pend = graveXpStore(server, GRAVE_XP_PENDING)
+  let pend = graveXpStore(server, GRAVE_XP_PENDING)
   if (!pend.contains(uuid)) return
-  const xp = pend.getInt(uuid)
+  let xp = pend.getInt(uuid)
   pend.remove(uuid)
   server.persistentData.put(GRAVE_XP_PENDING, pend)
   if (xp > 0) {
@@ -59,17 +59,17 @@ function graveXpPayPending(player) {
 // GraveStone puts the grave in the death column (moved up to free space, or clamped to the build limits for void deaths).
 function graveXpFindGrave(level, x, z, uuid, since) {
   let best = null
-  const minY = level.getMinBuildHeight()
-  const maxY = level.getMaxBuildHeight()
+  let minY = level.getMinBuildHeight()
+  let maxY = level.getMaxBuildHeight()
   for (let dx = -1; dx <= 1; dx++) {
     for (let dz = -1; dz <= 1; dz++) {
       for (let y = minY; y < maxY; y++) {
-        const pos = new $GraveBlockPos(x + dx, y, z + dz)
-        const be = level.getBlockEntity(pos)
+        let pos = new $GraveBlockPos(x + dx, y, z + dz)
+        let be = level.getBlockEntity(pos)
         if (!be || !be.getDeath) continue
-        const death = be.getDeath()
+        let death = be.getDeath()
         if (!death || String(death.getPlayerUUID()) !== uuid) continue
-        const t = Number(death.getTimestamp())
+        let t = Number(death.getTimestamp())
         if (t < since) continue
         if (!best || t > best.t) best = { id: String(death.getId()), t: t, pos: pos, empty: death.getAllItems().isEmpty() }
       }
@@ -80,28 +80,28 @@ function graveXpFindGrave(level, x, z, uuid, since) {
 
 // GraveStone always places a grave, even with nothing in it: remove empty ones (keeping water if it was waterlogged).
 function graveXpRemoveEmpty(level, pos) {
-  const block = level.getBlock(pos)
-  const wet = String(block.blockState).indexOf('waterlogged=true') >= 0
+  let block = level.getBlock(pos)
+  let wet = String(block.blockState).indexOf('waterlogged=true') >= 0
   block.set(wet ? 'minecraft:water' : 'minecraft:air')
 }
 
 function graveXpWhere(level, pos) {
-  const dim = String(level.dimension().location())
-  const where = `${pos.getX()} ${pos.getY()} ${pos.getZ()}`
+  let dim = String(level.dimension().location())
+  let where = `${pos.getX()} ${pos.getY()} ${pos.getZ()}`
   return dim === 'minecraft:overworld' ? where : `${where} (${dim})`
 }
 
 EntityEvents.death(event => {
-  const p = event.entity
+  let p = event.entity
   if (!p.isPlayer() || p.isSpectator() || p.isCreative()) return
-  const total = graveXpTotal(p)
-  const keep = Math.floor(total * GRAVE_XP_KEEP)
-  const server = event.server
-  const level = event.level
-  const uuid = String(p.uuid)
-  const x = Math.floor(p.x)
-  const z = Math.floor(p.z)
-  const since = Date.now() - 5000
+  let total = graveXpTotal(p)
+  let keep = Math.floor(total * GRAVE_XP_KEEP)
+  let server = event.server
+  let level = event.level
+  let uuid = String(p.uuid)
+  let x = Math.floor(p.x)
+  let z = Math.floor(p.z)
+  let since = Date.now() - 5000
   // Clear XP now so vanilla drops no orbs (it reads the level after this event).
   if (total > 0) {
     p.setExperienceLevels(0)
@@ -113,7 +113,7 @@ EntityEvents.death(event => {
       if (total > 0) p.giveExperiencePoints(total)
       return
     }
-    const grave = graveXpFindGrave(level, x, z, uuid, since)
+    let grave = graveXpFindGrave(level, x, z, uuid, since)
     if (grave && grave.empty) {
       graveXpRemoveEmpty(level, grave.pos)
       if (keep > 0) {
@@ -125,10 +125,10 @@ EntityEvents.death(event => {
       return
     }
     if (grave) {
-      const where = graveXpWhere(level, grave.pos)
+      let where = graveXpWhere(level, grave.pos)
       if (keep > 0) {
-        const store = graveXpStore(server, GRAVE_XP_STORE)
-        const entry = new $GraveCompoundTag()
+        let store = graveXpStore(server, GRAVE_XP_STORE)
+        let entry = new $GraveCompoundTag()
         entry.putString('owner', uuid)
         entry.putInt('xp', keep)
         entry.putLong('t', Date.now())
@@ -148,27 +148,27 @@ EntityEvents.death(event => {
 })
 
 BlockEvents.broken('gravestone:gravestone', event => {
-  const be = event.block.entity
+  let be = event.block.entity
   if (!be || !be.getDeath) return
-  const death = be.getDeath()
+  let death = be.getDeath()
   if (!death) return
-  const id = String(death.getId())
-  const server = event.server
+  let id = String(death.getId())
+  let server = event.server
   if (!graveXpStore(server, GRAVE_XP_STORE).contains(id)) return
-  const level = event.level
-  const pos = event.block.pos
-  const breaker = event.player ? String(event.player.uuid) : ''
+  let level = event.level
+  let pos = event.block.pos
+  let breaker = event.player ? String(event.player.uuid) : ''
   // Pay only once the grave is really gone (a claim mod may cancel the break).
   server.scheduleInTicks(1, () => {
     if (String(level.getBlock(pos).id) === 'gravestone:gravestone') return
-    const store = graveXpStore(server, GRAVE_XP_STORE)
+    let store = graveXpStore(server, GRAVE_XP_STORE)
     if (!store.contains(id)) return
-    const entry = store.getCompound(id)
-    const owner = entry.getString('owner')
-    const xp = entry.getInt('xp')
+    let entry = store.getCompound(id)
+    let owner = entry.getString('owner')
+    let xp = entry.getInt('xp')
     store.remove(id)
     server.persistentData.put(GRAVE_XP_STORE, store)
-    const ownerPlayer = graveXpOnline(server, owner)
+    let ownerPlayer = graveXpOnline(server, owner)
     if (breaker === owner && ownerPlayer) {
       ownerPlayer.giveExperiencePoints(xp)
       ownerPlayer.tell(graveXpMsg(`You got ${xp} XP back from your grave.`))
