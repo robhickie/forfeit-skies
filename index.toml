@@ -502,6 +502,10 @@ file = "kubejs/server_scripts/forfeit_flight.js"
 hash = "e6def4ae6ca6dbc6daa287e24f1b9d25557e889d5b05f82c83c21f719aef919c"
 
 [[files]]
+file = "kubejs/server_scripts/forfeit_gravexp.js"
+hash = "78e963f0a6fa0f5c3a9a4179499b3b32019382b220538d856b7350d1b03a8ba8"
+
+[[files]]
 file = "kubejs/server_scripts/forfeit_idle_pregen.js"
 hash = "f2b5f89e74ea5a2b07980793e0aa129451e8144c7d5efe3640a72081c052bb4c"
 
