@@ -38,6 +38,10 @@ file = "config/integrateddynamics-common.toml"
 hash = "d416445d5ce82b27037f039521accbdfda1acdb3189f15a4b46f71fa7d294990"
 
 [[files]]
+file = "config/inventoryessentials-common.toml"
+hash = "7fdfaf2d4c3f1c26b167f139f84c97ccf18a1d713394fb0919c0d2f2d565b8fe"
+
+[[files]]
 file = "config/openpartiesandclaims-server.toml"
 hash = "5d94b7046299d68b034938e0818c4d54142fa59775334e8d535b19b87dcab5d4"
 
