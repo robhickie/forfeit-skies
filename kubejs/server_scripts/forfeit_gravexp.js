@@ -12,6 +12,10 @@ const $GraveBlockPos = Java.loadClass('net.minecraft.core.BlockPos')
 const $GraveCompoundTag = Java.loadClass('net.minecraft.nbt.CompoundTag')
 
 const graveXpMsg = text => Text.of('[Forfeit Skies] ').darkPurple().append(Text.of(text).gray())
+function graveXpTell(player, text) {
+  console.info('[gravexp] ' + player.username + ': ' + text)
+  player.tell(graveXpMsg(text))
+}
 
 // Vanilla total XP points at the start of level L.
 function graveXpForLevel(L) {
@@ -52,7 +56,7 @@ function graveXpPayPending(player) {
   server.persistentData.put(GRAVE_XP_PENDING, pend)
   if (xp > 0) {
     player.giveExperiencePoints(xp)
-    player.tell(graveXpMsg(`You got ${xp} XP back from your grave.`))
+    graveXpTell(player, `You got ${xp} XP back from your grave.`)
   }
 }
 
@@ -86,7 +90,8 @@ function graveXpRemoveEmpty(level, pos) {
 }
 
 function graveXpWhere(level, pos) {
-  let dim = String(level.dimension().location())
+  let d = level.dimension
+  let dim = String(d && d.location ? d.location() : d)
   let where = `${pos.getX()} ${pos.getY()} ${pos.getZ()}`
   return dim === 'minecraft:overworld' ? where : `${where} (${dim})`
 }
@@ -118,9 +123,9 @@ EntityEvents.death(event => {
       graveXpRemoveEmpty(level, grave.pos)
       if (keep > 0) {
         graveXpAddPending(server, uuid, keep)
-        p.tell(graveXpMsg(`You had no items, so no grave was left. You keep ${keep} of your ${total} XP points when you respawn.`))
+        graveXpTell(p, `You had no items, so no grave was left. You keep ${keep} of your ${total} XP points when you respawn.`)
       } else {
-        p.tell(graveXpMsg('You had no items, so no grave was left.'))
+        graveXpTell(p, 'You had no items, so no grave was left.')
       }
       return
     }
@@ -134,15 +139,15 @@ EntityEvents.death(event => {
         entry.putLong('t', Date.now())
         store.put(grave.id, entry)
         server.persistentData.put(GRAVE_XP_STORE, store)
-        p.tell(graveXpMsg(`Your grave is at ${where}. It holds your items and ${keep} of your ${total} XP points; break it to get them back. The rest of the XP is lost.`))
+        graveXpTell(p, `Your grave is at ${where}. It holds your items and ${keep} of your ${total} XP points; break it to get them back. The rest of the XP is lost.`)
       } else {
-        p.tell(graveXpMsg(`Your grave is at ${where}.`))
+        graveXpTell(p, `Your grave is at ${where}.`)
       }
       return
     }
     if (keep > 0) {
       graveXpAddPending(server, uuid, keep)
-      p.tell(graveXpMsg(`No grave was placed, so you keep ${keep} of your ${total} XP points when you respawn.`))
+      graveXpTell(p, `No grave was placed, so you keep ${keep} of your ${total} XP points when you respawn.`)
     }
   })
 })
@@ -171,7 +176,7 @@ BlockEvents.broken('gravestone:gravestone', event => {
     let ownerPlayer = graveXpOnline(server, owner)
     if (breaker === owner && ownerPlayer) {
       ownerPlayer.giveExperiencePoints(xp)
-      ownerPlayer.tell(graveXpMsg(`You got ${xp} XP back from your grave.`))
+      graveXpTell(ownerPlayer, `You got ${xp} XP back from your grave.`)
     } else {
       graveXpAddPending(server, owner, xp)
       if (ownerPlayer && !ownerPlayer.isDeadOrDying()) graveXpPayPending(ownerPlayer)
