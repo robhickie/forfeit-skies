@@ -2,14 +2,17 @@
 // Vanilla drops at most 100 XP points as orbs on death and deletes the rest; GraveStone stores items only.
 // Here, on death, GRAVE_XP_KEEP of your total XP points goes into your grave (no vanilla orbs drop) and the rest is lost.
 // Breaking your own grave gives it back. If someone else (an admin) breaks it, the owner gets it on their next
-// respawn/login. If no grave was placed (nothing to store), the share comes back on respawn instead.
-// On death the player is also told the grave's coordinates, and a grave with no items in it is removed.
+// respawn/login. Only if GraveStone could not place a grave at all does the share come back on respawn instead.
+// On death the player is told the grave's coordinates. A grave with no items keeps the XP on its own; a grave with
+// no items and no XP (obituary books don't count) is removed.
 // Stored in server.persistentData keyed by the grave's Death id, so it survives restarts, reloads and cloned graves.
 const GRAVE_XP_KEEP = 0.5
 const GRAVE_XP_STORE = 'forfeitGraveXp'          // deathId -> { owner, xp, t }
 const GRAVE_XP_PENDING = 'forfeitGraveXpPending' // owner uuid -> points to give on respawn/login
 const $GraveBlockPos = Java.loadClass('net.minecraft.core.BlockPos')
 const $GraveCompoundTag = Java.loadClass('net.minecraft.nbt.CompoundTag')
+const $GraveNbtUtils = Java.loadClass('net.minecraft.nbt.NbtUtils')
+const $GraveUtils = Java.loadClass('de.maxhenkel.gravestone.GraveUtils')
 
 const graveXpMsg = text => Text.of('[Forfeit Skies] ').darkPurple().append(Text.of(text).gray())
 function graveXpTell(player, text) {
@@ -99,9 +102,37 @@ function graveXpRemoveEmpty(level, pos) {
   block.set(wet ? 'minecraft:water' : 'minecraft:air')
 }
 
-function graveXpWhere(level, pos) {
+function graveXpDim(level) {
   let d = level.dimension
-  let dim = String(d && d.location ? d.location() : d)
+  return String(d && d.location ? d.location() : d)
+}
+
+// GraveStone places no grave when there are no items to keep. Then we place one ourselves, on the spot GraveStone
+// would pick and with the NBT layout it writes, so the XP still waits in a grave. Returns { id, pos, empty } or null.
+function graveXpPlaceGrave(server, level, p, x, y, z) {
+  try {
+    let gpos = $GraveUtils.getGraveStoneLocation(level, new $GraveBlockPos(x, y, z))
+    if (!gpos) return null
+    let r = () => Math.floor(Math.random() * 4294967296) - 2147483648
+    let owner = String($GraveNbtUtils.createUUID(p.uuid))
+    let facing = 'north'
+    try { facing = String(p.getDirection().getOpposite().getSerializedName()) } catch (e) {}
+    let death = `{Id:[I;${r()},${r()},${r()},${r()}],PlayerUuid:${owner},PlayerName:"${p.username}",` +
+      `Timestamp:${Date.now()}L,PosX:${p.x}d,PosY:${p.y}d,PosZ:${p.z}d,Dimension:"${graveXpDim(level)}",` +
+      `MainInventory:[],ArmorInventory:[],OffHandInventory:[]}`
+    server.runCommandSilent(`execute in ${graveXpDim(level)} run setblock ${gpos.getX()} ${gpos.getY()} ${gpos.getZ()} ` +
+      `gravestone:gravestone[facing=${facing}]{Death:${death}}`)
+    let be = level.getBlockEntity(gpos)
+    if (!be || !be.getDeath || !be.getDeath()) return null
+    return { id: String(be.getDeath().getId()), pos: gpos, empty: true }
+  } catch (e) {
+    console.error('[gravexp] could not place an XP grave: ' + e)
+    return null
+  }
+}
+
+function graveXpWhere(level, pos) {
+  let dim = graveXpDim(level)
   let where = `${pos.getX()} ${pos.getY()} ${pos.getZ()}`
   return dim === 'minecraft:overworld' ? where : `${where} (${dim})`
 }
@@ -115,6 +146,7 @@ EntityEvents.death(event => {
   let level = event.level
   let uuid = String(p.uuid)
   let x = Math.floor(p.x)
+  let y = Math.floor(p.y)
   let z = Math.floor(p.z)
   let since = Date.now() - 5000
   // Clear XP now so vanilla drops no orbs (it reads the level after this event).
@@ -129,17 +161,14 @@ EntityEvents.death(event => {
       return
     }
     let grave = graveXpFindGrave(level, x, z, uuid, since)
-    if (grave && grave.empty) {
+    if (!grave && keep > 0) grave = graveXpPlaceGrave(server, level, p, x, y, z)
+    if (grave && grave.empty && keep <= 0) { // nothing to keep at all: no grave
       graveXpRemoveEmpty(level, grave.pos)
-      if (keep > 0) {
-        graveXpAddPending(server, uuid, keep)
-        graveXpTell(p, `You had no items, so no grave was left. You keep ${keep} of your ${total} XP points when you respawn.`)
-      } else {
-        graveXpTell(p, 'You had no items, so no grave was left.')
-      }
+      graveXpTell(p, 'You had no items or XP, so no grave was left.')
       return
     }
     if (grave) {
+      let holds = grave.empty ? 'It holds' : 'It holds your items and'
       let where = graveXpWhere(level, grave.pos)
       if (keep > 0) {
         let store = graveXpStore(server, GRAVE_XP_STORE)
@@ -149,7 +178,7 @@ EntityEvents.death(event => {
         entry.putLong('t', Date.now())
         store.put(grave.id, entry)
         server.persistentData.put(GRAVE_XP_STORE, store)
-        graveXpTell(p, `Your grave is at ${where}. It holds your items and ${keep} of your ${total} XP points; break it to get them back. The rest of the XP is lost.`)
+        graveXpTell(p, `Your grave is at ${where}. ${holds} ${keep} of your ${total} XP points; break it to get them back. The rest of the XP is lost.`)
       } else {
         graveXpTell(p, `Your grave is at ${where}.`)
       }
@@ -157,7 +186,7 @@ EntityEvents.death(event => {
     }
     if (keep > 0) {
       graveXpAddPending(server, uuid, keep)
-      graveXpTell(p, `No grave was placed, so you keep ${keep} of your ${total} XP points when you respawn.`)
+      graveXpTell(p, `No grave could be placed, so you keep ${keep} of your ${total} XP points when you respawn.`)
     }
   })
 })
