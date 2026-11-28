@@ -1,0 +1,16 @@
+{
+  "template": "aeronauticsdiscovery:airplane",
+  "initial_velocity": {
+    "linear": [0, 0, 0],
+    "angular": [0.0, 0.0, 0.0],
+    "impulse": false
+  },
+  "plan": {
+    "goals": [
+      { "type": "aeronauticsdiscovery:straight" },
+      { "type": "aeronauticsdiscovery:altitude", "min_altitude": 395, "max_altitude": 435 },
+      { "type": "aeronauticsdiscovery:terrain", "clearance": 32, "lookahead": 160, "max_pitch_degrees": 12 },
+      { "type": "aeronauticsdiscovery:avoid", "lookahead": 160, "max_bank_degrees": 25 }
+    ]
+  }
+}
