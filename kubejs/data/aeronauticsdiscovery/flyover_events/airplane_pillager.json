@@ -1,7 +1,7 @@
 {
   "template": "aeronauticsdiscovery:airplane_pillager",
-  "min_altitude": 398,
-  "max_altitude": 410,
+  "min_altitude": 405,
+  "max_altitude": 425,
   "weight": 1,
   "initial_velocity": {
     "linear": [0.0, 0.0, 0.0],
@@ -12,7 +12,7 @@
   "plan": {
     "goals": [
       { "type": "aeronauticsdiscovery:straight" },
-      { "type": "aeronauticsdiscovery:altitude", "min_altitude": 392, "max_altitude": 414 },
+      { "type": "aeronauticsdiscovery:altitude", "min_altitude": 395, "max_altitude": 435 },
       { "type": "aeronauticsdiscovery:terrain", "clearance": 32, "lookahead": 160, "max_pitch_degrees": 12 },
       { "type": "aeronauticsdiscovery:avoid", "lookahead": 160, "max_bank_degrees": 25 }
     ]

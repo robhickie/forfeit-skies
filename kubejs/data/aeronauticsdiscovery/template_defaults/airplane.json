@@ -8,7 +8,7 @@
   "plan": {
     "goals": [
       { "type": "aeronauticsdiscovery:straight" },
-      { "type": "aeronauticsdiscovery:altitude", "min_altitude": 392, "max_altitude": 414 },
+      { "type": "aeronauticsdiscovery:altitude", "min_altitude": 395, "max_altitude": 435 },
       { "type": "aeronauticsdiscovery:terrain", "clearance": 32, "lookahead": 160, "max_pitch_degrees": 12 },
       { "type": "aeronauticsdiscovery:avoid", "lookahead": 160, "max_bank_degrees": 25 }
     ]
