@@ -74,6 +74,26 @@ file = "kubejs/assets/forfeit/textures/quests/logo.png"
 hash = "b7168fc43ae4a9000a78a128d8edec73155d6e4d2a975faccba0344bf4aca496"
 
 [[files]]
+file = "kubejs/data/aeronauticsdiscovery/flyover_events/airplane.json"
+hash = "c578928004fabacb47d36eebc16b374d894ea8c2479ed3eaa0e5b6213e57f5a1"
+
+[[files]]
+file = "kubejs/data/aeronauticsdiscovery/flyover_events/airplane_pillager.json"
+hash = "4fe15a9d6f106d4745a38de797c99fff1c2b8f13b5ff6c498ef98135e0999542"
+
+[[files]]
+file = "kubejs/data/aeronauticsdiscovery/patrols/mansion_patrol.json"
+hash = "9cd7bf7bef224dbd781a9c3e78d6aa9a38cbcb9cd21be0a7d6c147fdd4f24534"
+
+[[files]]
+file = "kubejs/data/aeronauticsdiscovery/patrols/outpost_patrol.json"
+hash = "ddf2b3d7285471f6d50bae6b4e76b0cd703f5e52a1a2f20caad275fa3691d549"
+
+[[files]]
+file = "kubejs/data/aeronauticsdiscovery/template_defaults/airplane.json"
+hash = "13426ad360c3667eb5ce3a63cb1fab8b79c4595a435ba46fbf965ab8652cec4d"
+
+[[files]]
 file = "kubejs/data/ctov/lithostitched/worldgen_modifier/waystone/beach.json"
 hash = "e7ea8f5ff5090df9ae173f88b30ebec5066a23c1ab226dd80a34321d61fe9dd7"
 
