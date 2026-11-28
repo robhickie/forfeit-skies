@@ -75,23 +75,23 @@ hash = "b7168fc43ae4a9000a78a128d8edec73155d6e4d2a975faccba0344bf4aca496"
 
 [[files]]
 file = "kubejs/data/aeronauticsdiscovery/flyover_events/airplane.json"
-hash = "c578928004fabacb47d36eebc16b374d894ea8c2479ed3eaa0e5b6213e57f5a1"
+hash = "976aed42289f2f66280aaac4ef5ed34231be84dd5505930604bbc1673a7d1713"
 
 [[files]]
 file = "kubejs/data/aeronauticsdiscovery/flyover_events/airplane_pillager.json"
-hash = "4fe15a9d6f106d4745a38de797c99fff1c2b8f13b5ff6c498ef98135e0999542"
+hash = "a8cad2287d22c3123a0528d356b9582e80dd500e4b657ddaa9e05730aa50a322"
 
 [[files]]
 file = "kubejs/data/aeronauticsdiscovery/patrols/mansion_patrol.json"
-hash = "9cd7bf7bef224dbd781a9c3e78d6aa9a38cbcb9cd21be0a7d6c147fdd4f24534"
+hash = "d50b7e7736250440819aace6411faf6a4d0aa9804b4662ea724d949f3064cb51"
 
 [[files]]
 file = "kubejs/data/aeronauticsdiscovery/patrols/outpost_patrol.json"
-hash = "ddf2b3d7285471f6d50bae6b4e76b0cd703f5e52a1a2f20caad275fa3691d549"
+hash = "9abb395fee07517ebe8e696206c0b1936ab1a3837e92fad1e1143dd71533d669"
 
 [[files]]
 file = "kubejs/data/aeronauticsdiscovery/template_defaults/airplane.json"
-hash = "13426ad360c3667eb5ce3a63cb1fab8b79c4595a435ba46fbf965ab8652cec4d"
+hash = "476e194b6aa7b209b0863bf771742a27af9fd502aca36a3dd8f75bc6e382a530"
 
 [[files]]
 file = "kubejs/data/ctov/lithostitched/worldgen_modifier/waystone/beach.json"
@@ -191,7 +191,7 @@ hash = "274ef41dd58e89c672337a35de7100b877d83a58e75bd7df4f4106eae4a74cc4"
 
 [[files]]
 file = "kubejs/data/forfeit/dimension_physics/overworld.json"
-hash = "a4bc74e97a2e068e30f11c4f986050c8484332b0b3a8b7523c1bf04cafa7f4ab"
+hash = "c10e5d1aff0190c4a435cb12c5e62ce60c0f1b46fe3c8199cdc55a17b4f4514f"
 
 [[files]]
 file = "kubejs/data/forfeit/neoforge/biome_modifier/farm_animals.json"
