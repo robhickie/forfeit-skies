@@ -213,7 +213,6 @@ EntityEvents.death(event => {
 
 BlockEvents.broken('gravestone:gravestone', event => {
   let be = event.block.entity
-  console.info('[gravexp] break event at ' + event.block.pos + ' by ' + (event.player ? event.player.username : '?') + ' be=' + be + ' hasDeath=' + (be ? typeof be.getDeath : '-'))
   if (!be || !be.getDeath) return
   let death = be.getDeath()
   if (!death) return
