@@ -2,11 +2,14 @@
   "dimension": "minecraft:overworld",
   "priority": 100,
   "pressure_function": [
-    { "altitude": -38.4, "value": 1.5,   "slope": -0.006 },
-    { "altitude": 63.0,  "value": 1.0,   "slope": -0.004 },
-    { "altitude": 100.0, "value": 0.858, "slope": -0.0016 },
-    { "altitude": 250.0, "value": 0.76,  "slope": -0.0006 },
-    { "altitude": 415.0, "value": 0.665, "slope": -0.0006 },
-    { "altitude": 448.0, "value": 0.0,   "slope": 0.0 }
+    { "altitude": -38.4, "value": 1.5,  "slope": -0.006 },
+    { "altitude": 63.0,  "value": 1.0,  "slope": -0.004 },
+    { "altitude": 100.0, "value": 0.86, "slope": -0.0018 },
+    { "altitude": 160.0, "value": 0.81, "slope": -0.0007 },
+    { "altitude": 250.0, "value": 0.76, "slope": -0.0005 },
+    { "altitude": 290.0, "value": 0.74, "slope": -0.0005 },
+    { "altitude": 360.0, "value": 0.70, "slope": -0.0005 },
+    { "altitude": 410.0, "value": 0.67, "slope": -0.0008 },
+    { "altitude": 550.0, "value": 0.0,  "slope": 0.0 }
   ]
 }
