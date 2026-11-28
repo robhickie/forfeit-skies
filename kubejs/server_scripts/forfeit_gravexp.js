@@ -60,6 +60,16 @@ function graveXpPayPending(player) {
   }
 }
 
+// A grave holding nothing but obituary books (GraveStone gives one per death) counts as empty.
+function graveXpOnlyObituaries(death) {
+  let items = death.getAllItems()
+  for (let i = 0; i < items.size(); i++) {
+    let stack = items.get(i)
+    if (!stack.isEmpty() && String(stack.id) !== 'gravestone:obituary') return false
+  }
+  return true
+}
+
 // GraveStone puts the grave in the death column (moved up to free space, or clamped to the build limits for void deaths).
 function graveXpFindGrave(level, x, z, uuid, since) {
   let best = null
@@ -75,7 +85,7 @@ function graveXpFindGrave(level, x, z, uuid, since) {
         if (!death || String(death.getPlayerUUID()) !== uuid) continue
         let t = Number(death.getTimestamp())
         if (t < since) continue
-        if (!best || t > best.t) best = { id: String(death.getId()), t: t, pos: pos, empty: death.getAllItems().isEmpty() }
+        if (!best || t > best.t) best = { id: String(death.getId()), t: t, pos: pos, empty: graveXpOnlyObituaries(death) }
       }
     }
   }

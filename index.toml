@@ -503,7 +503,7 @@ hash = "e6def4ae6ca6dbc6daa287e24f1b9d25557e889d5b05f82c83c21f719aef919c"
 
 [[files]]
 file = "kubejs/server_scripts/forfeit_gravexp.js"
-hash = "7527a5f5581a7671d9352340ed342f5c5341a348c19cb897b6c76abdea0907d2"
+hash = "a089f0dfc510d496bcf0f1e962a7addc535715cf75fca595dc495b75b1692feb"
 
 [[files]]
 file = "kubejs/server_scripts/forfeit_idle_pregen.js"
