@@ -502,6 +502,10 @@ file = "kubejs/server_scripts/forfeit_flight.js"
 hash = "e6def4ae6ca6dbc6daa287e24f1b9d25557e889d5b05f82c83c21f719aef919c"
 
 [[files]]
+file = "kubejs/server_scripts/forfeit_gravexp.js"
+hash = "a7e37f52ade69b861d0c3851d67e7a7b13dbbff2042fff59650d89629ef63821"
+
+[[files]]
 file = "kubejs/server_scripts/forfeit_idle_pregen.js"
 hash = "f2b5f89e74ea5a2b07980793e0aa129451e8144c7d5efe3640a72081c052bb4c"
 
@@ -520,6 +524,10 @@ hash = "5221a7ff3079bbcce2cc9431efc8245eadb3d77b093c07624bbea4f97207b02b"
 [[files]]
 file = "kubejs/server_scripts/forfeit_notrader.js"
 hash = "44ddbe3044c7dabd1d6b8f2be5d0d7e314095043c732c8e1b226d89c7c1c83bb"
+
+[[files]]
+file = "kubejs/server_scripts/forfeit_shipname.js"
+hash = "4276267357c478058df7ad56d525713fa88ecf9a84e440a17e475b4ec26269de"
 
 [[files]]
 file = "kubejs/server_scripts/forfeit_skyfixes.js"
@@ -547,7 +555,7 @@ hash = "ca7a45e99ea36ca931a2e5c3095e4f2cabbb0ad2783ee92375ea24a97f6e7717"
 
 [[files]]
 file = "kubejs/server_scripts/forfeit_welcome.js"
-hash = "3ba942824083dd2b96d321d574e1157a16514805ba860e43c6cd1954f2f30b60"
+hash = "f55168d90aefcaae07b2acef7926ced37ae5ce42ead1a635c3a79e50a4af6686"
 
 [[files]]
 file = "mods/aces-spell-utils.pw.toml"
